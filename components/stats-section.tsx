@@ -36,9 +36,9 @@ export default function StatsSection() {
             return (
               <div
                 key={index}
-                className="group p-12 rounded-xl bg-background border border-purple-light/50 hover:border-purple-accent/70 hover:bg-purple-light/30 transition-all duration-300 text-center"
+                className="group p-6 rounded-xl bg-background border border-purple-light/50 hover:border-purple-accent/70 hover:bg-purple-light/30 transition-all duration-300 text-center"
               >
-                <div className="relative w-full max-w-[260px] aspect-square mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="relative w-full max-w-[320px] aspect-square mx-auto mb-4 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                   <Image
                     src={stat.image}
                     alt={stat.label}
