@@ -131,7 +131,10 @@ export default function Footer() {
                   href="https://clinicit.solutions" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-[#4a4b75] hover:text-[#3a3b65] transition-colors"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent hover:from-cyan-300 hover:to-blue-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]"
+                  style={{
+                    textShadow: '0 0 10px rgba(34, 211, 238, 0.8), 0 0 20px rgba(34, 211, 238, 0.6), 0 0 30px rgba(34, 211, 238, 0.4)'
+                  }}
                 >
                   ClinicIT Solutions
                 </a>
