@@ -122,7 +122,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100 text-foreground;
+    @apply bg-gradient-to-br from-teal-50 via-cyan-100 to-blue-200 text-foreground;
   }
 }
 

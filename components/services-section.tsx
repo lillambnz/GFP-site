@@ -32,7 +32,7 @@ export default function ServicesSection() {
   const duplicatedServices = [...services, ...services];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-pink-100 via-rose-50 to-orange-100 overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-br from-cyan-50 via-teal-100 to-blue-300 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 mb-12">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-[#0a2540] mb-4 tracking-tight">Our Services</h2>
@@ -49,9 +49,9 @@ export default function ServicesSection() {
             return (
               <div
                 key={index}
-                className="flex-shrink-0 w-80 bg-gradient-to-br from-white via-orange-50 to-amber-100 backdrop-blur-sm p-8 rounded-2xl border border-orange-200/50 hover:border-rose-300/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group hover:from-rose-50 hover:to-pink-100"
+                className="flex-shrink-0 w-80 bg-gradient-to-br from-white via-teal-50 to-[#00b1c3]/30 backdrop-blur-sm p-8 rounded-2xl border border-[#00b1c3]/50 hover:border-blue-400/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group hover:from-teal-50 hover:to-blue-200"
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-orange-200/40 via-rose-200/30 to-pink-300/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-rose-400 group-hover:to-pink-500 transition-all duration-300 group-hover:shadow-lg">
+                <div className="w-14 h-14 bg-gradient-to-br from-teal-200/40 via-[#00b1c3]/30 to-blue-300/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-[#00b1c3] group-hover:to-blue-500 transition-all duration-300 group-hover:shadow-lg">
                   <Icon className="w-7 h-7 text-[#4a4b75] group-hover:text-white transition-all duration-300" />
                 </div>
                 <h3 className="text-[#0a2540] mb-3 text-xl font-semibold">{service.title}</h3>

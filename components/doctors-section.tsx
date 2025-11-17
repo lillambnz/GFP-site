@@ -69,11 +69,11 @@ export default function DoctorsSection() {
   const duplicatedDoctors = [...doctors, ...doctors];
 
   return (
-    <section id="doctors" className="py-20 bg-gradient-to-br from-orange-100 via-yellow-50 to-green-100 overflow-hidden">
+    <section id="doctors" className="py-20 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-600 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 mb-12">
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-[#0a2540] mb-4 tracking-tight">Our Doctors</h2>
-          <p className="text-xl text-[#425466] max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-4xl font-bold text-white mb-4 tracking-tight">Our Doctors</h2>
+          <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
             Experienced healthcare professionals dedicated to your wellbeing
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function DoctorsSection() {
           {duplicatedDoctors.map((doctor, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-80 bg-gradient-to-br from-white via-yellow-50 to-green-100 backdrop-blur-sm rounded-2xl border border-yellow-200/50 hover:border-green-300/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden hover:from-green-50 hover:to-emerald-100"
+              className="flex-shrink-0 w-80 bg-gradient-to-br from-white via-teal-50 to-[#00b1c3]/30 backdrop-blur-sm rounded-2xl border border-[#00b1c3]/50 hover:border-blue-400/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden hover:from-teal-50 hover:to-blue-200"
             >
               <div className="aspect-square overflow-hidden">
                 <img
