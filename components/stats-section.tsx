@@ -29,16 +29,16 @@ export default function StatsSection() {
   ]
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-background to-purple-light/30 border-t border-border">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-indigo-100 via-purple-50 to-pink-100 border-t border-indigo-200/50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => {
             return (
               <div
                 key={index}
-                className="group p-6 rounded-xl bg-background border border-purple-light/50 hover:border-purple-accent/70 hover:bg-purple-light/30 transition-all duration-300 text-center"
+                className="group p-6 rounded-xl bg-gradient-to-br from-white via-cyan-50 to-blue-100 border border-cyan-200/50 hover:border-blue-300/70 hover:from-cyan-50 hover:to-indigo-100 transition-all duration-300 text-center shadow-lg"
               >
-                <div className="relative w-full max-w-[320px] aspect-square mx-auto mb-4 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="relative w-full max-w-[320px] aspect-square mx-auto mb-4 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-100 via-blue-50 to-indigo-100">
                   <Image
                     src={stat.image}
                     alt={stat.label}

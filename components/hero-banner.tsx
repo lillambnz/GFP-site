@@ -7,12 +7,12 @@ export default function HeroBanner() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-16 md:py-24"
+      className="relative overflow-hidden bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100 py-16 md:py-24"
     >
       {/* Enhanced Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-accent/30 to-primary/20 rounded-full blur-3xl -mr-48 -mt-48 floating"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/20 to-accent/30 rounded-full blur-3xl -ml-48 -mb-48 floating"></div>
-      <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-gradient-to-r from-primary/15 to-accent/20 rounded-full blur-3xl opacity-50 pulse-gentle"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-200/40 via-blue-300/30 to-indigo-400/20 rounded-full blur-3xl -mr-48 -mt-48 floating"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-indigo-300/30 via-purple-200/25 to-cyan-300/20 rounded-full blur-3xl -ml-48 -mb-48 floating"></div>
+      <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-gradient-to-r from-blue-200/20 via-cyan-300/15 to-indigo-200/25 rounded-full blur-3xl opacity-50 pulse-gentle"></div>
 
       <div className="relative max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">

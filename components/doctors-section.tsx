@@ -69,7 +69,7 @@ export default function DoctorsSection() {
   const duplicatedDoctors = [...doctors, ...doctors];
 
   return (
-    <section id="doctors" className="py-20 bg-gradient-to-br from-[#f7f9fc] to-white overflow-hidden">
+    <section id="doctors" className="py-20 bg-gradient-to-br from-orange-100 via-yellow-50 to-green-100 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 mb-12">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-[#0a2540] mb-4 tracking-tight">Our Doctors</h2>
@@ -84,7 +84,7 @@ export default function DoctorsSection() {
           {duplicatedDoctors.map((doctor, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-80 bg-white/80 backdrop-blur-sm rounded-2xl border border-[#e3e8ee] hover:border-[#4a4b75]/20 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden"
+              className="flex-shrink-0 w-80 bg-gradient-to-br from-white via-yellow-50 to-green-100 backdrop-blur-sm rounded-2xl border border-yellow-200/50 hover:border-green-300/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden hover:from-green-50 hover:to-emerald-100"
             >
               <div className="aspect-square overflow-hidden">
                 <img
