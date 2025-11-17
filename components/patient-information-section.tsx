@@ -81,7 +81,7 @@ export default function PatientInformationSection() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#0a2540] via-[#00b1c3] to-blue-600 bg-clip-text text-transparent mb-4 tracking-tight drop-shadow-lg">Patient Information</h2>
-          <p className="text-xl md:text-2xl text-white font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+          <p className="text-xl md:text-2xl text-[#425466] font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-md">
             Everything you need to know for your visit
           </p>
         </div>

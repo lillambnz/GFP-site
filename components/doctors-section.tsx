@@ -73,7 +73,7 @@ export default function DoctorsSection() {
       <div className="container mx-auto px-4 lg:px-8 mb-12">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-4 tracking-tight">Our Doctors</h2>
-          <p className="text-2xl md:text-3xl text-white font-bold max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+          <p className="text-2xl md:text-3xl text-[#0a2540] font-bold max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
             Experienced healthcare professionals dedicated to your wellbeing
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function DoctorsSection() {
           {duplicatedDoctors.map((doctor, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-80 bg-gradient-to-br from-white via-teal-50 to-[#00b1c3]/30 backdrop-blur-sm rounded-2xl border border-[#00b1c3]/50 hover:border-blue-400/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden hover:from-teal-50 hover:to-blue-200"
+              className="flex-shrink-0 w-80 bg-white/20 backdrop-blur-md rounded-3xl hover:bg-white/30 hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 cursor-pointer group overflow-hidden hover:backdrop-blur-lg border-0"
             >
               <div className="aspect-square overflow-hidden">
                 <img
