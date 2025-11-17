@@ -72,95 +72,100 @@ export default function PatientInformationSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <section id="patient-info" className="py-20 bg-gradient-to-br from-[#f7f9fc] to-white">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="patient-info" className="py-20 bg-transparent relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-[#00b1c3]/20 via-teal-300/15 to-blue-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-blue-500/15 via-[#00b1c3]/10 to-teal-200/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-teal-100/30 via-cyan-200/20 to-blue-300/15 rounded-full blur-2xl opacity-60"></div>
+      
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#0a2540] mb-4 tracking-tight">Patient Information</h2>
-          <p className="text-xl text-[#425466] max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#0a2540] via-[#00b1c3] to-blue-600 bg-clip-text text-transparent mb-4 tracking-tight drop-shadow-lg">Patient Information</h2>
+          <p className="text-xl md:text-2xl text-white font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-md">
             Everything you need to know for your visit
           </p>
         </div>
 
         <Tabs defaultValue="getting-started" className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-8 bg-white/80 border border-[#e3e8ee]">
+          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-8 bg-gradient-to-r from-white/90 via-teal-50/80 to-[#00b1c3]/10 border border-[#00b1c3]/30 backdrop-blur-sm shadow-lg">
             <TabsTrigger 
               value="getting-started"
-              className="data-[state=active]:bg-[#4a4b75]/10 data-[state=active]:text-[#4a4b75]"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00b1c3]/20 data-[state=active]:to-blue-400/10 data-[state=active]:text-[#00b1c3] data-[state=active]:font-semibold"
             >
               Getting Started
             </TabsTrigger>
             <TabsTrigger 
               value="appointments"
-              className="data-[state=active]:bg-[#4a4b75]/10 data-[state=active]:text-[#4a4b75]"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00b1c3]/20 data-[state=active]:to-blue-400/10 data-[state=active]:text-[#00b1c3] data-[state=active]:font-semibold"
             >
               Appointments
             </TabsTrigger>
             <TabsTrigger 
               value="fees-billing"
-              className="data-[state=active]:bg-[#4a4b75]/10 data-[state=active]:text-[#4a4b75]"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00b1c3]/20 data-[state=active]:to-blue-400/10 data-[state=active]:text-[#00b1c3] data-[state=active]:font-semibold"
             >
               Fees & Billing
             </TabsTrigger>
             <TabsTrigger 
               value="services"
-              className="data-[state=active]:bg-[#4a4b75]/10 data-[state=active]:text-[#4a4b75]"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00b1c3]/20 data-[state=active]:to-blue-400/10 data-[state=active]:text-[#00b1c3] data-[state=active]:font-semibold"
             >
               Services
             </TabsTrigger>
             <TabsTrigger 
               value="faqs"
-              className="data-[state=active]:bg-[#4a4b75]/10 data-[state=active]:text-[#4a4b75]"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00b1c3]/20 data-[state=active]:to-blue-400/10 data-[state=active]:text-[#00b1c3] data-[state=active]:font-semibold"
             >
               FAQs
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="getting-started" className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-[#e3e8ee]">
+          <TabsContent value="getting-started" className="bg-gradient-to-br from-white/90 via-teal-50/60 to-[#00b1c3]/5 backdrop-blur-sm rounded-2xl p-8 border border-[#00b1c3]/30 shadow-xl">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <Wallet className="w-6 h-6 text-[#4a4b75]" />
+                  <Wallet className="w-6 h-6 text-[#00b1c3]" />
                   <h3 className="text-2xl font-semibold text-[#0a2540]">What to Bring</h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#4a4b75] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#00b1c3] rounded-full mt-2"></div>
                     <p className="text-[#425466]">Medicare card</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#4a4b75] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#00b1c3] rounded-full mt-2"></div>
                     <p className="text-[#425466]">Photo ID</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#4a4b75] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#00b1c3] rounded-full mt-2"></div>
                     <p className="text-[#425466]">Concession cards (if applicable)</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#4a4b75] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#00b1c3] rounded-full mt-2"></div>
                     <p className="text-[#425466]">Current medication list</p>
                   </div>
                 </div>
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <MapPin className="w-6 h-6 text-[#4a4b75]" />
+                  <MapPin className="w-6 h-6 text-[#00b1c3]" />
                   <h3 className="text-2xl font-semibold text-[#0a2540]">Arrival Tips</h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#4a4b75] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#00b1c3] rounded-full mt-2"></div>
                     <p className="text-[#425466]">Arrive 10 minutes early</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#4a4b75] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#00b1c3] rounded-full mt-2"></div>
                     <p className="text-[#425466]">Complete registration forms</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#4a4b75] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#00b1c3] rounded-full mt-2"></div>
                     <p className="text-[#425466]">Free parking available</p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-[#4a4b75] rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-[#00b1c3] rounded-full mt-2"></div>
                     <p className="text-[#425466]">Wheelchair accessible</p>
                   </div>
                 </div>
@@ -168,16 +173,16 @@ export default function PatientInformationSection() {
             </div>
           </TabsContent>
 
-          <TabsContent value="appointments" className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-[#e3e8ee]">
+          <TabsContent value="appointments" className="bg-gradient-to-br from-white/90 via-teal-50/60 to-[#00b1c3]/5 backdrop-blur-sm rounded-2xl p-8 border border-[#00b1c3]/30 shadow-xl">
             <div className="flex items-center gap-3 mb-6">
-              <Calendar className="w-6 h-6 text-[#4a4b75]" />
+              <Calendar className="w-6 h-6 text-[#00b1c3]" />
               <h3 className="text-2xl font-semibold text-[#0a2540]">Appointment Types & Booking</h3>
             </div>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {appointmentTypes.map((appointment, index) => (
-                <div key={index} className="bg-[#4a4b75]/5 rounded-lg p-6 border border-[#4a4b75]/20">
+                <div key={index} className="bg-[#00b1c3]/5 rounded-lg p-6 border border-[#00b1c3]/30">
                   <h4 className="text-lg font-semibold text-[#0a2540] mb-2">{appointment.type}</h4>
-                  <p className="text-[#4a4b75] font-medium mb-2">Duration: {appointment.duration}</p>
+                  <p className="text-[#00b1c3] font-medium mb-2">Duration: {appointment.duration}</p>
                   <p className="text-[#425466] text-sm mb-4">{appointment.description}</p>
                   <div className="space-y-1 text-sm">
                     <div className="flex justify-between">
@@ -190,27 +195,27 @@ export default function PatientInformationSection() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-[#425466]">Out of pocket:</span>
-                      <span className="font-medium text-[#4a4b75]">{appointment.outOfPocket}</span>
+                      <span className="font-medium text-[#00b1c3]">{appointment.outOfPocket}</span>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="bg-[#4a4b75]/5 rounded-lg p-6">
+            <div className="bg-[#00b1c3]/5 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-[#0a2540] mb-4">How to Book</h4>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="text-center">
-                  <Building className="w-8 h-8 mx-auto mb-2 text-[#4a4b75]" />
+                  <Building className="w-8 h-8 mx-auto mb-2 text-[#00b1c3]" />
                   <h5 className="font-medium text-[#0a2540] mb-1">Online Booking</h5>
                   <p className="text-sm text-[#425466]">Book 24/7 through our website or HotDoc app</p>
                 </div>
                 <div className="text-center">
-                  <Phone className="w-8 h-8 mx-auto mb-2 text-[#4a4b75]" />
+                  <Phone className="w-8 h-8 mx-auto mb-2 text-[#00b1c3]" />
                   <h5 className="font-medium text-[#0a2540] mb-1">Call Us</h5>
                   <p className="text-sm text-[#425466]">Speak with reception: (08) 6118 2788</p>
                 </div>
                 <div className="text-center">
-                  <Clock className="w-8 h-8 mx-auto mb-2 text-[#4a4b75]" />
+                  <Clock className="w-8 h-8 mx-auto mb-2 text-[#00b1c3]" />
                   <h5 className="font-medium text-[#0a2540] mb-1">Walk-ins</h5>
                   <p className="text-sm text-[#425466]">Subject to availability, longer wait times</p>
                 </div>
@@ -218,34 +223,34 @@ export default function PatientInformationSection() {
             </div>
           </TabsContent>
 
-          <TabsContent value="fees-billing" className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-[#e3e8ee]">
+          <TabsContent value="fees-billing" className="bg-gradient-to-br from-white/90 via-teal-50/60 to-[#00b1c3]/5 backdrop-blur-sm rounded-2xl p-8 border border-[#00b1c3]/30 shadow-xl">
             <div className="flex items-center gap-3 mb-6">
-              <CreditCard className="w-6 h-6 text-[#4a4b75]" />
+              <CreditCard className="w-6 h-6 text-[#00b1c3]" />
               <h3 className="text-2xl font-semibold text-[#0a2540]">Fees & Billing</h3>
             </div>
             <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-[#4a4b75]/20 rounded-lg overflow-hidden">
+              <table className="w-full border-collapse border border-[#00b1c3]/30 rounded-lg overflow-hidden">
                 <thead>
-                  <tr className="bg-[#4a4b75]/10">
-                    <th className="border border-[#4a4b75]/20 p-3 text-left text-[#0a2540]">Consultation Type</th>
-                    <th className="border border-[#4a4b75]/20 p-3 text-left text-[#0a2540]">Fee</th>
-                    <th className="border border-[#4a4b75]/20 p-3 text-left text-[#0a2540]">Medicare Rebate</th>
-                    <th className="border border-[#4a4b75]/20 p-3 text-left text-[#0a2540]">Out of Pocket</th>
+                  <tr className="bg-[#00b1c3]/10">
+                    <th className="border border-[#00b1c3]/30 p-3 text-left text-[#0a2540]">Consultation Type</th>
+                    <th className="border border-[#00b1c3]/30 p-3 text-left text-[#0a2540]">Fee</th>
+                    <th className="border border-[#00b1c3]/30 p-3 text-left text-[#0a2540]">Medicare Rebate</th>
+                    <th className="border border-[#00b1c3]/30 p-3 text-left text-[#0a2540]">Out of Pocket</th>
                   </tr>
                 </thead>
                 <tbody>
                   {appointmentTypes.map((appointment, index) => (
-                    <tr key={index} className="bg-white hover:bg-[#4a4b75]/5">
-                      <td className="border border-[#4a4b75]/20 p-3 text-[#425466]">{appointment.type}</td>
-                      <td className="border border-[#4a4b75]/20 p-3 text-[#425466]">{appointment.fee}</td>
-                      <td className="border border-[#4a4b75]/20 p-3 text-[#425466]">{appointment.rebate}</td>
-                      <td className="border border-[#4a4b75]/20 p-3 text-[#4a4b75] font-medium">{appointment.outOfPocket}</td>
+                    <tr key={index} className="bg-white hover:bg-[#00b1c3]/5">
+                      <td className="border border-[#00b1c3]/30 p-3 text-[#425466]">{appointment.type}</td>
+                      <td className="border border-[#00b1c3]/30 p-3 text-[#425466]">{appointment.fee}</td>
+                      <td className="border border-[#00b1c3]/30 p-3 text-[#425466]">{appointment.rebate}</td>
+                      <td className="border border-[#00b1c3]/30 p-3 text-[#00b1c3] font-medium">{appointment.outOfPocket}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <div className="bg-[#4a4b75]/5 rounded-lg p-6">
+            <div className="bg-[#00b1c3]/5 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-[#0a2540] mb-4">Payment Information</h4>
               <div className="space-y-2 text-[#425466]">
                 <p>• Payment required on the day of consultation</p>
@@ -256,9 +261,9 @@ export default function PatientInformationSection() {
             </div>
           </TabsContent>
 
-          <TabsContent value="services" className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-[#e3e8ee]">
+          <TabsContent value="services" className="bg-gradient-to-br from-white/90 via-teal-50/60 to-[#00b1c3]/5 backdrop-blur-sm rounded-2xl p-8 border border-[#00b1c3]/30 shadow-xl">
             <div className="flex items-center gap-3 mb-6">
-              <Clock className="w-6 h-6 text-[#4a4b75]" />
+              <Clock className="w-6 h-6 text-[#00b1c3]" />
               <h3 className="text-2xl font-semibold text-[#0a2540]">Opening Hours</h3>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
@@ -266,14 +271,14 @@ export default function PatientInformationSection() {
                 {openingHours.map((item, index) => (
                   <div
                     key={index}
-                    className="flex justify-between items-center py-3 px-4 bg-[#4a4b75]/5 rounded-lg"
+                    className="flex justify-between items-center py-3 px-4 bg-[#00b1c3]/5 rounded-lg"
                   >
                     <span className="text-[#0a2540] font-medium">{item.day}</span>
                     <span className="text-[#425466]">{item.hours}</span>
                   </div>
                 ))}
               </div>
-              <div className="bg-[#4a4b75]/5 rounded-lg p-6">
+              <div className="bg-[#00b1c3]/5 rounded-lg p-6">
                 <h4 className="text-lg font-semibold text-[#0a2540] mb-4">Location</h4>
                 <p className="text-[#425466] mb-2">23C, 2158 Albany Highway</p>
                 <p className="text-[#425466] mb-4">Gosnells WA 6110</p>
@@ -286,16 +291,16 @@ export default function PatientInformationSection() {
             </div>
           </TabsContent>
 
-          <TabsContent value="faqs" className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-[#e3e8ee]">
+          <TabsContent value="faqs" className="bg-gradient-to-br from-white/90 via-teal-50/60 to-[#00b1c3]/5 backdrop-blur-sm rounded-2xl p-8 border border-[#00b1c3]/30 shadow-xl">
             <div className="flex items-center gap-3 mb-6">
-              <HelpCircle className="w-6 h-6 text-[#4a4b75]" />
+              <HelpCircle className="w-6 h-6 text-[#00b1c3]" />
               <h3 className="text-2xl font-semibold text-[#0a2540]">Frequently Asked Questions</h3>
             </div>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="border border-[#4a4b75]/20 rounded-lg overflow-hidden">
+                <div key={index} className="border border-[#00b1c3]/30 rounded-lg overflow-hidden">
                   <button
-                    className="w-full text-left p-4 bg-[#4a4b75]/5 hover:bg-[#4a4b75]/10 transition-colors duration-200"
+                    className="w-full text-left p-4 bg-[#00b1c3]/5 hover:bg-[#00b1c3]/10 transition-colors duration-200"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   >
                     <h4 className="text-lg font-medium text-[#0a2540]">{faq.question}</h4>
@@ -308,10 +313,10 @@ export default function PatientInformationSection() {
                 </div>
               ))}
             </div>
-            <div className="mt-8 text-center bg-[#4a4b75]/5 rounded-lg p-6">
+            <div className="mt-8 text-center bg-[#00b1c3]/5 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-[#0a2540] mb-2">Still Have Questions?</h4>
               <p className="text-[#425466] mb-4">Our friendly reception team is here to help with any questions you might have.</p>
-              <p className="text-[#4a4b75] font-medium">Call (08) 6118 2788</p>
+              <p className="text-[#00b1c3] font-medium">Call (08) 6118 2788</p>
             </div>
           </TabsContent>
         </Tabs>
