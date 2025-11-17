@@ -7,7 +7,7 @@ export default function HeroBanner() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-teal-50 via-cyan-100 to-blue-200 py-16 md:py-24"
+      className="relative overflow-hidden bg-transparent py-16 md:py-24"
     >
       {/* Enhanced Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#00b1c3]/40 via-teal-300/30 to-blue-400/20 rounded-full blur-3xl -mr-48 -mt-48 floating"></div>

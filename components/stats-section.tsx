@@ -29,7 +29,7 @@ export default function StatsSection() {
   ]
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-blue-200 via-teal-100 to-cyan-50 border-t border-[#00b1c3]/30">
+    <section className="py-12 md:py-16 bg-transparent">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => {

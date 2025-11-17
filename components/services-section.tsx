@@ -32,7 +32,7 @@ export default function ServicesSection() {
   const duplicatedServices = [...services, ...services];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-cyan-50 via-teal-100 to-blue-300 overflow-hidden">
+    <section id="services" className="py-20 bg-transparent overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 mb-12">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-[#0a2540] mb-4 tracking-tight">Our Services</h2>

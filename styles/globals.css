@@ -122,7 +122,15 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-gradient-to-br from-teal-50 via-cyan-100 to-blue-200 text-foreground;
+    @apply text-foreground;
+    background: linear-gradient(180deg, 
+      rgba(240, 253, 250, 1) 0%,     /* teal-50 at top */
+      rgba(165, 243, 252, 1) 25%,    /* cyan-100 */
+      rgba(147, 197, 253, 1) 50%,    /* blue-300 */
+      rgba(59, 130, 246, 1) 75%,     /* blue-500 */
+      rgba(29, 78, 216, 1) 100%      /* blue-700 at bottom */
+    );
+    min-height: 100vh;
   }
 }
 
