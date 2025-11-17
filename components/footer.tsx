@@ -4,11 +4,11 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       {/* Help Banner */}
-      <div className="bg-[#4a4b75]/10 text-gray-800 py-4">
+      <div className="bg-[#00b1c3]/20 text-white py-4">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-center gap-2 text-center">
-            <Lightbulb className="w-5 h-5 text-[#4a4b75]" />
-            <p className="text-sm font-medium">
+            <Lightbulb className="w-5 h-5 text-white" />
+            <p className="text-sm font-medium drop-shadow-lg">
               Not sure which doctor? Our reception team can help match you with the right specialist.
             </p>
           </div>

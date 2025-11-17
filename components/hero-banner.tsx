@@ -10,9 +10,10 @@ export default function HeroBanner() {
       className="relative overflow-hidden bg-transparent py-16 md:py-24"
     >
       {/* Enhanced Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#00b1c3]/40 via-teal-300/30 to-blue-400/20 rounded-full blur-3xl -mr-48 -mt-48 floating"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-700/30 via-blue-500/25 to-[#00b1c3]/20 rounded-full blur-3xl -ml-48 -mb-48 floating"></div>
-      <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-gradient-to-r from-teal-200/20 via-[#00b1c3]/15 to-blue-300/25 rounded-full blur-3xl opacity-50 pulse-gentle"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-400/60 via-[#00b1c3]/50 to-blue-500/40 rounded-full blur-3xl -mr-48 -mt-48 floating"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-600/40 via-indigo-500/35 to-[#00b1c3]/30 rounded-full blur-3xl -ml-48 -mb-48 floating"></div>
+      <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-gradient-to-r from-teal-300/40 via-cyan-400/30 to-blue-400/35 rounded-full blur-2xl opacity-70 pulse-gentle"></div>
+      <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-emerald-300/25 via-teal-400/20 to-cyan-500/30 rounded-full blur-3xl floating" style={{animationDelay: '2s'}}></div>
 
       <div className="relative max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">

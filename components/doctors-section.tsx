@@ -84,7 +84,7 @@ export default function DoctorsSection() {
           {duplicatedDoctors.map((doctor, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-80 bg-white/20 backdrop-blur-md rounded-3xl hover:bg-white/30 hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 cursor-pointer group overflow-hidden hover:backdrop-blur-lg border-0"
+              className="flex-shrink-0 w-80 bg-white/20 backdrop-blur-md rounded-3xl hover:bg-white/30 hover:shadow-2xl hover:shadow-[#00b1c3]/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer group overflow-hidden hover:backdrop-blur-lg border-0 shimmer"
             >
               <div className="aspect-square overflow-hidden">
                 <img
