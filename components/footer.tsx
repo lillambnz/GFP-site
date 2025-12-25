@@ -72,12 +72,13 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Quick Access</h4>
             <ul className="space-y-2">
-              <li><a href="#book" className="text-gray-300 hover:text-red-300 transition">Book Appointment</a></li>
-              <li><a href="#patient-info" className="text-gray-300 hover:text-red-300 transition">Patient Information</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-red-300 transition">Services</a></li>
-              <li><a href="#doctors" className="text-gray-300 hover:text-red-300 transition">Our Doctors</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-red-300 transition">Contact & Hours</a></li>
-              <li><a href="mailto:info@gosnellsfamilypractice.com.au" className="text-gray-300 hover:text-red-300 transition">Email Us</a></li>
+              <li><a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-red-300 transition">Book Appointment</a></li>
+              <li><a href="/about" className="text-gray-300 hover:text-red-300 transition">About Us</a></li>
+              <li><a href="/team" className="text-gray-300 hover:text-red-300 transition">Our Team</a></li>
+              <li><a href="/services" className="text-gray-300 hover:text-red-300 transition">All Services</a></li>
+              <li><a href="/faqs" className="text-gray-300 hover:text-red-300 transition">FAQs</a></li>
+              <li><a href="/blog" className="text-gray-300 hover:text-red-300 transition">Blog</a></li>
+              <li><a href="/after-hours" className="text-gray-300 hover:text-red-300 transition">After Hours Care</a></li>
             </ul>
           </div>
 
