@@ -22,6 +22,8 @@ export interface StaffMember {
   biography: string
   image: string
   availability: string
+  bookingName?: string
+  bookingUrl?: string
 }
 
 export const doctors: Doctor[] = [
@@ -44,14 +46,15 @@ export const doctors: Doctor[] = [
     title: "General Practitioner",
     qualifications: "MBBCh, FRACGP, BAO",
     languages: ["English", "Malay", "Arabic"],
-    specialInterests: ["Women's Health", "Antenatal Care", "Child Health"],
-    biography: "Dr. Fazilah Abu Bakar is a dedicated General Practitioner with Fellowship of the Royal Australian College of General Practitioners. She has a special interest in women's health, providing comprehensive care including antenatal and postnatal care, cervical screening, contraception advice, and menopause management. Dr. Fazilah also has extensive experience in child health and family medicine. She is passionate about providing holistic, compassionate care and takes time to listen to her patients' concerns. Fluent in English, Malay, and Arabic, she serves our culturally diverse community with sensitivity and understanding.",
+    specialInterests: ["Women's Health Medicine", "Paediatric Health", "Adolescent Health", "Chronic Disease Management"],
+    biography: "Dr. Fazilah Abu Bakar is an experienced female General Practitioner and FRACGP Fellow who graduated from Dublin, Ireland in 2000. She promotes overall well-being and disease prevention through a holistic approach that addresses both physical and emotional health. Her areas of interest include women's health medicine, paediatric and adolescent health, and chronic disease management. Fluent in English, Malay, and basic Arabic, Dr. Abu Bakar connects with patients from diverse cultural backgrounds, emphasizing effective communication and culturally sensitive care.",
     availability: "Tuesday-Saturday",
     status: "Available",
     rating: 4.9,
     image: "/images/team/Dr-Fazilah-Abu-Bakar.webp",
     bookingName: "Fazilah",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/fazilah-binti-abu-bakar"
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/fazilah-binti-abu-bakar",
+    yearsExperience: 24
   },
   {
     name: "Dr. Choong Leat Loh",
@@ -59,13 +62,14 @@ export const doctors: Doctor[] = [
     qualifications: "MBBS, FRACGP, Cert Skin Cancer, MAFM",
     languages: ["English", "Cantonese", "Hakka", "Indonesian", "Malay", "Mandarin", "Hokkien"],
     specialInterests: ["Skin Cancer Medicine", "Minor Procedures", "Chronic Disease Management"],
-    biography: "Dr. Choong Leat Loh is an experienced General Practitioner with Fellowship of the Royal Australian College of General Practitioners and a Certificate in Skin Cancer Medicine. He has particular expertise in skin cancer detection and treatment, performing comprehensive skin checks and minor surgical procedures. Dr. Loh is also skilled in chronic disease management and provides thorough care for patients with diabetes, cardiovascular disease, and other long-term conditions. Remarkably multilingual, he speaks seven languages, enabling him to provide culturally appropriate care to patients from diverse backgrounds. Dr. Loh is known for his meticulous approach and dedication to preventive healthcare.",
+    biography: "Dr. Loh is a highly skilled general practitioner fluent in multiple languages, including various Chinese dialects, Malay and Indonesian language. With more than 20 years of experience in the medical field, Dr. Loh is committed to providing exceptional care to patients of all ages. Dr. Loh has spent years honing his diagnostic and treatment skills in skin diseases. He is proud to offer comprehensive primary care services to patients in Gosnells. From routine check-ups to the management of chronic conditions, Dr. Loh is dedicated to helping patients achieve and maintain optimal health.",
     availability: "Monday-Friday",
     status: "Available",
     rating: 4.9,
     image: "/images/team/Dr-Choong-Leat-Loh.webp",
     bookingName: "Choong",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/choong-leat-loh"
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/choong-leat-loh",
+    yearsExperience: 20
   },
   {
     name: "Dr. Quam Gbajabiamila",
@@ -73,7 +77,7 @@ export const doctors: Doctor[] = [
     qualifications: "MBBS, FRACGP, MMSc",
     languages: ["English", "Afrikaans"],
     specialInterests: ["Family Medicine", "Preventive Health", "Sports Medicine"],
-    biography: "Dr. Quam Gbajabiamila brings extensive experience in family medicine and holds a Master of Medical Science along with Fellowship of the Royal Australian College of General Practitioners. He is passionate about preventive healthcare and helping patients maintain optimal health through lifestyle modification and early intervention. Dr. Quam has a special interest in sports medicine and musculoskeletal conditions, providing expert care for sports injuries and chronic pain management. He is committed to evidence-based medicine and takes a holistic approach to patient care, considering physical, mental, and social factors in his treatment plans.",
+    biography: "Dr. Quam is a highly experienced General Practitioner who is committed to providing exceptional healthcare services with a touch of joy and laughter. With years of experience in the medical field, Dr. Quam has developed a deep understanding of the diverse needs and concerns of his patients. Whether you're seeking routine check-ups, medical advice, or treatment for a specific condition, Dr. Quam's expertise will guide you through every step of the way. What truly sets Dr. Quam apart is his warm personality. Dr. Quam believes that building strong patient-doctor relationships is the key to successful healthcare outcomes. He values open communication and strives to create a safe and comfortable space where patients can openly discuss their concerns.",
     availability: "Wednesday-Sunday",
     status: "Available",
     rating: 4.9,
@@ -86,8 +90,8 @@ export const doctors: Doctor[] = [
     title: "General Practitioner",
     qualifications: "FRACGP, MBBS (UWA)",
     languages: ["English", "Malay"],
-    specialInterests: ["Women's Health", "Mental Health", "Youth Health"],
-    biography: "Dr. Intan Ramli is a dedicated General Practitioner who completed her medical degree at the University of Western Australia and holds Fellowship of the Royal Australian College of General Practitioners. She has a particular interest in women's health, providing comprehensive care including reproductive health, pregnancy care, and menopause management. Dr. Intan is also passionate about mental health and youth health, providing a safe, supportive environment for discussing sensitive health concerns. She is known for her empathetic approach and takes time to understand each patient's unique circumstances and health goals. Dr. Intan is fluent in English and Malay.",
+    specialInterests: ["Chronic Disease Management", "Mental Health", "Paediatric Health", "Women's Health", "Minor Surgical Procedures"],
+    biography: "Dr Intan Ramli graduated locally from WA, completing her Bachelor of Medicine/Bachelor of Surgery (MBBS) at the University of Western Australia in 2012. She gained her General Practitioner Fellowship in 2020. She has worked in many areas of specialty in medicine at Royal Perth Hospital, Fiona Stanley Hospital, Armadale Mental Health and Kalgoorlie Regional Hospital. She has worked across most of WA including multiple regional and rural clinics during her GP training. Dr Ramli has a particular interest in chronic disease, mental health, paediatric health, women's health and minor surgery. She can fluently speak both Malay and English. When she is not practising medicine, Dr Ramli enjoys travelling, cooking and spending time with her children.",
     availability: "Monday-Friday",
     status: "Available",
     rating: 4.9,
@@ -101,11 +105,13 @@ export const staff: StaffMember[] = [
   {
     name: "Dr. Yen Nee Liew (Dr. Yenny)",
     role: "Podiatrist",
-    qualifications: "Doctor of Podiatric Medicine, BSc (Pathology and Laboratory Medicine)",
-    specialties: ["Diabetic Foot Care", "Biomechanics", "Custom Orthotics", "Musculoskeletal Conditions"],
-    biography: "Dr Yenny is a podiatrist originally from Malaysia and is fluent in English, Mandarin, and Malay. She completed her Doctor of Podiatric Medicine at the University of Western Australia in 2019, after graduating with a Bachelor of Science (Pathology and Laboratory Medicine). Dr Yenny provides comprehensive podiatry care and has a special interest in general and high-risk foot care, biomechanics, and musculoskeletal conditions. She is passionate about active listening and works closely with her patients to achieve the best possible outcomes. Services include diabetic foot assessments, general foot care including ingrown toenails and wart treatment, biomechanical assessments, custom-made orthotics, and foot pain management using dry needling, ultrasound, and shockwave therapy.",
-    image: "/images/team/placeholder.webp",
-    availability: "By appointment - Call (08) 6118 2788"
+    qualifications: "Doctor of Podiatric Medicine (UWA), BSc (Pathology and Laboratory Medicine)",
+    specialties: ["Diabetic Foot Assessment", "General Foot Care", "Biomechanical Assessment", "Custom Made Orthotics", "Foot Pain Management"],
+    biography: "Dr Yenny is originally from Malaysia and is fluent in English, Chinese and Malay. She completed her Doctor of Podiatric Medicine degree at the University of Western Australia in 2019, after finishing her undergraduate Bachelor of Science degree majoring in Pathology and Laboratory Medicine. She has interest in all aspects of podiatry, including general foot care, high risk foot care, biomechanics and management of musculoskeletal conditions. She believes in active listening and strives to help her patients to achieve their treatment goals. Podiatry services include diabetic foot assessment, general foot care including ingrown toenail and wart management, biomechanical assessment, custom made orthotics, and foot pain management with dry needling therapy, ultrasound and shockwave treatment.",
+    image: "https://asset.imagine.art/processed/815985b8-6878-4b75-ab3a-a28c1aa61a33",
+    availability: "By appointment - Call (08) 6118 2788",
+    bookingName: "Yenny",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/yen-nee-liew-1"
   },
   {
     name: "Dr. Allison Ip",
@@ -140,7 +146,7 @@ export const staff: StaffMember[] = [
     qualifications: "Bachelor of Nursing, RN",
     specialties: ["Immunisation", "Wound Care", "Care Planning", "Health Assessment"],
     biography: "Jen is a Registered Nurse (RN) with over 10 years of experience across hospital wards, GP nursing, and agency settings. She holds a Bachelor of Nursing from the University of Notre Dame and has a strong passion for immunisation, wound care, care planning, and thorough health assessment. Jen is deeply committed to delivering gentle, stress-free immunisations, creating a calm and reassuring environment where both mum and bub feel comfortable and supported. Her nursing practice is guided by compassion, safety, and patient-centred care.",
-    image: "/images/team/nurse.jpg",
+    image: "/images/team/placeholder.webp",
     availability: "Monday-Friday"
   },
 ]
