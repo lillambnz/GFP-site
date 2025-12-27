@@ -163,7 +163,8 @@ export const services: Service[] = [
     details: 'Telehealth allows you to consult with our doctors from the comfort of your home via secure video call. Suitable for follow-up appointments, prescription renewals, test result discussions, and non-emergency medical concerns. Bulk billing available for eligible patients.',
     practitioners: ['All Doctors'],
     availability: 'Monday-Friday, 8:00 AM - 5:00 PM',
-    bookingInfo: 'Book a telehealth appointment online or call us'
+    bookingInfo: 'Book a telehealth appointment online or call us',
+    image: '/images/services/Telehealth.jpg'
   },
   {
     slug: 'pathology-services',
@@ -188,7 +189,8 @@ export const services: Service[] = [
     details: 'Australia has one of the highest rates of skin cancer in the world. Our comprehensive skin cancer screening includes full body mole mapping, dermoscopy examination, and assessment of suspicious lesions. Dr. Choong Leat Loh holds a Certificate in Skin Cancer Medicine and provides expert skin cancer detection and treatment.',
     practitioners: ['Dr. Choong Leat Loh', 'All Doctors'],
     availability: 'Monday-Friday',
-    bookingInfo: 'Book a skin check appointment - Medicare rebates available'
+    bookingInfo: 'Book a skin check appointment - Medicare rebates available',
+    image: '/images/services/skin-cancer.jpg'
   },
   {
     slug: 'immunisations',
@@ -199,7 +201,8 @@ export const services: Service[] = [
     details: 'We provide a comprehensive immunization service for children and adults including routine childhood vaccinations, flu shots, COVID-19 vaccines, and catch-up immunizations. Our practice is registered with the Australian Immunisation Register and follows the National Immunisation Program Schedule.',
     practitioners: ['All Doctors', 'Nursing Staff'],
     availability: 'Monday-Sunday',
-    bookingInfo: 'Book an immunization appointment - bring your immunization history'
+    bookingInfo: 'Book an immunization appointment - bring your immunization history',
+    image: '/images/services/Vaccination.jpg'
   },
   {
     slug: 'travel-health',
@@ -210,7 +213,8 @@ export const services: Service[] = [
     details: 'Planning international travel? We provide comprehensive travel health consultations including destination-specific advice, required and recommended vaccinations, malaria prevention, and travel health tips. Book your appointment at least 6-8 weeks before departure to ensure adequate time for vaccination schedules.',
     practitioners: ['All Doctors'],
     availability: 'Monday-Friday',
-    bookingInfo: 'Book a travel health consultation'
+    bookingInfo: 'Book a travel health consultation',
+    image: '/images/services/Vaccination.jpg'
   },
 
   // Procedures
@@ -224,7 +228,8 @@ export const services: Service[] = [
     practitioners: ['Dr. Choong Leat Loh', 'Dr. Ameer Khan'],
     availability: 'By appointment',
     bookingInfo: 'Discuss with your doctor if a procedure is needed',
-    subServices: ['Skin Lesion Removal', 'Wound Care & Suturing', 'Cyst Excision', 'Ingrown Toenail Treatment']
+    subServices: ['Skin Lesion Removal', 'Wound Care & Suturing', 'Cyst Excision', 'Ingrown Toenail Treatment'],
+    image: '/images/services/MinorProcedures.jpg'
   },
 
   // Respiratory
@@ -262,7 +267,8 @@ export const services: Service[] = [
     details: 'Our pre-employment medical examinations assess your fitness for work and meet employer requirements. We provide thorough health assessments including medical history, physical examination, vision and hearing tests, drug and alcohol screening, and relevant pathology tests as required.',
     practitioners: ['All Doctors'],
     availability: 'Monday-Friday',
-    bookingInfo: 'Book a pre-employment medical - bring employer requirements'
+    bookingInfo: 'Book a pre-employment medical - bring employer requirements',
+    image: '/images/services/occupationalhealth.jpg'
   },
   {
     slug: 'driver-medicals',
@@ -273,7 +279,8 @@ export const services: Service[] = [
     details: 'We conduct medical assessments for all classes of driver licenses including private, commercial, taxi, and heavy vehicle licenses. Our examinations meet Department of Transport requirements and include vision testing, medical history review, and assessment of fitness to drive.',
     practitioners: ['All Doctors'],
     availability: 'Monday-Sunday',
-    bookingInfo: 'Book a driver medical assessment - bring your license'
+    bookingInfo: 'Book a driver medical assessment - bring your license',
+    image: '/images/services/occupationalhealth.jpg'
   },
 ]
 
