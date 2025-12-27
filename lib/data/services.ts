@@ -126,7 +126,8 @@ export const services: Service[] = [
     details: 'We provide comprehensive mental health support including assessment and management of depression, anxiety, stress, and other mental health conditions. Our doctors can develop Mental Health Care Plans for access to Medicare-rebated psychology services. We offer a supportive, non-judgmental environment for discussing your mental wellbeing.',
     practitioners: ['All Doctors'],
     availability: 'Monday-Sunday',
-    bookingInfo: 'Book a longer consultation for mental health assessment'
+    bookingInfo: 'Book a longer consultation for mental health assessment',
+    image: '/images/services/mental-health.png'
   },
   {
     slug: 'psychology-services',
@@ -138,7 +139,7 @@ export const services: Service[] = [
     practitioners: ['Available by referral - psychologist appointments coming soon'],
     availability: 'By appointment',
     bookingInfo: 'Please speak to your doctor about a psychology referral',
-    image: '/images/services/placeholder.webp'
+    image: '/images/services/psychology.png'
   },
 
   // Specialist Services
@@ -152,7 +153,7 @@ export const services: Service[] = [
     practitioners: ['Dietitian positions - coming soon'],
     availability: 'By appointment',
     bookingInfo: 'Call (08) 6118 2788 to schedule a dietitian consultation',
-    image: '/images/services/placeholder.webp'
+    image: '/images/services/dietitian.png'
   },
   {
     slug: 'telehealth',
@@ -242,7 +243,8 @@ export const services: Service[] = [
     details: 'We provide comprehensive care for respiratory conditions including asthma, COPD, bronchitis, and other lung conditions. Services include spirometry testing, asthma action plans, medication review, inhaler technique training, and ongoing monitoring to keep your breathing healthy.',
     practitioners: ['All Doctors'],
     availability: 'Monday-Sunday',
-    bookingInfo: 'Book a respiratory health consultation'
+    bookingInfo: 'Book a respiratory health consultation',
+    image: '/images/services/respiratory-care.png'
   },
 
   // Occupational Health
