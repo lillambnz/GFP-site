@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Preparing for Flu Season 2025: Your Complete Guide',
     excerpt: 'Essential tips and information to protect yourself and your family during the upcoming flu season, including vaccination advice and preventive measures.',
     category: 'Health Tips',
-    author: 'Dr. Ameer Khan',
+    author: 'Gosnells Family Practice',
     date: '2025-01-15',
     image: '/images/blog/placeholder.webp',
     readTime: '5 min read',
@@ -69,7 +69,7 @@ Book your flu vaccination today at Gosnells Family Practice. Call (08) 6118 2788
     title: 'Managing Chronic Conditions: Tips from Our Doctors',
     excerpt: 'Practical advice for living well with chronic health conditions like diabetes, heart disease, and asthma.',
     category: 'Health Tips',
-    author: 'Dr. Fazilah Binti Abu Bakar',
+    author: 'Gosnells Family Practice',
     date: '2025-01-10',
     image: '/images/blog/placeholder.webp',
     readTime: '7 min read',
@@ -145,7 +145,7 @@ If you have a chronic condition and would like to discuss a management plan, boo
     title: 'The Importance of Regular Health Check-ups',
     excerpt: 'Why preventive health screenings matter and what to expect during your health assessment.',
     category: 'Health Tips',
-    author: 'Dr. Choong Leat Loh',
+    author: 'Gosnells Family Practice',
     date: '2025-01-05',
     image: '/images/blog/placeholder.webp',
     readTime: '6 min read',
@@ -254,7 +254,7 @@ Don't wait until you're unwell to see a doctor. Book your health check-up today 
     title: 'Understanding Telehealth: The Future of Healthcare Accessibility',
     excerpt: 'How virtual consultations work, when they are appropriate, and what to expect from your telehealth appointment.',
     category: 'Practice News',
-    author: 'Dr. Quam Gbajabiamila',
+    author: 'Gosnells Family Practice',
     date: '2024-12-28',
     image: '/images/blog/placeholder.webp',
     readTime: '5 min read',
@@ -453,7 +453,7 @@ Book a consultation with our dietitians for personalized nutrition advice tailor
     title: 'Skin Cancer Screening: What to Expect and Why It Matters',
     excerpt: 'Australia has one of the highest rates of skin cancer in the world. Learn about the importance of regular skin checks and what to expect during screening.',
     category: 'Medical Updates',
-    author: 'Dr. Choong Leat Loh',
+    author: 'Gosnells Family Practice',
     date: '2024-12-15',
     image: '/images/blog/placeholder.webp',
     readTime: '6 min read',
@@ -497,7 +497,7 @@ Everyone should perform regular self-examinations, but professional skin checks 
 ## What Happens During a Skin Check?
 
 ### Full Body Examination
-- Dr. Choong Leat Loh (Certificate in Skin Cancer Medicine) will examine your entire skin surface
+- Our qualified doctor will examine your entire skin surface
 - This includes scalp, between toes, soles of feet, and other easily missed areas
 - You'll need to undress to your underwear (gowns provided for modesty)
 
@@ -562,7 +562,7 @@ Skin cancer screening consultations are eligible for Medicare rebates. If you're
 
 ## Book Your Skin Check Today
 
-Don't wait until you notice a problem. Early detection saves lives. Dr. Choong Leat Loh's expertise in skin cancer medicine ensures thorough screening and expert care.
+Don't wait until you notice a problem. Early detection saves lives. Our experienced doctors provide thorough screening and expert care.
 
 Call (08) 6118 2788 or book online to schedule your skin check.
     `

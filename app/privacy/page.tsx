@@ -115,7 +115,20 @@ export default function PrivacyPolicy() {
             <li>Secure disposal of confidential information</li>
           </ul>
 
-          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">7. Website Cookies and Analytics</h2>
+          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">7. Use of Artificial Intelligence</h2>
+          <p>
+            This website may contain content that has been created with the assistance of artificial intelligence (AI) tools. AI has been used for:
+          </p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Website design and development assistance</li>
+            <li>Content generation and editing for informational blog posts</li>
+            <li>Image generation or enhancement for illustrative purposes</li>
+          </ul>
+          <p>
+            All AI-generated content is reviewed by our team for accuracy and appropriateness. AI is not used for clinical decision-making, diagnosis, or treatment of patients. All medical care is provided by qualified healthcare professionals.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">8. Website Cookies and Analytics</h2>
           <p>Our website uses:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li><strong>Google Analytics:</strong> To understand website usage and improve user experience</li>
@@ -124,7 +137,7 @@ export default function PrivacyPolicy() {
           </ul>
           <p>You can control cookie settings through your browser preferences. However, disabling cookies may affect website functionality.</p>
 
-          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">8. Data Retention</h2>
+          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">9. Data Retention</h2>
           <p>We retain your information for the following periods:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li><strong>Medical Records:</strong> Minimum 7 years from last consultation (adults), until age 25 (children)</li>
@@ -133,7 +146,7 @@ export default function PrivacyPolicy() {
             <li><strong>Contact Forms:</strong> 2 years unless ongoing patient relationship</li>
           </ul>
 
-          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">9. Your Rights</h2>
+          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">10. Your Rights</h2>
           <p>Under Australian privacy law, you have the right to:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li><strong>Access:</strong> Request access to your personal and health information</li>
@@ -142,12 +155,12 @@ export default function PrivacyPolicy() {
             <li><strong>Restrict Processing:</strong> Request limitations on how we use your information</li>
           </ul>
 
-          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">10. Data Breach Notification</h2>
+          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">11. Data Breach Notification</h2>
           <p>
             In the event of a data breach that is likely to result in serious harm, we will notify affected individuals and the Office of the Australian Information Commissioner (OAIC) within 72 hours, as required by the Notifiable Data Breaches scheme.
           </p>
 
-          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">11. Third-Party Services</h2>
+          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">12. Third-Party Services</h2>
           <p>We may use third-party services that have access to your information:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li><strong>Practice Management Software:</strong> For appointment booking and medical records</li>
@@ -157,12 +170,12 @@ export default function PrivacyPolicy() {
           </ul>
           <p>All third-party service providers are required to maintain appropriate privacy and security standards.</p>
 
-          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">12. Updates to This Policy</h2>
+          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">13. Updates to This Policy</h2>
           <p>
             We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of significant changes by posting the updated policy on our website with a new effective date.
           </p>
 
-          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">13. Contact Information</h2>
+          <h2 className="text-2xl font-semibold text-[#0a2540] mt-8 mb-4">14. Contact Information</h2>
           <p>If you have any questions, concerns, or wish to exercise your rights regarding your personal information, please contact us:</p>
           <div className="bg-[#f7f9fc] p-6 rounded-lg mt-4">
             <p className="font-semibold text-[#0a2540]">Gosnells Family Practice</p>
