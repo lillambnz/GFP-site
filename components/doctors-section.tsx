@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Languages } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function DoctorsSection() {
   const doctors = [
@@ -86,11 +87,15 @@ export default function DoctorsSection() {
               key={index}
               className="flex-shrink-0 w-80 bg-white/20 backdrop-blur-md rounded-3xl hover:bg-white/30 hover:shadow-2xl hover:shadow-[#00b1c3]/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer group overflow-hidden hover:backdrop-blur-lg border-0 shimmer"
             >
-              <div className="aspect-square overflow-hidden">
-                <img
+              <div className="aspect-square overflow-hidden relative">
+                <Image
                   src={doctor.image || "/placeholder.svg"}
                   alt={doctor.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  sizes="320px"
+                  quality={85}
+                  priority={index < 2}
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
