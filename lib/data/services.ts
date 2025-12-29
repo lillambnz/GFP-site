@@ -127,7 +127,7 @@ export const services: Service[] = [
     practitioners: ['All Doctors'],
     availability: 'Monday-Sunday',
     bookingInfo: 'Book a longer consultation for mental health assessment',
-    image: '/images/services/mental-health.png'
+    image: '/images/services/mental-health.jpg'
   },
   {
     slug: 'psychology-services',
@@ -139,7 +139,7 @@ export const services: Service[] = [
     practitioners: ['Available by referral - psychologist appointments coming soon'],
     availability: 'By appointment',
     bookingInfo: 'Please speak to your doctor about a psychology referral',
-    image: '/images/services/psychology.png'
+    image: '/images/services/psychology-services.png'
   },
 
   // Specialist Services
@@ -153,7 +153,7 @@ export const services: Service[] = [
     practitioners: ['Dietitian positions - coming soon'],
     availability: 'By appointment',
     bookingInfo: 'Call (08) 6118 2788 to schedule a dietitian consultation',
-    image: '/images/services/dietitian.png'
+    image: '/images/services/dietician-services.png'
   },
   {
     slug: 'telehealth',
@@ -244,7 +244,7 @@ export const services: Service[] = [
     practitioners: ['All Doctors'],
     availability: 'Monday-Sunday',
     bookingInfo: 'Book a respiratory health consultation',
-    image: '/images/services/respiratory-care.png'
+    image: '/images/services/asthma-respiratory.png'
   },
 
   // Occupational Health

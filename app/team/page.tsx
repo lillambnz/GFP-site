@@ -4,7 +4,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { PhotoGallery } from "@/components/photo-gallery"
 import { doctors, staff } from "@/lib/data/team"
-import { Languages, Star, Calendar } from "lucide-react"
+import { Languages, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -75,15 +75,17 @@ export default function TeamPage() {
                       <span className="text-sm font-semibold text-[#0a2540]">4.9</span>
                     </div>
                   </div>
-                  <p className="text-[#4a4b75] font-semibold mb-2">General Practitioner</p>
-                  <p className="text-sm text-[#425466] mb-6">MBBS, FRACGP</p>
+                  <p className="text-[#4a4b75] font-semibold mb-2">General Practitioner, Male</p>
+                  <p className="text-sm text-[#425466] mb-6">MRCGP, MBBS, FRACGP</p>
 
                   <div className="mb-6">
                     <p className="text-sm font-semibold text-[#0a2540] mb-2">Special Interests:</p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Family Medicine</span>
-                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Chronic Disease</span>
-                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Men's Health</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Chronic Disease Management</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Pain Management</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Mental Health</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Child and Family Health</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Childhood Immunisations</span>
                     </div>
                   </div>
 
@@ -91,20 +93,15 @@ export default function TeamPage() {
                     <div className="flex items-start gap-2">
                       <Languages className="w-5 h-5 text-[#4a4b75] mt-0.5 flex-shrink-0" />
                       <p className="text-sm text-[#425466]">
-                        English, Arabic, Hindi, Pashto, Urdu
+                        Arabic, Hindi, Pashto, Urdu
                       </p>
                     </div>
                   </div>
 
                   <div className="mb-6">
                     <p className="text-[#425466] leading-relaxed">
-                      Dr. Khan is dedicated to providing comprehensive family medicine with a focus on chronic disease management and men's health. His multilingual abilities ensure effective communication with diverse patient populations.
+                      Dr. Ameer Khan is a highly skilled, all rounded and compassionate GP dedicated to providing exceptional medical care. Dr Khan has a wealth of experience in all areas of primary care including minor illness, minor injuries, workers compensation, and has a specialist interest in chronic disease management. Known for his expertise, professionalism, and excellent bedside manner, Dr Khan has earned the trust and respect of his patients. He believes in a patient-centred approach, taking the time to listen to his patients' concerns, understand their unique needs, and develop personalised treatment plans.
                     </p>
-                  </div>
-
-                  <div className="flex items-center gap-2 text-sm text-[#425466] mb-6">
-                    <Calendar className="w-4 h-4" />
-                    <span>Monday to Saturday</span>
                   </div>
 
                   <Button className="bg-[#00b1c3] hover:bg-[#009bb0] text-white text-lg px-8 py-6" asChild>
@@ -127,15 +124,16 @@ export default function TeamPage() {
                       <span className="text-sm font-semibold text-[#0a2540]">4.9</span>
                     </div>
                   </div>
-                  <p className="text-[#4a4b75] font-semibold mb-2">General Practitioner</p>
-                  <p className="text-sm text-[#425466] mb-6">MBBS, FRACGP</p>
+                  <p className="text-[#4a4b75] font-semibold mb-2">General Practitioner, Female</p>
+                  <p className="text-sm text-[#425466] mb-6">MBBCh, FRACGP, BAO</p>
 
                   <div className="mb-6">
                     <p className="text-sm font-semibold text-[#0a2540] mb-2">Special Interests:</p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Women's Health</span>
-                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Antenatal Care</span>
-                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Child Health</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Women's Health Medicine</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Paediatric Health</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Adolescent Health</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Chronic Disease Management</span>
                     </div>
                   </div>
 
@@ -150,13 +148,8 @@ export default function TeamPage() {
 
                   <div className="mb-6">
                     <p className="text-[#425466] leading-relaxed">
-                      Dr. Fazilah specializes in women's health and antenatal care, providing compassionate and comprehensive care throughout all stages of women's lives. She has a special interest in child health and family medicine.
+                      Dr. Fazilah Abu Bakar is an experienced female General Practitioner and FRACGP Fellow who graduated from Dublin, Ireland in 2000. She promotes overall well-being and disease prevention through a holistic approach that addresses both physical and emotional health. Her areas of interest include women's health medicine, paediatric and adolescent health, and chronic disease management. Fluent in English, Malay, and basic Arabic, Dr. Abu Bakar connects with patients from diverse cultural backgrounds, emphasizing effective communication and culturally sensitive care.
                     </p>
-                  </div>
-
-                  <div className="flex items-center gap-2 text-sm text-[#425466] mb-6">
-                    <Calendar className="w-4 h-4" />
-                    <span>Monday to Friday</span>
                   </div>
 
                   <Button className="bg-[#00b1c3] hover:bg-[#009bb0] text-white text-lg px-8 py-6" asChild>
@@ -185,15 +178,16 @@ export default function TeamPage() {
                       <span className="text-sm font-semibold text-[#0a2540]">4.9</span>
                     </div>
                   </div>
-                  <p className="text-[#4a4b75] font-semibold mb-2">General Practitioner</p>
-                  <p className="text-sm text-[#425466] mb-6">MBBS, FRACGP</p>
+                  <p className="text-[#4a4b75] font-semibold mb-2">General Practitioner, Male</p>
+                  <p className="text-sm text-[#425466] mb-6">MBBS, FRACGP, Cert Skin Cancer, MAFM</p>
 
                   <div className="mb-6">
                     <p className="text-sm font-semibold text-[#0a2540] mb-2">Special Interests:</p>
                     <div className="flex flex-wrap gap-2">
                       <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Skin Cancer Medicine</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Skin Diseases</span>
                       <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Minor Procedures</span>
-                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Chronic Disease</span>
+                      <span className="text-sm bg-[#00b1c3]/10 text-[#00b1c3] px-3 py-1 rounded-full">Chronic Disease Management</span>
                     </div>
                   </div>
 
@@ -201,20 +195,15 @@ export default function TeamPage() {
                     <div className="flex items-start gap-2">
                       <Languages className="w-5 h-5 text-[#4a4b75] mt-0.5 flex-shrink-0" />
                       <p className="text-sm text-[#425466]">
-                        English, Cantonese, Hakka, Indonesian, Malay, Mandarin, Hokkien
+                        Cantonese, English, Hakka, Indonesian, Malay, Mandarin, Hokkien
                       </p>
                     </div>
                   </div>
 
                   <div className="mb-6">
                     <p className="text-[#425466] leading-relaxed">
-                      Dr. Loh brings extensive experience in skin cancer medicine and minor surgical procedures. His remarkable language abilities allow him to serve diverse communities with exceptional care.
+                      Dr Loh is a highly skilled general practitioner fluent in multiple languages, including various Chinese dialects, Malay and Indonesian language. With more than 20 years of experience in the medical field, Dr Loh is committed to providing exceptional care to patients of all ages. Dr Loh has spent years honing his diagnostic and treatment skills in skin diseases. Dr Loh is proud to offer comprehensive primary care services to patients in Gosnells. From routine check-ups to the management of chronic conditions, Dr Loh is dedicated to helping patients achieve and maintain optimal health.
                     </p>
-                  </div>
-
-                  <div className="flex items-center gap-2 text-sm text-[#425466] mb-6">
-                    <Calendar className="w-4 h-4" />
-                    <span>Monday to Saturday</span>
                   </div>
 
                   <Button className="bg-[#00b1c3] hover:bg-[#009bb0] text-white text-lg px-8 py-6" asChild>
@@ -264,11 +253,6 @@ export default function TeamPage() {
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-2 text-sm text-[#425466] mb-6">
-                    <Calendar className="w-4 h-4" />
-                    <span>Monday to Saturday</span>
-                  </div>
-
                   <Button className="bg-[#00b1c3] hover:bg-[#009bb0] text-white text-lg px-8 py-6" asChild>
                     <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-quam-gbajabiamila" target="_blank" rel="noopener noreferrer">
                       Book with Dr Quam
@@ -305,7 +289,7 @@ export default function TeamPage() {
                         <span className="text-sm font-semibold text-[#0a2540]">{doctor.rating}</span>
                       </div>
                     </div>
-                    <p className="text-[#4a4b75] font-semibold mb-2">{doctor.title}</p>
+                    <p className="text-[#4a4b75] font-semibold mb-2">{doctor.title}, {doctor.gender}</p>
                     <p className="text-sm text-[#425466] mb-4">{doctor.qualifications}</p>
 
                     {doctor.specialInterests && (
@@ -337,11 +321,6 @@ export default function TeamPage() {
                       <p className="text-sm text-[#425466] leading-relaxed line-clamp-4">
                         {doctor.biography}
                       </p>
-                    </div>
-
-                    <div className="flex items-center gap-2 text-sm text-[#425466] mb-4">
-                      <Calendar className="w-4 h-4" />
-                      <span>{doctor.availability}</span>
                     </div>
 
                     <Button
@@ -408,10 +387,6 @@ export default function TeamPage() {
                     <p className="text-sm text-[#425466] leading-relaxed line-clamp-4 mb-4">
                       {member.biography}
                     </p>
-
-                    <div className="text-xs text-[#425466] pt-4 border-t border-[#00b1c3]/20">
-                      <p><strong>Availability:</strong> {member.availability}</p>
-                    </div>
                   </div>
                 </div>
               ))}

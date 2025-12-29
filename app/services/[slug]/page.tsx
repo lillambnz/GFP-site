@@ -4,11 +4,42 @@ import { services, getServiceBySlug } from "@/lib/data/services"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import type { Metadata } from 'next'
 
 export async function generateStaticParams() {
   return services.map((service) => ({
     slug: service.slug,
   }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const service = getServiceBySlug(slug)
+
+  if (!service) return {}
+
+  return {
+    title: `${service.title} | Gosnells Family Practice`,
+    description: `${service.description} Expert ${service.title.toLowerCase()} in Gosnells. Book online or call (08) 6118 2788.`,
+    keywords: [service.title, 'Gosnells', 'medical centre', service.category, 'Perth', 'WA', 'bulk billing'],
+    alternates: {
+      canonical: `https://gosnellsfamilypractice.com.au/services/${slug}`
+    },
+    openGraph: {
+      title: `${service.title} in Gosnells | GFP`,
+      description: service.description,
+      url: `https://gosnellsfamilypractice.com.au/services/${slug}`,
+      siteName: 'Gosnells Family Practice',
+      type: 'website',
+      locale: 'en_AU',
+      images: service.image ? [{
+        url: service.image,
+        width: 1200,
+        height: 630,
+        alt: service.title
+      }] : []
+    }
+  }
 }
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {

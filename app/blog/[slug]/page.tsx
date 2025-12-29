@@ -4,11 +4,45 @@ import { blogPosts, getBlogPostBySlug } from "@/lib/data/blog-posts"
 import { notFound } from "next/navigation"
 import { Calendar, User, Clock, Tag } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from 'next'
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
   }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const post = getBlogPostBySlug(slug)
+
+  if (!post) return {}
+
+  return {
+    title: `${post.title} | Gosnells Family Practice Blog`,
+    description: post.excerpt,
+    keywords: [...post.tags, 'Gosnells', 'health tips', 'medical advice', 'Perth'],
+    authors: [{ name: post.author }],
+    alternates: {
+      canonical: `https://gosnellsfamilypractice.com.au/blog/${slug}`
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
+      url: `https://gosnellsfamilypractice.com.au/blog/${slug}`,
+      siteName: 'Gosnells Family Practice',
+      locale: 'en_AU',
+      images: post.image ? [{
+        url: post.image,
+        width: 1200,
+        height: 630,
+        alt: post.title
+      }] : []
+    }
+  }
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
