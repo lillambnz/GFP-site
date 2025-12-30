@@ -19,25 +19,25 @@ const appointmentTypes = [
     type: 'Standard Appointment',
     duration: '15 minutes',
     description: 'Perfect for 1-2 simple health concerns or routine check-ups',
-    fee: '$76',
+    fee: '$80',
     rebate: '$43.90',
-    outOfPocket: '$32.10'
+    outOfPocket: '$36.10'
   },
   {
     type: 'Long Appointment',
-    duration: '30 minutes', 
+    duration: '30 minutes',
     description: 'Ideal for multiple concerns, new patients, procedures, mental health consultations',
-    fee: '$142',
+    fee: '$148',
     rebate: '$84.90',
-    outOfPocket: '$57.10'
+    outOfPocket: '$63.10'
   },
   {
     type: 'Extended Appointment',
     duration: '45+ minutes',
     description: 'For complex cases, comprehensive health assessments, or detailed procedures',
-    fee: '$203',
+    fee: '$208',
     rebate: '$125.10',
-    outOfPocket: '$79.90'
+    outOfPocket: '$82.90'
   }
 ];
 
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     question: 'How do I get my test results?',
-    answer: 'Test results are available through our patient portal or by calling reception. We will contact you if any urgent follow-up is needed.'
+    answer: 'Book an appointment with the doctor to discuss your results.'
   }
 ];
 
