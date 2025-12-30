@@ -1,0 +1,122 @@
+GOSNELLS FAMILY PRACTICE - URLs FOR GOOGLE SEARCH CONSOLE INDEXING
+====================================================================
+
+INSTRUCTIONS:
+1. Go to: https://search.google.com/search-console
+2. Select property: gosnellsfamilypractice.com.au
+3. Click "URL Inspection" in left sidebar
+4. Copy/paste each URL below
+5. Click "Request Indexing" for each URL
+
+NOTE: Google limits ~10-15 indexing requests per day. Submit priority pages first.
+
+====================================================================
+HIGH PRIORITY PAGES (Submit these first - Updated recently)
+====================================================================
+
+Homepage:
+https://gosnellsfamilypractice.com.au
+
+Team Page (New clickable doctor cards):
+https://gosnellsfamilypractice.com.au/team
+
+Main Services Page:
+https://gosnellsfamilypractice.com.au/services
+
+About Us:
+https://gosnellsfamilypractice.com.au/about
+
+FAQs:
+https://gosnellsfamilypractice.com.au/faqs
+
+====================================================================
+SERVICE PAGES (19 services)
+====================================================================
+
+https://gosnellsfamilypractice.com.au/services/general-checkups
+https://gosnellsfamilypractice.com.au/services/chronic-disease-management
+https://gosnellsfamilypractice.com.au/services/diabetes-management
+https://gosnellsfamilypractice.com.au/services/dietitian-services
+https://gosnellsfamilypractice.com.au/services/driver-medicals
+https://gosnellsfamilypractice.com.au/services/immunisations
+https://gosnellsfamilypractice.com.au/services/mens-health
+https://gosnellsfamilypractice.com.au/services/mental-health
+https://gosnellsfamilypractice.com.au/services/minor-procedures
+https://gosnellsfamilypractice.com.au/services/pathology-services
+https://gosnellsfamilypractice.com.au/services/pre-employment-medicals
+https://gosnellsfamilypractice.com.au/services/pregnancy-care
+https://gosnellsfamilypractice.com.au/services/psychology-services
+https://gosnellsfamilypractice.com.au/services/respiratory-care
+https://gosnellsfamilypractice.com.au/services/skin-cancer-screening
+https://gosnellsfamilypractice.com.au/services/telehealth
+https://gosnellsfamilypractice.com.au/services/travel-health
+https://gosnellsfamilypractice.com.au/services/womens-health
+https://gosnellsfamilypractice.com.au/services/workers-compensation
+
+====================================================================
+BLOG PAGES (7 pages)
+====================================================================
+
+Blog Index:
+https://gosnellsfamilypractice.com.au/blog
+
+Blog Articles:
+https://gosnellsfamilypractice.com.au/blog/preparing-for-flu-season-2025
+https://gosnellsfamilypractice.com.au/blog/managing-chronic-conditions
+https://gosnellsfamilypractice.com.au/blog/importance-of-regular-checkups
+https://gosnellsfamilypractice.com.au/blog/skin-cancer-screening
+https://gosnellsfamilypractice.com.au/blog/nutrition-tips-from-dietitians
+https://gosnellsfamilypractice.com.au/blog/understanding-telehealth
+
+====================================================================
+OTHER PAGES
+====================================================================
+
+After Hours:
+https://gosnellsfamilypractice.com.au/after-hours
+
+====================================================================
+SUBMISSION SCHEDULE RECOMMENDATION
+====================================================================
+
+DAY 1: High Priority Pages (5 URLs)
+- Homepage
+- Team
+- Services
+- About
+- FAQs
+
+DAY 2: Top Services (10 URLs)
+- General checkups
+- Chronic disease management
+- Womens health
+- Mens health
+- Mental health
+- Pregnancy care
+- Telehealth
+- Immunisations
+- Skin cancer screening
+- Diabetes management
+
+DAY 3: Remaining Services (9 URLs)
+- Dietitian services
+- Psychology services
+- Pathology services
+- Minor procedures
+- Respiratory care
+- Travel health
+- Workers compensation
+- Driver medicals
+- Pre-employment medicals
+
+DAY 4: Blog & Other Pages (7 URLs)
+- Blog index
+- All 6 blog articles
+- After hours page
+
+====================================================================
+TOTAL: 31 URLs
+====================================================================
+
+Last Updated: 2025-12-30
+Sitemap: https://gosnellsfamilypractice.com.au/sitemap.xml
