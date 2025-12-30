@@ -162,112 +162,104 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Dr. Khan */}
-            <div className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10">
+            <Link href="/team#dr-khan" className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10 group">
               <div className="aspect-[3/4] overflow-hidden relative">
                 <Image
                   src="/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-35.jpg"
                   alt="Dr. Ameer Khan"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[#0a2540] mb-1">Dr. Ameer Khan</h3>
+                <h3 className="text-xl font-bold text-[#0a2540] mb-1 group-hover:text-[#00b1c3] transition-colors">Dr. Ameer Khan</h3>
                 <p className="text-[#4a4b75] font-semibold text-sm mb-2">General Practitioner</p>
                 <p className="text-xs text-[#425466] mb-4">MBBS, FRACGP</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="text-xs bg-[#00b1c3]/10 text-[#00b1c3] px-2 py-1 rounded-full">Family Medicine</span>
                   <span className="text-xs bg-[#00b1c3]/10 text-[#00b1c3] px-2 py-1 rounded-full">Men's Health</span>
                 </div>
-                <Button className="w-full bg-[#00b1c3] hover:bg-[#009bb0] text-white text-sm" asChild>
-                  <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-ameer-khan" target="_blank" rel="noopener noreferrer">
-                    Book with Dr Khan
-                  </a>
+                <Button className="w-full bg-[#00b1c3] hover:bg-[#009bb0] text-white text-sm pointer-events-none">
+                  View Profile
                 </Button>
               </div>
-            </div>
+            </Link>
 
             {/* Dr. Fazilah */}
-            <div className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10">
+            <Link href="/team#dr-fazilah" className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10 group">
               <div className="aspect-[3/4] overflow-hidden relative">
                 <Image
                   src="/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-64.jpg"
                   alt="Dr. Fazilah Abu Bakar"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[#0a2540] mb-1">Dr. Fazilah Abu Bakar</h3>
+                <h3 className="text-xl font-bold text-[#0a2540] mb-1 group-hover:text-[#00b1c3] transition-colors">Dr. Fazilah Abu Bakar</h3>
                 <p className="text-[#4a4b75] font-semibold text-sm mb-2">General Practitioner</p>
                 <p className="text-xs text-[#425466] mb-4">MBBS, FRACGP</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="text-xs bg-[#00b1c3]/10 text-[#00b1c3] px-2 py-1 rounded-full">Women's Health</span>
                   <span className="text-xs bg-[#00b1c3]/10 text-[#00b1c3] px-2 py-1 rounded-full">Antenatal Care</span>
                 </div>
-                <Button className="w-full bg-[#00b1c3] hover:bg-[#009bb0] text-white text-sm" asChild>
-                  <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-fazilah-binti-abu-bakar" target="_blank" rel="noopener noreferrer">
-                    Book with Dr Fazilah
-                  </a>
+                <Button className="w-full bg-[#00b1c3] hover:bg-[#009bb0] text-white text-sm pointer-events-none">
+                  View Profile
                 </Button>
               </div>
-            </div>
+            </Link>
 
             {/* Dr. Loh */}
-            <div className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10">
+            <Link href="/team#dr-loh" className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10 group">
               <div className="aspect-[3/4] overflow-hidden relative">
                 <Image
                   src="/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-2.jpg"
                   alt="Dr. Choong Leat Loh"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[#0a2540] mb-1">Dr. Choong Leat Loh</h3>
+                <h3 className="text-xl font-bold text-[#0a2540] mb-1 group-hover:text-[#00b1c3] transition-colors">Dr. Choong Leat Loh</h3>
                 <p className="text-[#4a4b75] font-semibold text-sm mb-2">General Practitioner</p>
                 <p className="text-xs text-[#425466] mb-4">MBBS, FRACGP</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="text-xs bg-[#00b1c3]/10 text-[#00b1c3] px-2 py-1 rounded-full">Skin Cancer</span>
                   <span className="text-xs bg-[#00b1c3]/10 text-[#00b1c3] px-2 py-1 rounded-full">Minor Procedures</span>
                 </div>
-                <Button className="w-full bg-[#00b1c3] hover:bg-[#009bb0] text-white text-sm" asChild>
-                  <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-choong-leat-loh" target="_blank" rel="noopener noreferrer">
-                    Book with Dr Loh
-                  </a>
+                <Button className="w-full bg-[#00b1c3] hover:bg-[#009bb0] text-white text-sm pointer-events-none">
+                  View Profile
                 </Button>
               </div>
-            </div>
+            </Link>
 
             {/* Dr. Quam */}
-            <div className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10">
+            <Link href="/team#dr-quam" className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10 group">
               <div className="aspect-[3/4] overflow-hidden relative">
                 <Image
                   src="/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-115.jpg"
                   alt="Dr. Quam Gbajabiamila"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[#0a2540] mb-1">Dr. Quam Gbajabiamila</h3>
+                <h3 className="text-xl font-bold text-[#0a2540] mb-1 group-hover:text-[#00b1c3] transition-colors">Dr. Quam Gbajabiamila</h3>
                 <p className="text-[#4a4b75] font-semibold text-sm mb-2">General Practitioner</p>
                 <p className="text-xs text-[#425466] mb-4">MBBS, FRACGP</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="text-xs bg-[#00b1c3]/10 text-[#00b1c3] px-2 py-1 rounded-full">Family Medicine</span>
                   <span className="text-xs bg-[#00b1c3]/10 text-[#00b1c3] px-2 py-1 rounded-full">Sports Medicine</span>
                 </div>
-                <Button className="w-full bg-[#00b1c3] hover:bg-[#009bb0] text-white text-sm" asChild>
-                  <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-quam-gbajabiamila" target="_blank" rel="noopener noreferrer">
-                    Book with Dr Quam
-                  </a>
+                <Button className="w-full bg-[#00b1c3] hover:bg-[#009bb0] text-white text-sm pointer-events-none">
+                  View Profile
                 </Button>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="text-center">

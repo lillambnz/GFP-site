@@ -62,7 +62,7 @@ export default function TeamPage() {
             </div>
 
             {/* Dr. Ameer Khan */}
-            <div className="mb-16 bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden border border-[#00b1c3]/10">
+            <div id="dr-khan" className="mb-16 bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden border border-[#00b1c3]/10 scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div>
                   <PhotoGallery photos={doctorPhotos.khan} columns={2} showLightbox={true} />
@@ -114,7 +114,7 @@ export default function TeamPage() {
             </div>
 
             {/* Dr. Fazilah Abu Bakar */}
-            <div className="mb-16 bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden border border-[#00b1c3]/10">
+            <div id="dr-fazilah" className="mb-16 bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden border border-[#00b1c3]/10 scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div className="order-2 lg:order-1 flex flex-col justify-center">
                   <div className="flex items-center gap-2 mb-3">
@@ -165,7 +165,7 @@ export default function TeamPage() {
             </div>
 
             {/* Dr. Choong Leat Loh */}
-            <div className="mb-16 bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden border border-[#00b1c3]/10">
+            <div id="dr-loh" className="mb-16 bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden border border-[#00b1c3]/10 scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div>
                   <PhotoGallery photos={doctorPhotos.loh} columns={2} showLightbox={true} />
@@ -216,7 +216,7 @@ export default function TeamPage() {
             </div>
 
             {/* Dr. Quam Gbajabiamila */}
-            <div className="mb-16 bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden border border-[#00b1c3]/10">
+            <div id="dr-quam" className="mb-16 bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden border border-[#00b1c3]/10 scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div className="order-2 lg:order-1 flex flex-col justify-center">
                   <div className="flex items-center gap-2 mb-3">
