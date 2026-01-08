@@ -50,7 +50,8 @@ export function PhotoGallery({ photos, columns = 4, showLightbox = true }: Photo
               src={photo.src}
               alt={photo.alt}
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              quality={95}
               className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -97,6 +98,7 @@ export function PhotoGallery({ photos, columns = 4, showLightbox = true }: Photo
               alt={photos[selectedPhoto].alt}
               width={1920}
               height={1080}
+              quality={95}
               className="object-contain max-w-full max-h-full"
             />
           </div>
