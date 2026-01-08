@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://gosnellsfamilypractice.com.au/sitemap.xml',
+    sitemap: 'https://www.gosnellsfamilypractice.com.au/sitemap.xml',
   }
 }

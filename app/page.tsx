@@ -50,12 +50,12 @@ export default function Home() {
 
   // Clinic Photos for Gallery
   const clinicPhotos = [
-    { src: "/images/photoshoot/reception/GosnellsFamilyPractice-109.jpg", alt: "Reception Area", category: "Reception" },
-    { src: "/images/photoshoot/reception/GosnellsFamilyPractice-23.jpg", alt: "Front Desk", category: "Reception" },
-    { src: "/images/photoshoot/lab/GosnellsFamilyPractice-136.jpg", alt: "Clinical Laboratory", category: "Lab" },
-    { src: "/images/photoshoot/lab/GosnellsFamilyPractice-140.jpg", alt: "Lab Equipment", category: "Lab" },
-    { src: "/images/photoshoot/treatment-room/GosnellsFamilyPractice-93.jpg", alt: "Treatment Room", category: "Treatment" },
-    { src: "/images/photoshoot/treatment-room/GosnellsFamilyPractice-95.jpg", alt: "Medical Equipment", category: "Treatment" }
+    { src: "/images/photoshoot/reception/GosnellsFamilyPractice-109.jpg", alt: "Warm and welcoming reception area at Gosnells Family Practice", category: "Reception" },
+    { src: "/images/photoshoot/reception/GosnellsFamilyPractice-23.jpg", alt: "The front desk at Gosnells Family Practice, where our friendly staff is ready to assist you", category: "Reception" },
+    { src: "/images/photoshoot/lab/GosnellsFamilyPractice-136.jpg", alt: "A modern clinical laboratory at Gosnells Family Practice, equipped for a variety of tests", category: "Lab" },
+    { src: "/images/photoshoot/lab/GosnellsFamilyPractice-140.jpg", alt: "Advanced lab equipment at Gosnells Family Practice, ensuring accurate and timely results", category: "Lab" },
+    { src: "/images/photoshoot/treatment-room/GosnellsFamilyPractice-93.jpg", alt: "A clean and private treatment room at Gosnells Family Practice", category: "Treatment" },
+    { src: "/images/photoshoot/treatment-room/GosnellsFamilyPractice-95.jpg", alt: "State-of-the-art medical equipment in a treatment room at Gosnells Family Practice", category: "Treatment" }
   ]
 
   return (
@@ -104,7 +104,7 @@ export default function Home() {
                     {service.image ? (
                       <Image
                         src={service.image}
-                        alt={service.title}
+                        alt={`${service.title} service at Gosnells Family Practice`}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
