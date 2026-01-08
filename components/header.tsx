@@ -14,13 +14,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-8">
           {/* Logo and Branding */}
-          <a href="/" className="flex items-center gap-3 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity">
+          <a href="/" className="flex items-center gap-3 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity mr-4">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GFPlogo-XmsNsFYlBTa0JzThg7OtQk5oqJxTzJ.avif"
+              src="https://i.ibb.co/N6J8rcPS/newgfplogo.jpg"
               alt="Gosnells Family Practice Logo"
-              width={60}
-              height={60}
-              className="h-14 w-auto"
+              width={70}
+              height={70}
+              className="h-16 w-auto"
             />
           </a>
 
