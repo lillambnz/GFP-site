@@ -14,13 +14,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-8">
           {/* Logo and Branding */}
-          <a href="/" className="flex items-center gap-3 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity mr-4">
+          <a href="/" className="flex items-center gap-3 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity mr-6">
             <Image
               src="https://i.ibb.co/N6J8rcPS/newgfplogo.jpg"
               alt="Gosnells Family Practice Logo"
-              width={70}
-              height={70}
-              className="h-16 w-auto"
+              width={140}
+              height={140}
+              className="h-32 w-auto"
             />
           </a>
 
