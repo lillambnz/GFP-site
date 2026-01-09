@@ -138,15 +138,6 @@ export const staff: StaffMember[] = [
     availability: "By GP referral to MindSpot"
   },
   {
-    name: "Aisis Tagudar",
-    role: "Nurse",
-    qualifications: "Bachelor of Nursing, RN",
-    specialties: ["Chronic Disease Management", "Health Assessments", "Patient Education", "Preventative Care"],
-    biography: "Aisis holds a Bachelor of Nursing, and she is a compassionate and experienced Registered Nurse with a strong commitment to providing high-quality, patient-centred care. She works closely with general practitioners and allied health professionals to support patients in managing acute and chronic health conditions across the lifespan. She has vast experience working in general practice and primary healthcare settings, providing clinical support, health education, and preventative care. Her role includes assisting with chronic disease management, health assessments, and patient education to promote long-term wellbeing. She believes in delivering care that is respectful, culturally sensitive, and tailored to each patient's individual needs. She aims to create a supportive and welcoming environment where patients feel comfortable, informed, and involved in their healthcare decisions.",
-    image: "/images/team/nurse.jpg",
-    availability: "Monday-Friday"
-  },
-  {
     name: "Jennifer Watson",
     role: "Nurse",
     qualifications: "Bachelor of Nursing, RN",
