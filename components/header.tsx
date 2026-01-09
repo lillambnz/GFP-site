@@ -91,7 +91,7 @@ export default function Header() {
                 <a href="/after-hours" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#4a4b75]/5 transition">
                   After Hours
                 </a>
-                <a href="/#contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#4a4b75]/5 transition">
+                <a href="mailto:reception@gosnellsfamilypractice.com.au" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#4a4b75]/5 transition">
                   Contact
                 </a>
               </div>
