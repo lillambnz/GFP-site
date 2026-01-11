@@ -106,11 +106,11 @@ export default function PatientInformationSection() {
             >
               Fees & Billing
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="services"
               className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#00b1c3]/20 data-[state=active]:to-blue-400/10 data-[state=active]:text-[#00b1c3] data-[state=active]:font-semibold"
             >
-              Services
+              Clinic hours
             </TabsTrigger>
             <TabsTrigger 
               value="faqs"
