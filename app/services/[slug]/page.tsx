@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       'Dr Ameer Khan',
       'integrative GP Gosnells',
       'chronic pain treatment Gosnells',
-      'TGA approved doctor Perth',
+      'integrative medicine doctor Perth',
       'natural health GP Gosnells',
       'alternative health Maddington',
       'holistic healthcare Thornlie',

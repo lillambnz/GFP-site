@@ -100,7 +100,7 @@ export default function TeamPage() {
 
                   <div className="mb-6">
                     <p className="text-[#425466] leading-relaxed">
-                      Dr. Ameer Khan is a highly skilled, all-rounded and compassionate GP dedicated to providing exceptional medical care. Dr Khan has a wealth of experience in all areas of primary care including minor illness, minor injuries, workers compensation, and has a specialist interest in chronic disease management and integrative medicine approaches. As a TGA-authorized prescriber, Dr Khan combines evidence-based conventional medicine with complementary therapies to provide holistic, patient-centered care. Known for his expertise, professionalism, and excellent bedside manner, Dr Khan has earned the trust and respect of his patients. He believes in addressing the whole person - physical, emotional, and lifestyle factors - taking the time to listen to his patients' concerns, understand their unique needs, and develop personalised treatment plans.
+                      Dr. Ameer Khan is a highly skilled, all-rounded and compassionate GP dedicated to providing exceptional medical care. Dr Khan has a wealth of experience in all areas of primary care including minor illness, minor injuries, workers compensation, and has a specialist interest in chronic disease management and integrative medicine approaches. Dr Khan combines evidence-based conventional medicine with alternative and integrative health approaches to provide holistic, patient-centered care. Known for his expertise, professionalism, and excellent bedside manner, Dr Khan has earned the trust and respect of his patients. He believes in addressing the whole person - physical, emotional, and lifestyle factors - taking the time to listen to his patients' concerns, understand their unique needs, and develop personalised treatment plans.
                     </p>
                   </div>
 
@@ -110,7 +110,7 @@ export default function TeamPage() {
                       <span className="text-lg">✨</span> Now Offering Alternative & Integrative Medicine
                     </p>
                     <p className="text-sm text-[#425466] mb-3">
-                      Evidence-based complementary therapies combined with conventional GP care. Dr Khan is a TGA-authorized prescriber offering integrative approaches to chronic pain, functional medicine, and holistic healthcare.
+                      Evidence-based complementary therapies combined with conventional GP care. Dr Khan offers alternative and integrative approaches to chronic pain, functional medicine, and holistic healthcare.
                     </p>
                     <a
                       href="/services/alternative-medicine-gosnells"

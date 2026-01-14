@@ -303,20 +303,9 @@ Our Integrative Medicine Services Include:
 • Mind-body medicine techniques
 • Collaborative care with allied health professionals
 
-TGA-Authorized Therapeutic Services:
-Dr. Ameer Khan is authorized under the Therapeutic Goods Administration (TGA) Special Access Scheme to prescribe therapeutic products for eligible patients with qualifying medical conditions.
+Dr. Khan combines his FRACGP qualifications and extensive experience in chronic disease management with specialized training in integrative medicine to provide holistic, evidence-based care tailored to your individual needs.
 
-Patients may be eligible if they have:
-• A diagnosed medical condition lasting 3+ months
-• Inadequate response to conventional first-line treatments
-• Experienced unacceptable side effects from standard therapies
-• A condition recognized under TGA Special Access provisions
-
-Qualifying conditions may include chronic pain, epilepsy (certain forms), chemotherapy-related nausea, multiple sclerosis spasticity, and other TGA-approved conditions.
-
-Important: All prescriptions are subject to TGA approval under the Special Access Scheme (Category B) or Authorized Prescriber pathways. An initial consultation is required to assess eligibility. Due to TGA regulations, we cannot advertise specific therapeutic products directly. For information about treatment options for your specific condition, please book a confidential consultation.
-
-Dr. Khan combines his FRACGP qualifications and extensive experience in chronic disease management with specialized training in integrative medicine to provide holistic, evidence-based care tailored to your individual needs.`,
+Book an extended consultation to discuss how alternative and integrative approaches may complement your healthcare journey.`,
     practitioners: ['Dr. Ameer Khan MRCGP, MBBS, FRACGP'],
     availability: 'Monday-Friday',
     bookingInfo: 'Book an extended consultation to discuss integrative treatment options',
@@ -327,7 +316,7 @@ Dr. Khan combines his FRACGP qualifications and extensive experience in chronic 
       'Nutritional Medicine',
       'Lifestyle Medicine',
       'Evidence-Based Herbal Medicine',
-      'TGA-Authorized Therapeutic Prescriptions',
+      'Holistic Health Assessments',
       'Integrative Chronic Disease Management'
     ]
   },
