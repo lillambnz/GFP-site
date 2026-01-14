@@ -12,6 +12,7 @@ import { services } from "@/lib/data/services"
 import { doctors } from "@/lib/data/team"
 import { getLatestBlogPosts } from "@/lib/data/blog-posts"
 import { Heart, Award, Users, Clock, ArrowRight, Calendar, User } from "lucide-react"
+import { GoogleReviewsSection } from "@/components/google-reviews-section"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -271,6 +272,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Google Reviews Section */}
+      <GoogleReviewsSection />
 
       {/* Latest Blog Posts */}
       <section className="py-20 bg-white/10">

@@ -100,8 +100,25 @@ export default function TeamPage() {
 
                   <div className="mb-6">
                     <p className="text-[#425466] leading-relaxed">
-                      Dr. Ameer Khan is a highly skilled, all rounded and compassionate GP dedicated to providing exceptional medical care. Dr Khan has a wealth of experience in all areas of primary care including minor illness, minor injuries, workers compensation, and has a specialist interest in chronic disease management. Known for his expertise, professionalism, and excellent bedside manner, Dr Khan has earned the trust and respect of his patients. He believes in a patient-centred approach, taking the time to listen to his patients' concerns, understand their unique needs, and develop personalised treatment plans.
+                      Dr. Ameer Khan is a highly skilled, all-rounded and compassionate GP dedicated to providing exceptional medical care. Dr Khan has a wealth of experience in all areas of primary care including minor illness, minor injuries, workers compensation, and has a specialist interest in chronic disease management and integrative medicine approaches. As a TGA-authorized prescriber, Dr Khan combines evidence-based conventional medicine with complementary therapies to provide holistic, patient-centered care. Known for his expertise, professionalism, and excellent bedside manner, Dr Khan has earned the trust and respect of his patients. He believes in addressing the whole person - physical, emotional, and lifestyle factors - taking the time to listen to his patients' concerns, understand their unique needs, and develop personalised treatment plans.
                     </p>
+                  </div>
+
+                  {/* Alternative Medicine Specialty Highlight */}
+                  <div className="mb-6 p-4 bg-gradient-to-r from-[#00b1c3]/10 to-[#4a4b75]/10 rounded-2xl border border-[#00b1c3]/20">
+                    <p className="text-sm font-semibold text-[#0a2540] mb-2 flex items-center gap-2">
+                      <span className="text-lg">✨</span> Now Offering Alternative & Integrative Medicine
+                    </p>
+                    <p className="text-sm text-[#425466] mb-3">
+                      Evidence-based complementary therapies combined with conventional GP care. Dr Khan is a TGA-authorized prescriber offering integrative approaches to chronic pain, functional medicine, and holistic healthcare.
+                    </p>
+                    <a
+                      href="/services/alternative-medicine-gosnells"
+                      className="text-sm text-[#00b1c3] hover:text-[#009bb0] font-semibold underline inline-flex items-center gap-1"
+                    >
+                      Learn more about these services
+                      <span className="text-xs">→</span>
+                    </a>
                   </div>
 
                   <Button className="bg-[#00b1c3] hover:bg-[#009bb0] text-white text-lg px-8 py-6" asChild>

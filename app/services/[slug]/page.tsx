@@ -18,10 +18,32 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!service) return {}
 
+  // Enhanced keywords for alternative medicine page
+  let keywords = [service.title, 'Gosnells', 'medical centre', service.category, 'Perth', 'WA', 'bulk billing']
+
+  if (slug === 'alternative-medicine-gosnells') {
+    keywords = [
+      'alternative medicine Gosnells',
+      'integrative medicine Perth',
+      'holistic doctor Gosnells',
+      'complementary medicine WA',
+      'functional medicine Perth',
+      'Dr Ameer Khan',
+      'integrative GP Gosnells',
+      'chronic pain treatment Gosnells',
+      'TGA approved doctor Perth',
+      'natural health GP Gosnells',
+      'alternative health Maddington',
+      'holistic healthcare Thornlie',
+      'evidence-based alternative therapy',
+      'integrative pain management'
+    ]
+  }
+
   return {
     title: `${service.title} | Gosnells Family Practice`,
     description: `${service.description} Expert ${service.title.toLowerCase()} in Gosnells. Book online or call (08) 6118 2788.`,
-    keywords: [service.title, 'Gosnells', 'medical centre', service.category, 'Perth', 'WA', 'bulk billing'],
+    keywords,
     alternates: {
       canonical: `https://gosnellsfamilypractice.com.au/services/${slug}`
     },

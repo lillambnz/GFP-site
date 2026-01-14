@@ -34,8 +34,8 @@ export const doctors: Doctor[] = [
     gender: "Male",
     qualifications: "MRCGP, MBBS, FRACGP",
     languages: ["Arabic", "Hindi", "Pashto", "Urdu"],
-    specialInterests: ["Chronic Disease Management", "Pain Management", "Mental Health", "Child and Family Health", "Childhood Immunisations"],
-    biography: "Dr. Ameer Khan is a highly skilled, all rounded and compassionate GP dedicated to providing exceptional medical care. Dr Khan has a wealth of experience in all areas of primary care including minor illness, minor injuries, workers compensation, and has a specialist interest in chronic disease management. Known for his expertise, professionalism, and excellent bedside manner, Dr Khan has earned the trust and respect of his patients. He believes in a patient-centred approach, taking the time to listen to his patients' concerns, understand their unique needs, and develop personalised treatment plans.",
+    specialInterests: ["Chronic Disease Management", "Pain Management", "Mental Health", "Child and Family Health", "Childhood Immunisations", "Alternative & Integrative Medicine", "Functional Medicine"],
+    biography: "Dr. Ameer Khan is a highly skilled, all-rounded and compassionate GP dedicated to providing exceptional medical care. Dr Khan has a wealth of experience in all areas of primary care including minor illness, minor injuries, workers compensation, and has a specialist interest in chronic disease management and integrative medicine approaches. As a TGA-authorized prescriber, Dr Khan combines evidence-based conventional medicine with complementary therapies to provide holistic, patient-centered care. Known for his expertise, professionalism, and excellent bedside manner, Dr Khan has earned the trust and respect of his patients. He believes in addressing the whole person - physical, emotional, and lifestyle factors - taking the time to listen to his patients' concerns, understand their unique needs, and develop personalised treatment plans.",
     availability: "Monday-Friday",
     status: "Available",
     rating: 4.9,
@@ -135,6 +135,15 @@ export const staff: StaffMember[] = [
     specialties: ["Mental Health Disorders", "ADHD", "Sleep Difficulties", "LGBTQI+ Support"],
     biography: "Bianca MacIntyre is a Provisional Psychologist employed by ORS who takes a warm, person-centred approach to therapy, ensuring clients across the lifespan feel heard, respected, and empowered. Bianca strongly believes in individual autonomy and values collaborative decision-making in all aspects of care. She has a particular interest in working with individuals experiencing mental health disorders, ADHD, and sleep-related difficulties. She also has a strong commitment to inclusive practice and supporting LGBTQI+ individuals, as well as Aboriginal and Torres Strait Islander people. Her therapeutic approach is evidence-based and flexible, drawing on a range of modalities including Cognitive Behaviour Therapy (CBT), Mindfulness-Based CBT, Acceptance and Commitment Therapy (ACT), Dialectical Behaviour Therapy (DBT), and Narrative Therapy. Gosnells Family Practice hosts WAPHA commissioned ORS/MindSpot clinics for eligible patients. Referrals are made by GPs through approved channels direct to MindSpot.",
     image: "https://ui-avatars.com/api/?name=Bianca+MacIntyre&size=400&background=00b1c3&color=fff&bold=true&font-size=0.4",
+    availability: "By GP referral to MindSpot"
+  },
+  {
+    name: "Rayan (Ray) Tiba",
+    role: "Psychologist",
+    qualifications: "Registered Psychologist",
+    specialties: ["Mental Health Disorders", "Stress Management", "Interpersonal Conflict", "Behavioural Challenges", "Inclusive Practice", "All Ages and Abilities"],
+    biography: "Rayan (Ray) Tiba is a Registered Psychologist employed by ORS who takes a collaborative, person-centred approach to therapy and is passionate about working with clients of all ages, abilities, and presentations.\n\nRay strongly values collaborative decision-making across the therapy journey. Ray has a particular interest in working with individuals experiencing mental health disorders, stress, interpersonal conflict, and behavioural challenges. She also has a strong commitment to inclusive practice and supporting people of all genders and nationalities.\n\nHer therapeutic approach is evidence-based, drawing on a range of modalities including Cognitive Behaviour Therapy (CBT), Interpersonal Therapy, Acceptance and Commitment Therapy (ACT), Dialectical Behaviour Therapy (DBT), and Narrative Therapy.\n\nGosnells Family Practice hosts WAPHA-commissioned ORS/MindSpot clinics for eligible patients. Referrals are made by GPs through approved channels direct to MindSpot. ORS does not accept direct referrals. Patients wishing to see Ray may seek a GP referral to MindSpot GP, a free government funded mental health service for low to moderate mental health presentations. Upon receiving the referral, MindSpot will contact the patient and assess suitability for in-person/telehealth services with ORS.\n\nPlease note that although Ray is a Registered Psychologist, patients seeing her are currently not eligible for Medicare rebates.",
+    image: "https://ui-avatars.com/api/?name=Rayan+Tiba&size=400&background=00b1c3&color=fff&bold=true&font-size=0.4",
     availability: "By GP referral to MindSpot"
   },
   {

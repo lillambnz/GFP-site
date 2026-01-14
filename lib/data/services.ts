@@ -284,6 +284,53 @@ export const services: Service[] = [
     bookingInfo: 'Book a driver medical assessment - bring your license',
     image: '/images/services/occupationalhealth.jpg'
   },
+
+  // Integrative Healthcare
+  {
+    slug: 'alternative-medicine-gosnells',
+    category: 'Integrative Healthcare',
+    icon: Activity,
+    title: 'Alternative Medicine & Integrative Healthcare',
+    description: 'Evidence-based complementary therapies combined with conventional GP care in Gosnells',
+    details: `Dr. Ameer Khan provides comprehensive integrative healthcare combining the best of conventional medicine with evidence-based complementary therapies. This patient-centered approach addresses the whole person - physical, emotional, and lifestyle factors.
+
+Our Integrative Medicine Services Include:
+• Chronic pain management with integrative approaches
+• Functional medicine assessments
+• Nutritional medicine consultations
+• Lifestyle medicine interventions
+• Evidence-based herbal medicine
+• Mind-body medicine techniques
+• Collaborative care with allied health professionals
+
+TGA-Authorized Therapeutic Services:
+Dr. Ameer Khan is authorized under the Therapeutic Goods Administration (TGA) Special Access Scheme to prescribe therapeutic products for eligible patients with qualifying medical conditions.
+
+Patients may be eligible if they have:
+• A diagnosed medical condition lasting 3+ months
+• Inadequate response to conventional first-line treatments
+• Experienced unacceptable side effects from standard therapies
+• A condition recognized under TGA Special Access provisions
+
+Qualifying conditions may include chronic pain, epilepsy (certain forms), chemotherapy-related nausea, multiple sclerosis spasticity, and other TGA-approved conditions.
+
+Important: All prescriptions are subject to TGA approval under the Special Access Scheme (Category B) or Authorized Prescriber pathways. An initial consultation is required to assess eligibility. Due to TGA regulations, we cannot advertise specific therapeutic products directly. For information about treatment options for your specific condition, please book a confidential consultation.
+
+Dr. Khan combines his FRACGP qualifications and extensive experience in chronic disease management with specialized training in integrative medicine to provide holistic, evidence-based care tailored to your individual needs.`,
+    practitioners: ['Dr. Ameer Khan MRCGP, MBBS, FRACGP'],
+    availability: 'Monday-Friday',
+    bookingInfo: 'Book an extended consultation to discuss integrative treatment options',
+    image: '/images/services/alternative-medicine.jpg',
+    subServices: [
+      'Chronic Pain Management',
+      'Functional Medicine Consultations',
+      'Nutritional Medicine',
+      'Lifestyle Medicine',
+      'Evidence-Based Herbal Medicine',
+      'TGA-Authorized Therapeutic Prescriptions',
+      'Integrative Chronic Disease Management'
+    ]
+  },
 ]
 
 export const serviceCategories = [
@@ -297,6 +344,7 @@ export const serviceCategories = [
   'Chronic Care',
   'Procedures',
   'Occupational Health',
+  'Integrative Healthcare',
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {

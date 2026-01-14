@@ -32,6 +32,11 @@ export const metadata: Metadata = {
 
   authors: [{ name: 'Gosnells Family Practice' }],
 
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
+
   openGraph: {
     type: 'website',
     locale: 'en_AU',
