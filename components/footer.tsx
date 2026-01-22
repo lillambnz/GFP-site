@@ -42,6 +42,16 @@ export default function Footer() {
                   <p className="text-gray-400 text-sm">Gosnells, WA</p>
                 </div>
               </div>
+
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-[#6b6d95]" />
+                <div>
+                  <a href="mailto:reception@gosnellsfamilypractice.com.au" className="text-white font-semibold hover:text-[#00b1c3] transition-colors">
+                    reception@gosnellsfamilypractice.com.au
+                  </a>
+                  <p className="text-gray-400 text-sm">Email us</p>
+                </div>
+              </div>
             </div>
           </div>
 
