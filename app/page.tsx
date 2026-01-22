@@ -64,7 +64,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Gallery - Large Photo Focus */}
-      <section className="container mx-auto px-4 lg:px-8 pt-24 pb-8">
+      <section className="container mx-auto px-4 lg:px-8 pt-8 pb-8">
         <HeroGallery photos={heroPhotos} height="h-[75vh]" />
       </section>
 
