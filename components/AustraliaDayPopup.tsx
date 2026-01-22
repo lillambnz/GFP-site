@@ -43,13 +43,13 @@ export default function AustraliaDayPopup() {
         }`}
       >
         <div
-          className="relative pointer-events-auto w-full max-w-lg"
+          className="relative pointer-events-auto w-full max-w-md"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Main Card */}
-          <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
+          <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
             {/* Decorative Top Wave with Australia Day Colors */}
-            <div className="relative h-32 bg-gradient-to-br from-blue-600 via-blue-500 to-red-500 overflow-hidden">
+            <div className="relative h-24 bg-gradient-to-br from-blue-600 via-blue-500 to-red-500 overflow-hidden">
               {/* Southern Cross Stars */}
               <div className="absolute top-4 left-6 w-2 h-2 bg-white rounded-full shadow-lg animate-pulse" style={{ animationDelay: '0ms' }} />
               <div className="absolute top-8 left-12 w-2.5 h-2.5 bg-white rounded-full shadow-lg animate-pulse" style={{ animationDelay: '200ms' }} />
@@ -77,24 +77,24 @@ export default function AustraliaDayPopup() {
             </div>
 
             {/* Content */}
-            <div className="relative px-8 py-8 pb-10">
+            <div className="relative px-6 py-6 pb-8 text-center">
               {/* Close button */}
               <button
                 onClick={handleClose}
-                className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors group"
+                className="absolute top-3 right-3 p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors group"
                 aria-label="Close popup"
               >
-                <X className="w-5 h-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
+                <X className="w-4 h-4 text-gray-600 group-hover:text-gray-800 transition-colors" />
               </button>
 
               {/* Australia Day Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-red-500 text-white rounded-full text-sm font-semibold mb-6 shadow-lg">
-                <Calendar className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-red-500 text-white rounded-full text-xs font-semibold mb-4 shadow-lg">
+                <Calendar className="w-3.5 h-3.5" />
                 <span>Australia Day 2026</span>
               </div>
 
               {/* Heading */}
-              <h2 className="text-3xl font-bold text-gray-900 mb-3 leading-tight">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2 leading-tight">
                 We're Open on<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-red-500">
                   Australia Day!
@@ -102,42 +102,42 @@ export default function AustraliaDayPopup() {
               </h2>
 
               {/* Subheading */}
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+              <p className="text-gray-600 text-base mb-6 leading-relaxed">
                 Your health doesn't take holidays. We're here to serve you on January 26th.
               </p>
 
               {/* Booking Options */}
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {/* Phone Booking */}
                 <a
                   href="tel:0861182788"
-                  className="group flex items-center gap-4 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 hover:from-blue-100 hover:to-cyan-100 rounded-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 hover:shadow-lg"
+                  className="group flex items-center gap-3 p-3 bg-gradient-to-r from-blue-50 to-cyan-50 hover:from-blue-100 hover:to-cyan-100 rounded-xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 hover:shadow-lg"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
-                    <Phone className="w-6 h-6 text-white" />
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <Phone className="w-5 h-5 text-white" />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm font-medium text-blue-600 mb-0.5">Call to Book</div>
-                    <div className="text-xl font-bold text-gray-900 tracking-wide">(08) 6118 2788</div>
+                  <div className="flex-1 min-w-0 text-left">
+                    <div className="text-xs font-medium text-blue-600 mb-0.5">Call to Book</div>
+                    <div className="text-lg font-bold text-gray-900 tracking-wide">(08) 6118 2788</div>
                   </div>
                 </a>
 
                 {/* Online Booking */}
                 <a
-                  href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice"
+                  href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-4 bg-gradient-to-r from-green-50 to-emerald-50 hover:from-green-100 hover:to-emerald-100 rounded-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 hover:shadow-lg"
+                  className="group flex items-center gap-3 p-3 bg-gradient-to-r from-green-50 to-emerald-50 hover:from-green-100 hover:to-emerald-100 rounded-xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 hover:shadow-lg"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
-                    <Calendar className="w-6 h-6 text-white" />
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <Calendar className="w-5 h-5 text-white" />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm font-medium text-green-600 mb-0.5">Book Online</div>
-                    <div className="text-lg font-semibold text-gray-900">Visit HotDoc</div>
+                  <div className="flex-1 min-w-0 text-left">
+                    <div className="text-xs font-medium text-green-600 mb-0.5">Book Online</div>
+                    <div className="text-base font-semibold text-gray-900">Visit HotDoc</div>
                   </div>
                   <svg
-                    className="w-5 h-5 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all duration-300"
+                    className="w-4 h-4 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all duration-300"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -148,8 +148,8 @@ export default function AustraliaDayPopup() {
               </div>
 
               {/* Footer Note */}
-              <div className="mt-6 pt-6 border-t border-gray-100">
-                <p className="text-sm text-gray-500 text-center">
+              <div className="mt-5 pt-5 border-t border-gray-100">
+                <p className="text-xs text-gray-500 text-center">
                   Regular holiday hours apply • Walk-ins welcome
                 </p>
               </div>
