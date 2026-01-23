@@ -1,55 +1,54 @@
-import Image from "next/image"
+import { Clock, Star, Award, CreditCard } from "lucide-react"
 
 export default function StatsSection() {
   const stats = [
     {
-      image: "/alternate.png",
-      value: "",
-      label: "Alternative Health",
-      color: "from-primary to-primary/50",
+      icon: Clock,
+      value: "Open 7 Days",
+      label: "Including After Hours",
+      color: "text-[#6b6d95]",
+      bgColor: "bg-slate-100",
     },
     {
-      image: "/quitsmoking.png",
-      value: "",
-      label: "Quit Smoking", 
-      color: "from-purple-accent to-purple-accent/50",
+      icon: Star,
+      value: "4.9 Rating",
+      label: "Google Reviews",
+      color: "text-[#6b6d95]",
+      bgColor: "bg-slate-100",
+      fill: true,
     },
     {
-      image: "/weight.png",
-      value: "",
-      label: "Weight Loss",
-      color: "from-accent to-accent/50",
+      icon: Award,
+      value: "Accredited",
+      label: "AGPAL Certified",
+      color: "text-[#6b6d95]",
+      bgColor: "bg-slate-100",
     },
     {
-      image: "/workers.png",
-      value: "",
-      label: "Workers Compensation",
-      color: "from-primary/80 to-purple-accent/80",
+      icon: CreditCard,
+      value: "Bulk Billing",
+      label: "Available*",
+      color: "text-[#6b6d95]",
+      bgColor: "bg-slate-100",
     },
   ]
 
   return (
-    <section className="py-12 md:py-16 bg-transparent">
+    <section className="py-12 bg-white/50 backdrop-blur-sm border-y border-white/20">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, index) => {
+            const Icon = stat.icon
             return (
               <div
                 key={index}
-                className="group p-6 rounded-3xl bg-white/20 backdrop-blur-md hover:bg-white/30 hover:shadow-2xl hover:shadow-[#00b1c3]/25 hover:-translate-y-3 transition-all duration-500 text-center hover:backdrop-blur-lg border-0 shimmer"
+                className="group p-4 md:p-6 rounded-2xl bg-white/40 hover:bg-white/80 transition-all duration-300 flex flex-col items-center text-center border border-white/50 shadow-sm hover:shadow-md hover:-translate-y-1"
               >
-                <div className="relative w-full max-w-[320px] aspect-square mx-auto mb-4 rounded-3xl overflow-hidden bg-white/30 backdrop-blur-sm group-hover:bg-white/40 transition-all duration-300">
-                  <Image
-                    src={stat.image}
-                    alt={stat.label}
-                    fill
-                    className="object-cover"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
+                <div className={`p-3 rounded-xl mb-3 ${stat.bgColor} ${stat.color} group-hover:scale-110 transition-transform duration-300`}>
+                  <Icon className={`w-8 h-8 ${stat.fill ? "fill-current" : ""}`} />
                 </div>
-                <p className="text-xl font-semibold text-muted-foreground">{stat.label}</p>
+                <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-1">{stat.value}</h3>
+                <p className="text-sm text-slate-600 font-medium">{stat.label}</p>
               </div>
             )
           })}

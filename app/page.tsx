@@ -1,5 +1,6 @@
 "use client"
 
+
 import Header from "@/components/header"
 import HeroBanner from "@/components/hero-banner"
 import StatsSection from "@/components/stats-section"
@@ -15,6 +16,8 @@ import { Heart, Award, Users, Clock, ArrowRight, Calendar, User } from "lucide-r
 import { GoogleReviewsSection } from "@/components/google-reviews-section"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { MobileStickyBar } from "@/components/mobile-sticky-bar"
+
 
 export default function Home() {
   const featuredServices = services.slice(0, 6)
@@ -64,25 +67,17 @@ export default function Home() {
       <Header />
 
       {/* Hero Gallery - Large Photo Focus */}
-      <section className="container mx-auto px-4 lg:px-8 pt-8 pb-8">
-        <HeroGallery photos={heroPhotos} height="h-[75vh]" />
+      <section className="relative pt-44 lg:pt-48 pb-10">
+        <HeroGallery photos={heroPhotos} height="h-[85vh]" />
+
+
       </section>
 
-      {/* Our Clinic Gallery Section */}
-      <section className="py-20 bg-white/5">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#0a2540] mb-4">Our Modern Facilities</h2>
-            <p className="text-xl text-[#425466] max-w-2xl mx-auto">
-              Take a virtual tour of our state-of-the-art medical practice
-            </p>
-          </div>
-          <PhotoGallery photos={clinicPhotos} columns={3} />
-        </div>
-      </section>
+      {/* Trust Signals (Stats) - Moved Up */}
+      <StatsSection />
 
-      {/* Featured Services Section */}
-      <section className="py-20 bg-transparent">
+      {/* Featured Services Section - Moved Up */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-[#0a2540] mb-4">Our Medical Services</h2>
@@ -152,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* Featured Doctors Section - Photo Focused */}
-      <section className="py-20 bg-white/10">
+      <section className="py-20 bg-slate-50/50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-[#0a2540] mb-4">Meet Our Expert Medical Team</h2>
@@ -163,7 +158,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Dr. Khan */}
-            <Link href="/team#dr-khan" className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10 group">
+            <Link href="/team#dr-khan" className="bg-white rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100 group">
               <div className="aspect-[3/4] overflow-hidden relative">
                 <Image
                   src="/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-35.jpg"
@@ -188,7 +183,7 @@ export default function Home() {
             </Link>
 
             {/* Dr. Fazilah */}
-            <Link href="/team#dr-fazilah" className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10 group">
+            <Link href="/team#dr-fazilah" className="bg-white rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100 group">
               <div className="aspect-[3/4] overflow-hidden relative">
                 <Image
                   src="/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-64.jpg"
@@ -213,7 +208,7 @@ export default function Home() {
             </Link>
 
             {/* Dr. Loh */}
-            <Link href="/team#dr-loh" className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10 group">
+            <Link href="/team#dr-loh" className="bg-white rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100 group">
               <div className="aspect-[3/4] overflow-hidden relative">
                 <Image
                   src="/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-2.jpg"
@@ -238,7 +233,7 @@ export default function Home() {
             </Link>
 
             {/* Dr. Quam */}
-            <Link href="/team#dr-quam" className="bg-white/20 backdrop-blur-md rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-[#00b1c3]/10 group">
+            <Link href="/team#dr-quam" className="bg-white rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100 group">
               <div className="aspect-[3/4] overflow-hidden relative">
                 <Image
                   src="/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-115.jpg"
@@ -270,6 +265,19 @@ export default function Home() {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Our Clinic Gallery Section - Moved Down */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-[#0a2540] mb-4">Our Modern Facilities</h2>
+            <p className="text-xl text-[#425466] max-w-2xl mx-auto">
+              Take a virtual tour of our state-of-the-art medical practice
+            </p>
+          </div>
+          <PhotoGallery photos={clinicPhotos} columns={3} />
         </div>
       </section>
 
@@ -360,6 +368,8 @@ export default function Home() {
       </section>
 
       <Footer />
+      <MobileStickyBar />
     </div>
+
   )
 }

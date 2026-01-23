@@ -5,11 +5,12 @@ import { usePathname } from "next/navigation"
 import {
   Phone, Menu, X, ChevronDown,
   Stethoscope, Apple, Video, Heart, Activity, Brain, Microscope,
-  Newspaper, Clock, Mail
+  Newspaper, Clock, Mail, Calendar
 } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,416 +33,223 @@ export default function Header() {
     return pathname.startsWith(href)
   }
 
-  const isAboutSectionActive = () => {
-    return pathname === '/about' || pathname === '/team'
-  }
-
   const isMoreSectionActive = () => {
     return pathname === '/blog' || pathname === '/after-hours'
   }
 
-  // Reusable className patterns - Medical Blue Theme
-  const navLinkClasses = (active: boolean) => cn(
-    "relative text-sm font-medium transition-all duration-200",
-    "pb-1 border-b-2",
-    active
-      ? "text-blue-600 border-blue-600"
-      : "text-gray-700 border-transparent hover:text-blue-600 hover:border-blue-300"
-  )
-
-  const dropdownTriggerClasses = (active: boolean) => cn(
-    "relative text-sm font-medium transition-all duration-200 flex items-center gap-1",
-    "pb-1 border-b-2",
-    active
-      ? "text-blue-600 border-blue-600"
-      : "text-gray-700 border-transparent hover:text-blue-600 hover:border-blue-300"
+  // Modern Navigation Link with Pill Hover Effect
+  const NavLink = ({ href, children, active }: { href: string; children: React.ReactNode; active?: boolean }) => (
+    <Link
+      href={href}
+      className={cn(
+        "px-4 py-2 text-sm font-medium rounded-full transition-all duration-300",
+        active
+          ? "bg-blue-50 text-blue-600 shadow-sm"
+          : "text-slate-600 hover:text-blue-600 hover:bg-white/50"
+      )}
+    >
+      {children}
+    </Link>
   )
 
   const dropdownItemClasses = (active: boolean) => cn(
-    "flex items-center gap-3 px-4 py-3 text-sm transition-colors duration-150 group/item",
-    active
-      ? "bg-blue-50 text-blue-600 font-medium"
-      : "text-gray-700 hover:bg-blue-50"
+    "flex items-center gap-3 px-4 py-3 text-sm transition-colors duration-200 hover:bg-slate-50",
+    active ? "text-blue-600 bg-blue-50/50 font-medium" : "text-slate-600"
   )
 
   return (
-    <header className={cn(
-      "sticky top-0 z-50 w-full border-b border-blue-100/50 transition-all duration-300",
-      "bg-gradient-to-r from-slate-50 via-white to-blue-50",
-      isScrolled ? "shadow-md" : ""
-    )}>
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <div className="flex items-center justify-between gap-6">
-          {/* Logo - Reduced size for professional proportion */}
-          <a href="/" className="flex items-center gap-3 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-transparent",
+        isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-slate-200/50 py-4"
+          : "bg-white/50 backdrop-blur-sm py-6"
+      )}
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0 relative group">
             <Image
-              src="https://i.ibb.co/N6J8rcPS/newgfplogo.jpg"
+              src="/logo-transparent.png"
               alt="Gosnells Family Practice Logo"
-              width={256}
-              height={256}
-              className="h-28 lg:h-32 w-auto"
-              quality={100}
+              width={320}
+              height={120}
+              className="h-[7.2rem] md:h-[9.6rem] w-auto transition-transform duration-300 group-hover:scale-105"
+              priority
             />
-          </a>
+          </Link>
 
-          {/* Desktop Navigation - Centered */}
-          <nav className="hidden lg:flex items-center gap-8 flex-1 justify-center">
-            <a href="/" className={navLinkClasses(isActive('/'))}>
-              Home
-            </a>
+          {/* Desktop Navigation - Clean & Centered */}
+          <nav className="hidden lg:flex items-center gap-2 bg-white/50 backdrop-blur-md p-1.5 rounded-full border border-white/20 shadow-sm">
+            <NavLink href="/" active={isActive('/')}>Home</NavLink>
+
+            {/* About Dropdown */}
             <div className="relative group">
-              <button className={dropdownTriggerClasses(isAboutSectionActive())}>
-                About <ChevronDown size={16} />
+              <button className={cn(
+                "flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-full transition-all duration-300",
+                pathname.startsWith('/about') || pathname.startsWith('/team')
+                  ? "bg-blue-50 text-blue-600 shadow-sm"
+                  : "text-slate-600 hover:text-blue-600 hover:bg-white/50"
+              )}>
+                About <ChevronDown className="w-4 h-4 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white border border-blue-100 rounded-lg shadow-lg opacity-0 invisible -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50">
-                <a
-                  href="/about"
-                  className={cn(
-                    "block px-4 py-3 text-sm rounded-t-lg transition-colors duration-150",
-                    isActive('/about')
-                      ? "bg-blue-50 text-blue-600 font-medium"
-                      : "text-gray-700 hover:bg-blue-50"
-                  )}
-                >
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 p-2 z-50">
+                <Link href="/about" className={dropdownItemClasses(isActive('/about') && !isActive('/team')) + " rounded-xl"}>
                   About Us
-                </a>
-                <a
-                  href="/team"
-                  className={cn(
-                    "block px-4 py-3 text-sm rounded-b-lg transition-colors duration-150",
-                    isActive('/team')
-                      ? "bg-blue-50 text-blue-600 font-medium"
-                      : "text-gray-700 hover:bg-blue-50"
-                  )}
-                >
+                </Link>
+                <Link href="/team" className={dropdownItemClasses(isActive('/team')) + " rounded-xl"}>
                   Our Team
-                </a>
+                </Link>
               </div>
             </div>
+
+            {/* Services Dropdown */}
             <div className="relative group">
-              <button className={dropdownTriggerClasses(pathname.startsWith('/services'))}>
-                Services <ChevronDown size={16} />
+              <button className={cn(
+                "flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-full transition-all duration-300",
+                pathname.startsWith('/services')
+                  ? "bg-blue-50 text-blue-600 shadow-sm"
+                  : "text-slate-600 hover:text-blue-600 hover:bg-white/50"
+              )}>
+                Services <ChevronDown className="w-4 h-4 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
               </button>
-              <div className="absolute left-0 mt-2 w-56 bg-white border border-blue-100 rounded-lg shadow-lg opacity-0 invisible -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50">
-                <a
-                  href="/services"
-                  className={cn(
-                    "flex items-center gap-3 px-4 py-3 text-sm rounded-t-lg transition-colors duration-150 font-semibold",
-                    pathname === '/services'
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-700 hover:bg-blue-50"
-                  )}
-                >
-                  All Services
-                </a>
-                <div className="border-t border-blue-50"></div>
-                <a href="/services/general-checkups" className={dropdownItemClasses(pathname === '/services/general-checkups')}>
-                  <Stethoscope className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>General Practice</span>
-                </a>
-                <a href="/services/dietitian-services" className={dropdownItemClasses(pathname === '/services/dietitian-services')}>
-                  <Apple className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>Dietitian Services</span>
-                </a>
-                <a href="/services/telehealth" className={dropdownItemClasses(pathname === '/services/telehealth')}>
-                  <Video className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>Telehealth</span>
-                </a>
-                <a href="/services/womens-health" className={dropdownItemClasses(pathname === '/services/womens-health')}>
-                  <Heart className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>Women's Health</span>
-                </a>
-                <a href="/services/mens-health" className={dropdownItemClasses(pathname === '/services/mens-health')}>
-                  <Activity className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>Men's Health</span>
-                </a>
-                <a href="/services/psychology-services" className={dropdownItemClasses(pathname === '/services/psychology-services')}>
-                  <Brain className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>Psychology</span>
-                </a>
-                <a href="/services/pathology-services" className={cn(dropdownItemClasses(pathname === '/services/pathology-services'), "rounded-b-lg")}>
-                  <Microscope className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>Pathology</span>
-                </a>
+
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white rounded-3xl shadow-xl border border-slate-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 p-3 z-50 grid gap-1">
+                <Link href="/services" className="flex items-center justify-between px-4 py-3 bg-slate-50 hover:bg-blue-50 rounded-xl transition-colors group/link mb-2">
+                  <span className="font-semibold text-slate-700 group-hover/link:text-blue-600">All Services</span>
+                  <ChevronDown className="w-4 h-4 -rotate-90 opacity-50" />
+                </Link>
+
+                <div className="max-h-[60vh] overflow-y-auto pr-1 space-y-1 custom-scrollbar">
+                  {[
+                    { href: '/services/general-checkups', label: 'General Practice', icon: Stethoscope },
+                    { href: '/services/dietitian-services', label: 'Dietitian', icon: Apple },
+                    { href: '/services/telehealth', label: 'Telehealth', icon: Video },
+                    { href: '/services/womens-health', label: "Women's Health", icon: Heart },
+                    { href: '/services/mens-health', label: "Men's Health", icon: Activity },
+                    { href: '/services/psychology-services', label: 'Psychology', icon: Brain },
+                    { href: '/services/pathology-services', label: 'Pathology', icon: Microscope },
+                  ].map((item) => (
+                    <Link key={item.href} href={item.href} className={dropdownItemClasses(isActive(item.href)) + " rounded-xl"}>
+                      <item.icon className="w-4 h-4 text-blue-500/70" />
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
-            <a href="/#patient-info" className={cn(navLinkClasses(false), "whitespace-nowrap")}>
-              Patient Info
-            </a>
-            <a href="/faqs" className={navLinkClasses(isActive('/faqs'))}>
-              FAQs
-            </a>
+
+            <NavLink href="/#patient-info">Patient Info</NavLink>
+            <NavLink href="/faqs" active={isActive('/faqs')}>FAQs</NavLink>
+
             <div className="relative group">
-              <button className={dropdownTriggerClasses(isMoreSectionActive())}>
-                More <ChevronDown size={16} />
+              <button className={cn(
+                "flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-full transition-all duration-300",
+                isMoreSectionActive()
+                  ? "bg-blue-50 text-blue-600 shadow-sm"
+                  : "text-slate-600 hover:text-blue-600 hover:bg-white/50"
+              )}>
+                More <ChevronDown className="w-4 h-4 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white border border-blue-100 rounded-lg shadow-lg opacity-0 invisible -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50">
-                <a
-                  href="/blog"
-                  className={cn(
-                    "flex items-center gap-3 px-4 py-3 text-sm rounded-t-lg transition-colors duration-150 group/item",
-                    isActive('/blog')
-                      ? "bg-blue-50 text-blue-600 font-medium"
-                      : "text-gray-700 hover:bg-blue-50"
-                  )}
-                >
-                  <Newspaper className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>Blog</span>
-                </a>
-                <a
-                  href="/after-hours"
-                  className={cn(
-                    "flex items-center gap-3 px-4 py-3 text-sm transition-colors duration-150 group/item",
-                    isActive('/after-hours')
-                      ? "bg-blue-50 text-blue-600 font-medium"
-                      : "text-gray-700 hover:bg-blue-50"
-                  )}
-                >
-                  <Clock className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>After Hours</span>
-                </a>
-                <a
-                  href="mailto:reception@gosnellsfamilypractice.com.au"
-                  className="flex items-center gap-3 px-4 py-3 text-sm rounded-b-lg text-gray-700 hover:bg-blue-50 transition-colors duration-150 group/item"
-                >
-                  <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span>Contact</span>
-                </a>
+              <div className="absolute top-full right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-100 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 p-2 z-50">
+                <Link href="/blog" className={dropdownItemClasses(isActive('/blog')) + " rounded-xl"}>
+                  <Newspaper className="w-4 h-4 text-blue-500/70" /> Blog
+                </Link>
+                <Link href="/after-hours" className={dropdownItemClasses(isActive('/after-hours')) + " rounded-xl"}>
+                  <Clock className="w-4 h-4 text-blue-500/70" /> After Hours
+                </Link>
+                <Link href="mailto:reception@gosnellsfamilypractice.com.au" className={dropdownItemClasses(false) + " rounded-xl"}>
+                  <Mail className="w-4 h-4 text-blue-500/70" /> Contact Us
+                </Link>
               </div>
             </div>
           </nav>
 
-          {/* Phone and CTA - Right aligned */}
-          <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
+          {/* Right Area: Call & Book */}
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href="tel:0861182788"
-              className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-blue-600 transition"
+              className="hidden xl:flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 bg-white/50 hover:bg-white rounded-full transition-all border border-transparent hover:border-slate-200"
             >
-              <Phone size={16} className="text-blue-600" />
-              <span>(08) 6118 2788</span>
+              <Phone className="w-4 h-4" />
+              <span className="tracking-wide">(08) 6118 2788</span>
             </a>
-            <Button className="bg-blue-600 text-white hover:bg-blue-700 font-semibold px-5 py-2 rounded-lg shadow-sm" asChild>
+            <Button
+              className="rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 px-6"
+              asChild
+            >
               <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
-                Book Appointment
+                <Calendar className="w-4 h-4 mr-2" />
+                Book Now
               </a>
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Toggle */}
           <button
-            className="lg:hidden text-gray-700 hover:text-blue-600 transition"
+            className="lg:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-full transition-colors"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <nav className="lg:hidden mt-4 space-y-2 pb-4">
-            <a
-              href="/"
-              className={cn(
-                "block px-4 py-2 text-base font-medium rounded transition-colors duration-200 border-l-4",
-                isActive('/')
-                  ? "border-blue-600 bg-blue-50 text-blue-600"
-                  : "border-transparent text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              )}
-            >
+      {/* Modern Mobile Menu Overlay */}
+      <div className={cn(
+        "fixed inset-x-0 top-[140px] bottom-0 bg-white/95 backdrop-blur-xl z-40 lg:hidden transition-all duration-300 ease-in-out border-t border-slate-100 overflow-y-auto",
+        isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+      )}>
+        <div className="p-6 space-y-6">
+          <div className="space-y-2">
+            <Link href="/" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-medium text-slate-800 hover:bg-slate-50 rounded-xl transition-colors">
               Home
-            </a>
-            <a
-              href="/about"
-              className={cn(
-                "block px-4 py-2 text-base font-medium rounded transition-colors duration-200 border-l-4",
-                isActive('/about')
-                  ? "border-blue-600 bg-blue-50 text-blue-600"
-                  : "border-transparent text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              )}
-            >
+            </Link>
+            <Link href="/about" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-medium text-slate-800 hover:bg-slate-50 rounded-xl transition-colors">
               About Us
-            </a>
-            <a
-              href="/team"
-              className={cn(
-                "block px-4 py-2 text-base font-medium rounded transition-colors duration-200 border-l-4",
-                isActive('/team')
-                  ? "border-blue-600 bg-blue-50 text-blue-600"
-                  : "border-transparent text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              )}
-            >
-              Our Team
-            </a>
-            <button
-              onClick={() => setServicesOpen(!servicesOpen)}
-              className={cn(
-                "w-full text-left px-4 py-2 text-base font-medium rounded transition-colors duration-200 flex items-center justify-between border-l-4",
-                pathname.startsWith('/services')
-                  ? "border-blue-600 bg-blue-50 text-blue-600"
-                  : "border-transparent text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              )}
-            >
-              Services <ChevronDown size={18} className={cn("transition-transform duration-200", servicesOpen ? "rotate-180" : "")} />
-            </button>
-            {servicesOpen && (
-              <div className="pl-4 space-y-1">
-                <a
-                  href="/services"
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded transition-colors duration-150 font-semibold",
-                    pathname === '/services'
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  )}
-                >
-                  All Services
-                </a>
-                <a
-                  href="/services/general-checkups"
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded transition-colors duration-150",
-                    pathname === '/services/general-checkups'
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  )}
-                >
-                  <Stethoscope className="w-4 h-4" />
-                  General Practice
-                </a>
-                <a
-                  href="/services/dietitian-services"
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded transition-colors duration-150",
-                    pathname === '/services/dietitian-services'
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  )}
-                >
-                  <Apple className="w-4 h-4" />
-                  Dietitian Services
-                </a>
-                <a
-                  href="/services/telehealth"
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded transition-colors duration-150",
-                    pathname === '/services/telehealth'
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  )}
-                >
-                  <Video className="w-4 h-4" />
-                  Telehealth
-                </a>
-                <a
-                  href="/services/womens-health"
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded transition-colors duration-150",
-                    pathname === '/services/womens-health'
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  )}
-                >
-                  <Heart className="w-4 h-4" />
-                  Women's Health
-                </a>
-                <a
-                  href="/services/mens-health"
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded transition-colors duration-150",
-                    pathname === '/services/mens-health'
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  )}
-                >
-                  <Activity className="w-4 h-4" />
-                  Men's Health
-                </a>
-                <a
-                  href="/services/psychology-services"
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded transition-colors duration-150",
-                    pathname === '/services/psychology-services'
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  )}
-                >
-                  <Brain className="w-4 h-4" />
-                  Psychology
-                </a>
-                <a
-                  href="/services/pathology-services"
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded transition-colors duration-150",
-                    pathname === '/services/pathology-services'
-                      ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                  )}
-                >
-                  <Microscope className="w-4 h-4" />
-                  Pathology
-                </a>
-              </div>
-            )}
-            <a
-              href="/#patient-info"
-              className={cn(
-                "block px-4 py-2 text-base font-medium rounded transition-colors duration-200 border-l-4",
-                "border-transparent text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              )}
-            >
-              Patient Info
-            </a>
-            <a
-              href="/faqs"
-              className={cn(
-                "block px-4 py-2 text-base font-medium rounded transition-colors duration-200 border-l-4",
-                isActive('/faqs')
-                  ? "border-blue-600 bg-blue-50 text-blue-600"
-                  : "border-transparent text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              )}
-            >
-              FAQs
-            </a>
-            <a
-              href="/blog"
-              className={cn(
-                "block px-4 py-2 text-base font-medium rounded transition-colors duration-200 border-l-4",
-                isActive('/blog')
-                  ? "border-blue-600 bg-blue-50 text-blue-600"
-                  : "border-transparent text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              )}
-            >
-              Blog
-            </a>
-            <a
-              href="/after-hours"
-              className={cn(
-                "block px-4 py-2 text-base font-medium rounded transition-colors duration-200 border-l-4",
-                isActive('/after-hours')
-                  ? "border-blue-600 bg-blue-50 text-blue-600"
-                  : "border-transparent text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-              )}
-            >
-              After Hours
-            </a>
-            <div className="pt-2 space-y-2 mt-4 border-t border-blue-100">
-              <a
-                href="tel:0861182788"
-                className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition"
+            </Link>
+
+            {/* Mobile Services Accordion-style */}
+            <div className="space-y-1">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="w-full flex items-center justify-between px-4 py-3 text-lg font-medium text-slate-800 hover:bg-slate-50 rounded-xl transition-colors"
               >
-                <Phone size={16} />
-                (08) 6118 2788
-              </a>
-              <Button className="w-full bg-blue-600 text-white hover:bg-blue-700 rounded-lg" asChild>
-                <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
-                  Book Appointment
-                </a>
-              </Button>
+                Our Services
+                <ChevronDown className={cn("w-5 h-5 transition-transform", servicesOpen && "rotate-180")} />
+              </button>
+
+              <div className={cn("pl-4 space-y-1 overflow-hidden transition-all duration-300", servicesOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0")}>
+                <Link href="/services" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-blue-600 font-medium">View All Services</Link>
+                <Link href="/services/general-checkups" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-slate-600">General Practice</Link>
+                <Link href="/services/womens-health" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-slate-600">Women's Health</Link>
+                <Link href="/services/mens-health" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-slate-600">Men's Health</Link>
+              </div>
             </div>
-          </nav>
-        )}
+
+            <Link href="/blog" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-medium text-slate-800 hover:bg-slate-50 rounded-xl transition-colors">
+              Blog & News
+            </Link>
+            <Link href="/faqs" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-medium text-slate-800 hover:bg-slate-50 rounded-xl transition-colors">
+              FAQs
+            </Link>
+          </div>
+
+          <div className="pt-6 border-t border-slate-100 space-y-4">
+            <a href="tel:0861182788" className="flex items-center justify-center gap-2 w-full py-3 rounded-full border border-slate-200 text-slate-700 font-medium hover:bg-slate-50 transition-colors">
+              <Phone className="w-5 h-5" /> Call Reception
+            </a>
+            <Button className="w-full rounded-full py-6 text-lg bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200">
+              <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
+                Book Appointment Now
+              </a>
+            </Button>
+          </div>
+        </div>
       </div>
     </header>
   )
 }
+

@@ -30,17 +30,15 @@ export default function AustraliaDayPopup() {
     <>
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-50 transition-opacity duration-400 ${
-          isClosing ? 'opacity-0' : 'opacity-100'
-        }`}
+        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-[100] transition-opacity duration-400 ${isClosing ? 'opacity-0' : 'opacity-100'
+          }`}
         onClick={handleClose}
       />
 
       {/* Popup Container */}
       <div
-        className={`fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none transition-all duration-400 ${
-          isClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
-        }`}
+        className={`fixed inset-0 z-[100] flex items-center justify-center p-4 pointer-events-none transition-all duration-400 ${isClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
+          }`}
       >
         <div
           className="relative pointer-events-auto w-full max-w-md"
