@@ -8,12 +8,12 @@ export default function AustraliaDayPopup() {
   const [isClosing, setIsClosing] = useState(false)
 
   useEffect(() => {
-    // Check if popup was already dismissed in this session
-    const dismissed = sessionStorage.getItem('australiaDayPopupDismissed')
-    if (!dismissed) {
-      // Show popup after a short delay
-      setTimeout(() => setIsVisible(true), 800)
-    }
+    // Australia Day 2026 has passed, so don't show the popup anymore
+    // Original code would have been:
+    // const dismissed = sessionStorage.getItem('australiaDayPopupDismissed')
+    // if (!dismissed) {
+    //   setTimeout(() => setIsVisible(true), 800)
+    // }
   }, [])
 
   const handleClose = () => {

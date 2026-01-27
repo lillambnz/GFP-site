@@ -13,6 +13,77 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'medical-services-gosnells-residents',
+    title: 'Medical Services Available to Gosnells Residents: Your Local Guide',
+    excerpt: 'A comprehensive guide to the healthcare services available to residents of the City of Gosnells, from GPs and urgent care to hospitals and specialists.',
+    category: 'Community Health',
+    author: 'Gosnells Family Practice',
+    date: '2025-01-24',
+    image: '/images/blog/placeholder.webp',
+    readTime: '6 min read',
+    tags: ['gosnells', 'community-health', 'local-services', 'urgent-care'],
+    content: `
+Accessing the right medical care when you need it is vital for every family. The City of Gosnells is well-served by a range of medical facilities, from general practitioners to specialized urgent care clinics and nearby hospitals.
+
+Here is your local guide to the medical services available to residents of Gosnells, Maddington, Thornlie, and surrounding areas.
+
+## 1. General Practice (GPs)
+
+Your local General Practitioner (GP) is your first point of contact for most health needs. In Gosnells, we are fortunate to have several high-quality medical centres.
+
+**Gosnells Family Practice** (us!) provides comprehensive care including:
+- Chronic disease management
+- Immunizations and travel medicine
+- Men's and Women's health
+- Mental health support
+- Minor surgeries
+- Pathology collection on-site
+
+We are open **7 days a week**, making it easier for working families to see a doctor. We also offer **bulk billing** options for eligible patients.
+
+## 2. Medicare Urgent Care Clinic (UCC)
+
+For non-life-threatening injuries or illnesses that can't wait for a GP appointment, the **Gosnells Medicare Urgent Care Clinic** is a fantastic resource.
+- **Location**: Unit 1, 2227 Albany Highway, Gosnells.
+- **Cost**: Fully **Bulk Billed** (Free with Medicare card).
+- **Hours**: Open extended hours, 7 days a week.
+- **What they treat**: Minor fractures, sprains, minor infections, insect bites, rashes, and minor cuts.
+
+This service helps take the pressure off hospital emergency departments and provides a faster alternative for urgent but not life-threatening conditions.
+
+## 3. Hospitals and Emergency Care
+
+For life-threatening emergencies, residents have access to nearby world-class hospitals.
+
+- **Armadale Health Service**: Located just a short drive away, this is our primary public hospital. It features an **Emergency Department** open 24/7, as well as maternity, paediatric, and rehabilitation services.
+- **St John of God Murdoch/Midland**: For those with private health insurance or requiring specific specialists, these major hospitals are accessible via the Roe Highway.
+
+**When to call 000**: Always call Triple Zero (000) for chest pain, difficulty breathing, severe bleeding, or stroke symptoms.
+
+## 4. Pathology and Radiology
+
+Diagnostic services are readily available in the Gosnells town centre.
+- **Pathology**: Most medical centres, including ours, have on-site pathology (e.g., Clinipath) for blood tests and sample collection.
+- **Radiology**: Services like **Western Radiology** (Canning Vale/nearby) provide X-rays, ultrasounds, and CT scans. Your GP can refer you to the most convenient location.
+
+## 5. Allied Health Services
+
+A holistic approach to health often involves more than just a doctor. Gosnells has a strong network of:
+- **Physiotherapists**: For injury rehabilitation and mobility.
+- **Podiatrists**: For foot care (especially important for diabetic patients).
+- **Dietitians**: For nutritional advice and weight management.
+- **Psychologists**: For mental health support.
+
+At Gosnells Family Practice, we can coordinate your care with these local specialists through a Team Care Arrangement (TCA) for eligible chronic conditions.
+
+## Summary
+
+Residents of the City of Gosnells have access to a robust healthcare network. Whether it's a routine check-up with us at **Gosnells Family Practice**, an urgent minor injury treated at the Medicare UCC, or emergency care at Armadale Hospital, help is close by.
+
+**Need a GP appointment?** Book online with us today or call **(08) 6118 2788**.
+    `
+  },
+  {
     slug: 'preparing-for-flu-season-2025',
     title: 'Preparing for Flu Season 2025: Your Complete Guide',
     excerpt: 'Essential tips and information to protect yourself and your family during the upcoming flu season, including vaccination advice and preventive measures.',
