@@ -27,25 +27,25 @@ export default function Home() {
   // Hero Gallery Photos
   const heroPhotos = [
     {
-      src: "https://asset.imagine.art/processed/6feca710-6ead-4d3d-9d6c-c2eb7a2e0384",
+      src: "/images/hero/reception.png",
       alt: "Modern Medical Reception Area",
       title: "Welcome to Gosnells Family Practice",
       description: "Your trusted healthcare partner, providing comprehensive medical care for the whole family"
     },
     {
-      src: "https://asset.imagine.art/processed/303f0971-28e4-47b8-9cf5-034ad08c92a1",
+      src: "/images/hero/doctorsitting.png",
       alt: "Professional Medical Care",
       title: "Expert Medical Team",
       description: "All doctors hold FRACGP qualifications and speak multiple languages"
     },
     {
-      src: "https://cdn.imagine.art/processed/3bc7a926-dd66-43c3-b289-544cd61bf500",
+      src: "/images/hero/mixfacility.png",
       alt: "State-of-the-art Facilities",
       title: "Modern Healthcare Facilities",
       description: "AGPAL accredited practice with cutting-edge medical equipment"
     },
     {
-      src: "https://asset.imagine.art/processed/fa04c108-7f20-4f24-aa43-f9d28576194d",
+      src: "/images/hero/nurse.png",
       alt: "Welcoming Reception",
       title: "Friendly & Professional Service",
       description: "Open 7 days a week for your convenience"
