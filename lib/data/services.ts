@@ -175,7 +175,7 @@ export const services: Service[] = [
     description: 'Convenient on-site pathology collection services',
     details: 'We offer on-site pathology collection services for blood tests, urine tests, and other specimens. Our trained staff ensure comfortable and efficient sample collection. Results are sent directly to your doctor who will discuss them with you at your follow-up appointment.',
     practitioners: ['Nursing Staff'],
-    availability: 'Monday-Friday, 8:30 AM - 4:30 PM',
+    availability: 'Monday-Friday, 8:30 AM - 2:30 PM',
     bookingInfo: 'Bring your pathology request form - no appointment needed for most tests',
     image: '/images/services/onsitepathology.jpg'
   },
