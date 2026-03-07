@@ -58,6 +58,7 @@ export default function Header() {
   )
 
   return (
+    <>
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-transparent",
@@ -197,11 +198,28 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Modern Mobile Menu Overlay */}
+    </header>
+
+      {/* Modern Mobile Menu Overlay - Moved outside header for proper stacking */}
       <div className={cn(
-        "fixed inset-x-0 top-[140px] bottom-0 bg-white/95 backdrop-blur-xl z-40 lg:hidden transition-all duration-300 ease-in-out border-t border-slate-100 overflow-y-auto",
-        isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+        "fixed inset-0 z-[60] lg:hidden",
+        isOpen ? "pointer-events-auto" : "pointer-events-none"
       )}>
+        {/* Backdrop */}
+        <div
+          className={cn(
+            "absolute inset-0 bg-black/20 transition-opacity duration-300",
+            isOpen ? "opacity-100" : "opacity-0"
+          )}
+          onClick={() => setIsOpen(false)}
+        />
+
+        {/* Menu Content */}
+        <div className={cn(
+          "absolute left-0 right-0 bg-white shadow-xl transition-all duration-300 ease-in-out overflow-y-auto max-h-[calc(100vh-88px)]",
+          isScrolled ? "top-[88px]" : "top-[164px]",
+          isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
+        )}>
         <div className="p-6 space-y-6">
           <div className="space-y-2">
             <Link href="/" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-lg font-medium text-slate-800 hover:bg-slate-50 rounded-xl transition-colors">
@@ -248,8 +266,9 @@ export default function Header() {
             </Button>
           </div>
         </div>
+        </div>
       </div>
-    </header>
+    </>
   )
 }
 
