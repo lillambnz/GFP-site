@@ -114,7 +114,7 @@ export const staff: StaffMember[] = [
     qualifications: "BSc, DPM",
     specialties: ["Diabetic Foot Assessment", "Biomechanical Assessment", "General Foot Care (Ingrown Toenail, Wart Management)", "Foot Pain Management (Dry Needling, Ultrasound, Shockwave Treatment)", "Custom Made Orthotics"],
     biography: "Dr Yen Nee Liew - Podiatrist (BSc, DPM)\n\nShe completed her Doctor of Podiatric Medicine (DPM) degree at the University of Western Australia in 2019, after finishing her undergraduate Bachelor of Science degree majoring in Pathology and Laboratory Medicine.\n\nShe has had clinical placements in various private clinics as well as in a multidisciplinary team setting, She has a keen interest in all aspects of podiatry, including general foot care, high risk foot care, biomechanics and management of musculoskeletal conditions. She believes in active listening and strives to help her patients to achieve their treatment goals.\n\nPodiatry services including:\n\n- Diabetic foot assessment\n\n- General foot care including ingrown toenail, wart and corn management\n\n- Biomechanical assessment\n\n- Foot pain management with dry needling therapy, ultrasound therapy etc\n\n- Custom made orthotics",
-    image: "https://asset.imagine.art/processed/5df0a6f9-434d-4eaa-a03b-9d89814a53b2",
+    image: "/images/team/yenny.jpeg",
     availability: "Available in 12 days",
     bookingName: "Yenny",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/yen-nee-liew-1"
@@ -138,22 +138,13 @@ export const staff: StaffMember[] = [
     availability: "By GP referral to MindSpot"
   },
   {
-    name: "Rayan (Ray) Tiba",
+    name: "Saphia Beekawoo",
     role: "Psychologist",
-    qualifications: "Registered Psychologist",
-    specialties: ["Mental Health Disorders", "Stress Management", "Interpersonal Conflict", "Behavioural Challenges", "Inclusive Practice", "All Ages and Abilities"],
-    biography: "Rayan (Ray) Tiba is a Registered Psychologist employed by ORS who takes a collaborative, person-centred approach to therapy and is passionate about working with clients of all ages, abilities, and presentations.\n\nRay strongly values collaborative decision-making across the therapy journey. Ray has a particular interest in working with individuals experiencing mental health disorders, stress, interpersonal conflict, and behavioural challenges. She also has a strong commitment to inclusive practice and supporting people of all genders and nationalities.\n\nHer therapeutic approach is evidence-based, drawing on a range of modalities including Cognitive Behaviour Therapy (CBT), Interpersonal Therapy, Acceptance and Commitment Therapy (ACT), Dialectical Behaviour Therapy (DBT), and Narrative Therapy.\n\nGosnells Family Practice hosts WAPHA-commissioned ORS/MindSpot clinics for eligible patients. Referrals are made by GPs through approved channels direct to MindSpot. ORS does not accept direct referrals. Patients wishing to see Ray may seek a GP referral to MindSpot GP, a free government funded mental health service for low to moderate mental health presentations. Upon receiving the referral, MindSpot will contact the patient and assess suitability for in-person/telehealth services with ORS.\n\nPlease note that although Ray is a Registered Psychologist, patients seeing her are currently not eligible for Medicare rebates.",
-    image: "https://ui-avatars.com/api/?name=Rayan+Tiba&size=400&background=00b1c3&color=fff&bold=true&font-size=0.4",
+    qualifications: "Provisional Psychologist",
+    specialties: ["Stress Management", "Emotional Regulation", "Interpersonal Challenges", "Behavioural Concerns", "Mental Health"],
+    biography: "Saphia is a Provisional Psychologist employed by ORS who takes a warm, collaborative, and person-centred approach to therapy. She is passionate about walking alongside individuals as they navigate life's challenges, deepen self-understanding, and work towards meaningful and sustainable change. She aims to create a therapeutic space that feels safe, respectful, and grounded in trust, where patients feel genuinely heard and supported. She places strong value on mutual and shared decision-making and believes that therapy works best when clients are active partners in their care. Her work is informed by evidence-based approaches, drawing on modalities such as Cognitive Behaviour Therapy (CBT), Acceptance and Commitment Therapy (ACT), Metacognitive Therapy (MCT), among other therapeutic modalities. She uses an integrative approach that honours the interconnection between mind, body, and soul. Saphia tailors her approach to each individual, recognising that every person's story, strengths, and goals are unique. She has a particular interest in supporting individuals experiencing stress, emotional regulation difficulties, interpersonal challenges, behavioural concerns, and broader mental health difficulties. Saphia is committed to an inclusive, culturally responsive, and affirming practice, and welcomes individuals of all genders, cultures, and backgrounds. Gosnells Family Practice hosts WAPHA-commissioned ORS/MindSpot clinics for eligible patients. Referrals are made by GPs through approved pathways directly to MindSpot, as ORS does not accept direct referrals. Patients wishing to see Saphia may speak with their GP about a referral to MindSpot GP, a free government-funded mental health service for individuals experiencing low to moderate mental health concerns. Once a referral is received, MindSpot will contact the patient to assess suitability for in-person or telehealth services with ORS.",
+    image: "https://ui-avatars.com/api/?name=Saphia+Beekawoo&size=400&background=00b1c3&color=fff&bold=true&font-size=0.4",
     availability: "By GP referral to MindSpot"
-  },
-  {
-    name: "Jennifer Watson",
-    role: "Nurse",
-    qualifications: "Bachelor of Nursing, RN",
-    specialties: ["Immunisation", "Wound Care", "Care Planning", "Health Assessment"],
-    biography: "Jen is a Registered Nurse (RN) with over 10 years of experience across hospital wards, GP nursing, and agency settings. She holds a Bachelor of Nursing from the University of Notre Dame and has a strong passion for immunisation, wound care, care planning, and thorough health assessment. Jen is deeply committed to delivering gentle, stress-free immunisations, creating a calm and reassuring environment where both mum and bub feel comfortable and supported. Her nursing practice is guided by compassion, safety, and patient-centred care.",
-    image: "https://ui-avatars.com/api/?name=Jennifer+Watson&size=400&background=00b1c3&color=fff&bold=true&font-size=0.4",
-    availability: "Monday-Friday"
   },
 ]
 
