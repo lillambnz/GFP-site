@@ -3,6 +3,8 @@ export interface GoogleReview {
   rating: 5
   text: string
   date?: string
+  featured?: boolean
+  url?: string
 }
 
 // Featured 5-star reviews from Google My Business
@@ -42,6 +44,14 @@ export const googleReviews: GoogleReview[] = [
     rating: 5,
     text: "I visited this clinic this morning and everything was great! Doctor Choong Leat was calm and steady.",
     date: "16 weeks ago"
+  },
+  {
+    name: "Alzena C",
+    rating: 5,
+    text: "Had an unexpectedly awesome doctor experience. Met Dr. Fazilah Abu Bakar — absolute legend. She checked in, asked what I needed, and made the whole thing feel easy and human. Professional but also totally human. Felt cared for, not rushed, and actually enjoyed a doctor's visit for once. 10/10!",
+    date: "3 days ago",
+    featured: true,
+    url: "https://share.google/vhSo4PVJI2HDy9H2F"
   }
 ]
 

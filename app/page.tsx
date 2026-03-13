@@ -27,6 +27,10 @@ export default function Home() {
   // Hero Gallery Photos
   const heroPhotos = [
     {
+      src: "/images/hero/bulk-billing-banner.png",
+      alt: "Bulk Billing Coming Soon - Gosnells Family Practice",
+    },
+    {
       src: "/images/hero/reception.png",
       alt: "Modern Medical Reception Area",
       title: "Welcome to Gosnells Family Practice",

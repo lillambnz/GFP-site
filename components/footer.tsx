@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Lightbulb, Facebook, Instagram, Twitter } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -116,6 +117,13 @@ export default function Footer() {
               <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                 AGPAL Accredited
               </span>
+              <Image
+                src="/images/bulk-billing/BBPIP_webtile_200x160_v1.png"
+                alt="Medicare Bulk Billing Practice"
+                width={100}
+                height={80}
+                className="rounded"
+              />
               <div className="flex items-center gap-2">
                 <span className="text-gray-300">Follow us:</span>
                 <div className="flex gap-2">

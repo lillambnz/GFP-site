@@ -81,8 +81,10 @@ export function HeroGallery({
             priority={index === 0}
           />
 
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+          {/* Gradient Overlay - only for slides with text */}
+          {(photo.title || photo.description) && (
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+          )}
 
           {/* Text Content */}
           {(photo.title || photo.description) && (

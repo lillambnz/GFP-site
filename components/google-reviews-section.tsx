@@ -75,9 +75,52 @@ export function GoogleReviewsSection() {
           </p>
         </div>
 
+        {/* Featured Review */}
+        {googleReviews.filter(r => r.featured).map((review, index) => {
+          const content = (
+            <div
+              key={`featured-${index}`}
+              className="bg-gradient-to-r from-[#00b1c3]/5 to-[#009aaa]/5 backdrop-blur-md rounded-2xl p-8 shadow-sm border-2 border-[#00b1c3]/20 hover:shadow-lg transition-shadow mb-8 max-w-3xl mx-auto group cursor-pointer"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00b1c3] to-[#009aaa] flex items-center justify-center text-white font-semibold text-lg">
+                    {review.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 text-lg">{review.name}</p>
+                    {review.date && (
+                      <p className="text-xs text-gray-500">{review.date}</p>
+                    )}
+                  </div>
+                </div>
+                <GoogleIcon className="w-6 h-6 opacity-60" />
+              </div>
+
+              <StarRating rating={review.rating} />
+
+              <p className="mt-4 text-gray-700 leading-relaxed">
+                &ldquo;{review.text}&rdquo;
+              </p>
+
+              {review.url && (
+                <p className="mt-3 text-xs text-[#00b1c3] group-hover:underline">
+                  View original review on Google →
+                </p>
+              )}
+            </div>
+          );
+
+          return review.url ? (
+            <a key={`featured-link-${index}`} href={review.url} target="_blank" rel="noopener noreferrer">
+              {content}
+            </a>
+          ) : content;
+        })}
+
         {/* Reviews Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {googleReviews.slice(0, 6).map((review, index) => (
+          {googleReviews.filter(r => !r.featured).slice(0, 6).map((review, index) => (
             <div
               key={index}
               className="bg-white/60 backdrop-blur-md rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
@@ -100,7 +143,7 @@ export function GoogleReviewsSection() {
               <StarRating rating={review.rating} />
 
               <p className="mt-3 text-gray-700 text-sm leading-relaxed">
-                "{review.text}"
+                &ldquo;{review.text}&rdquo;
               </p>
             </div>
           ))}
