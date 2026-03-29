@@ -33,7 +33,7 @@ function GoogleIcon({ className }: { className?: string }) {
 
 export function GoogleReviewsSection() {
   return (
-    <section className="py-16 md:py-24 bg-surface-sunken">
+    <section className="py-16 md:py-24 bg-surface-sunken bg-dot-pattern">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">

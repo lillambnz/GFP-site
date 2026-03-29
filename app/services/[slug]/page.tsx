@@ -96,7 +96,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </section>
 
         {/* Service Details */}
-        <section className="py-20">
+        <section className="py-20 bg-warm-glow">
           <div className="max-w-4xl mx-auto px-4">
             <div className="prose prose-lg max-w-none">
               <div className="bg-card shadow-card rounded-2xl p-8 mb-8 border border-border">

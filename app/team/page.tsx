@@ -52,7 +52,7 @@ export default function TeamPage() {
         </section>
 
         {/* Doctors Section - Enhanced with Professional Photos */}
-        <section className="py-20">
+        <section className="py-20 bg-glow-tl">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-foreground mb-4">Our Doctors</h2>
@@ -356,7 +356,7 @@ export default function TeamPage() {
         </section>
 
         {/* Staff Section */}
-        <section className="py-20 bg-surface-sunken">
+        <section className="py-20 bg-surface-sunken bg-dot-pattern">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-foreground mb-4">Our Healthcare Team</h2>

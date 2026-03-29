@@ -76,7 +76,7 @@ export default function Home() {
       <StatsSection />
 
       {/* Featured Services */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background bg-warm-glow">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionHeading
             eyebrow="What We Offer"
@@ -147,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* Doctors Section */}
-      <section className="py-20 bg-secondary/50">
+      <section className="py-20 bg-secondary/50 bg-dot-pattern">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionHeading
             eyebrow="Our Doctors"
@@ -201,7 +201,7 @@ export default function Home() {
       </section>
 
       {/* Clinic Gallery */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background bg-glow-br">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionHeading
             eyebrow="Our Facilities"
@@ -219,7 +219,7 @@ export default function Home() {
       <GoogleReviewsSection />
 
       {/* Blog */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background bg-glow-tl">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionHeading
             eyebrow="Health Tips"

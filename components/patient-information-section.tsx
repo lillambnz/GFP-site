@@ -76,7 +76,7 @@ export default function PatientInformationSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <section id="patient-info" className="py-20 bg-background relative">
+    <section id="patient-info" className="py-20 bg-background bg-medical-subtle relative">
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="For Patients"

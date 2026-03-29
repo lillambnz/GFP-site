@@ -51,7 +51,7 @@ export default function AboutPage() {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-20">
+        <section className="py-20 bg-warm-glow">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="bg-card shadow-card p-8 rounded-2xl border border-border">
@@ -71,7 +71,7 @@ export default function AboutPage() {
         </section>
 
         {/* Our Story */}
-        <section className="py-20 bg-surface-sunken">
+        <section className="py-20 bg-surface-sunken bg-grid-pattern">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-foreground mb-8 text-center">Our Story</h2>
             <div className="prose prose-lg max-w-none space-y-6">
@@ -92,7 +92,7 @@ export default function AboutPage() {
         </section>
 
         {/* Our Values */}
-        <section className="py-20">
+        <section className="py-20 bg-glow-center">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-foreground mb-4 text-center">Our Core Values</h2>
             <p className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">

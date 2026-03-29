@@ -52,7 +52,7 @@ export default function FAQsPage() {
         </section>
 
         {/* FAQs Accordion */}
-        <section className="py-16">
+        <section className="py-16 bg-glow-center">
           <div className="max-w-4xl mx-auto px-4">
             <div className="space-y-4">
               {currentCategoryData?.questions.map((faq, index) => (
