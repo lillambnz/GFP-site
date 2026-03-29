@@ -15,7 +15,7 @@ export default function ServicesPage() {
     : services.filter(service => service.category === activeCategory)
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background bg-medical-subtle">
       <Header />
 
       <main>
