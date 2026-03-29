@@ -5,13 +5,13 @@ export default function TermsPage() {
     <div className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8">Terms and Conditions</h1>
-        
+
         <div className="prose max-w-none space-y-6">
           <section>
             <h2 className="text-2xl font-semibold mb-4">1. Practice Information</h2>
             <p>
-              Gosnells Family Practice is a medical practice located at 23C, 2158 Albany Highway, Gosnells, WA 6110. 
-              We provide general practice medical services to patients in accordance with Australian healthcare standards 
+              Gosnells Family Practice is a medical practice located at 23C, 2158 Albany Highway, Gosnells, WA 6110.
+              We provide general practice medical services to patients in accordance with Australian healthcare standards
               and regulations.
             </p>
           </section>
@@ -59,8 +59,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">5. Privacy and Confidentiality</h2>
             <p>
-              Your medical information is confidential and will be handled in accordance with the Privacy Act 1988 
-              and Australian Privacy Principles. Please refer to our Privacy Policy for detailed information about 
+              Your medical information is confidential and will be handled in accordance with the Privacy Act 1988
+              and Australian Privacy Principles. Please refer to our Privacy Policy for detailed information about
               how we collect, use, and protect your personal health information.
             </p>
           </section>
@@ -78,8 +78,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">7. Professional Standards</h2>
             <p>
-              All doctors at Gosnells Family Practice are registered with the Australian Health Practitioner 
-              Regulation Agency (AHPRA) and maintain current medical registration. Our practice is AGPAL 
+              All doctors at Gosnells Family Practice are registered with the Australian Health Practitioner
+              Regulation Agency (AHPRA) and maintain current medical registration. Our practice is AGPAL
               accredited, ensuring we meet national safety and quality standards.
             </p>
           </section>
@@ -87,8 +87,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">8. Complaints and Feedback</h2>
             <p>
-              We welcome feedback about our services. If you have concerns about your care, please speak with 
-              the practice manager or your doctor. Formal complaints can be made to the Health and Disability 
+              We welcome feedback about our services. If you have concerns about your care, please speak with
+              the practice manager or your doctor. Formal complaints can be made to the Health and Disability
               Services Complaints Office (HaDSCO) or the Australian Health Practitioner Regulation Agency (AHPRA).
             </p>
           </section>
@@ -96,8 +96,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">9. Limitation of Liability</h2>
             <p>
-              While we strive to provide the highest quality medical care, medicine is not an exact science. 
-              Treatment outcomes cannot be guaranteed. Our liability is limited to the extent permitted by 
+              While we strive to provide the highest quality medical care, medicine is not an exact science.
+              Treatment outcomes cannot be guaranteed. Our liability is limited to the extent permitted by
               Australian law, including the Competition and Consumer Act 2010 and relevant state legislation.
             </p>
           </section>
@@ -105,8 +105,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">10. Changes to Terms</h2>
             <p>
-              These terms and conditions may be updated from time to time. Current terms will be available 
-              on our website and at our practice. Continued use of our services constitutes acceptance of 
+              These terms and conditions may be updated from time to time. Current terms will be available
+              on our website and at our practice. Continued use of our services constitutes acceptance of
               any updated terms.
             </p>
           </section>

@@ -1,17 +1,9 @@
 import {
-  Stethoscope,
-  Heart,
-  User,
-  UserCheck,
-  Scan,
-  Brain,
-  Syringe,
-  Plane,
-  Activity,
-  HardHat,
-  Clipboard,
-  Car
+  Stethoscope, Heart, User, UserCheck, Scan, Brain,
+  Syringe, Plane, Activity, HardHat, Clipboard, Car
 } from 'lucide-react';
+import { Reveal, StaggerContainer, StaggerItem } from './reveal';
+import { SectionHeading } from './section-heading';
 
 const services = [
   { icon: Stethoscope, title: 'General Check-ups', description: 'Comprehensive health assessments and preventative care for all ages' },
@@ -29,37 +21,32 @@ const services = [
 ];
 
 export default function ServicesSection() {
-  const duplicatedServices = [...services, ...services];
-
   return (
-    <section id="services" className="py-20 bg-transparent overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-8 mb-12">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-[#0a2540] mb-4 tracking-tight">Our Services</h2>
-          <p className="text-xl text-[#425466] max-w-2xl mx-auto leading-relaxed">
-            Comprehensive healthcare services for the whole family, delivered by experienced medical professionals
-          </p>
-        </div>
-      </div>
+    <section id="services" className="py-20">
+      <div className="container mx-auto px-4 lg:px-8">
+        <SectionHeading
+          eyebrow="What We Offer"
+          title="Our Services"
+          subtitle="Comprehensive healthcare services for the whole family, delivered by experienced medical professionals"
+          className="mb-14"
+        />
 
-      <div className="relative">
-        <div className="flex gap-6 services-scroll">
-          {duplicatedServices.map((service, index) => {
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
-                key={index}
-                className="flex-shrink-0 w-80 bg-white/20 backdrop-blur-md p-8 rounded-3xl hover:bg-white/30 hover:shadow-2xl hover:shadow-[#00b1c3]/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer group hover:backdrop-blur-lg border-0 shimmer"
-              >
-                <div className="w-14 h-14 bg-white/30 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#00b1c3] transition-all duration-300 group-hover:shadow-lg group-hover:scale-110">
-                  <Icon className="w-7 h-7 text-[#4a4b75] group-hover:text-white transition-all duration-300" />
+              <StaggerItem key={index}>
+                <div className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 border border-border group h-full">
+                  <div className="w-11 h-11 bg-brand-teal-light rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-teal transition-colors duration-300">
+                    <Icon className="w-5 h-5 text-brand-teal group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <h3 className="text-foreground mb-2 text-base font-semibold">{service.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
                 </div>
-                <h3 className="text-[#0a2540] mb-3 text-xl font-semibold">{service.title}</h3>
-                <p className="text-[#425466] leading-relaxed">{service.description}</p>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

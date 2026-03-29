@@ -1,143 +1,112 @@
-import { Card, CardContent } from "@/components/ui/card"
+"use client"
+
 import { Languages } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { StaggerContainer, StaggerItem } from "./reveal"
+import { SectionHeading } from "./section-heading"
+
+const doctors = [
+  {
+    name: "Dr. Ameer Khan",
+    title: "General Practitioner",
+    qualifications: "MRCGP, MBBS, FRACGP",
+    languages: ["English", "Arabic", "Hindi", "Pashto", "Urdu"],
+    image: "/images/team/Dr-Ameer-Khan.webp",
+    bookingName: "Ameer",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/ameer-khan"
+  },
+  {
+    name: "Dr. Fazilah Abu Bakar",
+    title: "General Practitioner",
+    qualifications: "MBBCh, FRACGP, BAO",
+    languages: ["English", "Malay", "Arabic"],
+    image: "/images/team/Dr-Fazilah-Abu-Bakar.webp",
+    bookingName: "Fazilah",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/fazilah-binti-abu-bakar"
+  },
+  {
+    name: "Dr. Choong Leat Loh",
+    title: "General Practitioner",
+    qualifications: "MBBS, FRACGP, Cert Skin Cancer, MAFM",
+    languages: ["English", "Cantonese", "Hakka", "Indonesian", "Malay", "Mandarin", "Hokkien"],
+    image: "/images/team/Dr-Choong-Leat-Loh.webp",
+    bookingName: "Choong",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/choong-leat-loh"
+  },
+  {
+    name: "Dr. Quam Gbajabiamila",
+    title: "General Practitioner",
+    qualifications: "MBBS, FRACGP, MMSc",
+    languages: ["English", "Afrikaans"],
+    image: "/images/team/quam-bio.webp",
+    bookingName: "Quam",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/quam-gbajabiamila"
+  },
+  {
+    name: "Dr. Intan Ramli",
+    title: "General Practitioner",
+    qualifications: "FRACGP, MBBS (UWA)",
+    languages: ["English", "Malay"],
+    image: "/images/team/Dr-Intan.webp",
+    bookingName: "Intan",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3"
+  },
+]
 
 export default function DoctorsSection() {
-  const doctors = [
-    {
-      name: "Dr. Ameer Khan",
-      title: "General Practitioner",
-      qualifications: "MRCGP, MBBS, FRACGP",
-      languages: ["English", "Arabic", "Hindi", "Pashto", "Urdu"],
-      availability: "Monday-Friday",
-      status: "Available",
-      rating: 4.9,
-      image: "/images/team/Dr-Ameer-Khan.webp",
-      bookingName: "Ameer",
-      bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/ameer-khan"
-    },
-    {
-      name: "Dr. Fazilah Binti Abu Bakar",
-      title: "General Practitioner",
-      qualifications: "MBBCh, FRACGP, BAO",
-      languages: ["English", "Malay", "Arabic"],
-      availability: "Tuesday-Saturday",
-      status: "Available",
-      rating: 4.9,
-      image: "/images/team/Dr-Fazilah-Abu-Bakar.webp",
-      bookingName: "Fazilah",
-      bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/fazilah-binti-abu-bakar"
-    },
-    {
-      name: "Dr. Choong Leat Loh",
-      title: "General Practitioner",
-      qualifications: "MBBS, FRACGP, Cert Skin Cancer, MAFM",
-      languages: ["English", "Cantonese", "Hakka", "Indonesian", "Malay", "Mandarin", "Hokkien"],
-      availability: "Monday-Friday",
-      status: "Available",
-      rating: 4.9,
-      image: "/images/team/Dr-Choong-Leat-Loh.webp",
-      bookingName: "Choong",
-      bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/choong-leat-loh"
-    },
-    {
-      name: "Dr. Quam Gbajabiamila",
-      title: "General Practitioner", 
-      qualifications: "MBBS, FRACGP, MMSc",
-      languages: ["English", "Afrikaans"],
-      availability: "Wednesday-Sunday",
-      status: "Available",
-      rating: 4.9,
-      image: "/images/team/quam-bio.webp",
-      bookingName: "Quam",
-      bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/quam-gbajabiamila"
-    },
-    {
-      name: "Dr. Intan Ramli",
-      title: "General Practitioner",
-      qualifications: "FRACGP, MBBS (UWA)",
-      languages: ["English", "Malay"],
-      availability: "Monday-Friday",
-      status: "Available",
-      rating: 4.9,
-      image: "/images/team/Dr-Intan.webp",
-      bookingName: "Intan",
-      bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3"
-    },
-  ]
-
-  const duplicatedDoctors = [...doctors, ...doctors];
-
   return (
-    <section id="doctors" className="py-20 bg-transparent overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-8 mb-12">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-4 tracking-tight">Our Doctors</h2>
-          <p className="text-2xl md:text-3xl text-[#0a2540] font-bold max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
-            Experienced healthcare professionals dedicated to your wellbeing
-          </p>
-        </div>
-      </div>
+    <section id="doctors" className="py-20">
+      <div className="container mx-auto px-4 lg:px-8">
+        <SectionHeading
+          eyebrow="Our Team"
+          title="Our Doctors"
+          subtitle="Experienced healthcare professionals dedicated to your wellbeing"
+          className="mb-14"
+        />
 
-      <div className="relative">
-        <div className="flex gap-6 doctors-scroll">
-          {duplicatedDoctors.map((doctor, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-80 bg-white/20 backdrop-blur-md rounded-3xl hover:bg-white/30 hover:shadow-2xl hover:shadow-[#00b1c3]/20 hover:-translate-y-3 transition-all duration-500 cursor-pointer group overflow-hidden hover:backdrop-blur-lg border-0 shimmer"
-            >
-              <div className="aspect-square overflow-hidden relative">
-                <Image
-                  src={doctor.image || "/placeholder.svg"}
-                  alt={doctor.name}
-                  fill
-                  sizes="320px"
-                  quality={85}
-                  priority={index < 2}
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#0a2540] mb-1">{doctor.name}</h3>
-                <p className="text-[#4a4b75] font-semibold text-sm mb-2">{doctor.title}</p>
-                
-                <div className="mb-3">
-                  <p className="text-xs text-[#425466] font-medium">{doctor.qualifications}</p>
-                </div>
-
-                <div className="mb-4">
-                  <div className="flex items-start gap-1 mb-1">
-                    <Languages size={14} className="text-[#4a4b75] mt-0.5 shrink-0" />
-                    <p className="text-xs text-[#425466]">{doctor.languages.join(", ")}</p>
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          {doctors.map((doctor, index) => (
+            <StaggerItem key={index}>
+              <div className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group">
+                <div className="aspect-square overflow-hidden relative">
+                  <Image
+                    src={doctor.image}
+                    alt={doctor.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                    quality={85}
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {/* Gradient overlay at bottom */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4">
+                    <h3 className="text-white font-bold text-sm leading-tight">{doctor.name}</h3>
                   </div>
                 </div>
+                <div className="p-4">
+                  <p className="text-brand-teal font-medium text-xs mb-1">{doctor.title}</p>
+                  <p className="text-muted-foreground text-[11px] mb-2">{doctor.qualifications}</p>
 
-                <div className="flex gap-2">
-                  <Button 
-                    size="sm" 
-                    className="flex-1 bg-[#00b1c3] hover:bg-[#009bb0] text-white text-xs transition-all duration-300"
+                  <div className="flex items-start gap-1 mb-3">
+                    <Languages size={12} className="text-muted-foreground mt-0.5 shrink-0" />
+                    <p className="text-[11px] text-muted-foreground leading-tight">{doctor.languages.join(", ")}</p>
+                  </div>
+
+                  <Button
+                    size="sm"
+                    className="w-full bg-brand-teal hover:bg-brand-teal-dark text-white text-xs rounded-lg"
                     asChild
                   >
                     <a href={doctor.bookingUrl} target="_blank" rel="noopener noreferrer">
                       Book with {doctor.bookingName}
                     </a>
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="text-xs border-[#4a4b75] text-[#4a4b75] hover:bg-[#4a4b75] hover:text-white transition-all duration-300"
-                    asChild
-                  >
-                    <a href={doctor.bookingUrl} target="_blank" rel="noopener noreferrer">
-                      View Details
-                    </a>
-                  </Button>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   )

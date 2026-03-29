@@ -80,18 +80,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-[#0a2540] to-[#00b1c3] text-white py-16">
+        <section className="relative bg-slate-900 text-white py-16 pt-48">
           <div className="max-w-7xl mx-auto px-4">
+            <span className="inline-block bg-white/10 text-white/80 px-3 py-1 rounded-full text-xs font-medium mb-4">
+              {service.category}
+            </span>
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center">
-                <Icon className="w-8 h-8 text-white" />
+              <div className="w-14 h-14 bg-brand-teal rounded-2xl flex items-center justify-center shrink-0">
+                <Icon className="w-7 h-7 text-white" />
               </div>
-              <div>
-                <div className="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-sm font-semibold mb-2">
-                  {service.category}
-                </div>
-                <h1 className="text-5xl font-bold">{service.title}</h1>
-              </div>
+              <h1 className="text-4xl md:text-5xl font-bold">{service.title}</h1>
             </div>
             <p className="text-xl max-w-3xl">{service.description}</p>
           </div>
@@ -101,22 +99,22 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4">
             <div className="prose prose-lg max-w-none">
-              <div className="bg-white/20 backdrop-blur-md rounded-3xl p-8 mb-8 border border-[#00b1c3]/20">
-                <h2 className="text-3xl font-bold text-[#0a2540] mb-6">About This Service</h2>
-                <p className="text-lg text-[#425466] leading-relaxed whitespace-pre-line">
+              <div className="bg-card shadow-card rounded-2xl p-8 mb-8 border border-border">
+                <h2 className="text-3xl font-bold text-foreground mb-6">About This Service</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
                   {service.details}
                 </p>
               </div>
 
               {/* Sub-services if available */}
               {service.subServices && service.subServices.length > 0 && (
-                <div className="bg-white/20 backdrop-blur-md rounded-3xl p-8 mb-8 border border-[#00b1c3]/20">
-                  <h2 className="text-2xl font-bold text-[#0a2540] mb-4">What We Offer</h2>
+                <div className="bg-card shadow-card rounded-2xl p-8 mb-8 border border-border">
+                  <h2 className="text-2xl font-bold text-foreground mb-4">What We Offer</h2>
                   <ul className="space-y-2">
                     {service.subServices.map((subService, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <span className="text-[#00b1c3] mt-1.5">•</span>
-                        <span className="text-[#425466]">{subService}</span>
+                        <span className="text-brand-teal mt-1.5">•</span>
+                        <span className="text-muted-foreground">{subService}</span>
                       </li>
                     ))}
                   </ul>
@@ -125,24 +123,24 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
               {/* Practitioners & Availability */}
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 border border-[#00b1c3]/20">
-                  <h3 className="text-xl font-bold text-[#0a2540] mb-4">Our Practitioners</h3>
+                <div className="bg-card shadow-card rounded-2xl p-6 border border-border">
+                  <h3 className="text-xl font-bold text-foreground mb-4">Our Practitioners</h3>
                   <ul className="space-y-2">
                     {service.practitioners.map((practitioner, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-[#00b1c3] rounded-full"></span>
-                        <span className="text-[#425466]">{practitioner}</span>
+                        <span className="w-2 h-2 bg-brand-teal rounded-full"></span>
+                        <span className="text-muted-foreground">{practitioner}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 border border-[#00b1c3]/20">
-                  <h3 className="text-xl font-bold text-[#0a2540] mb-4">Availability</h3>
-                  <p className="text-[#425466] mb-4">{service.availability}</p>
-                  <div className="pt-4 border-t border-[#00b1c3]/20">
-                    <p className="text-sm font-semibold text-[#0a2540] mb-2">Booking Information</p>
-                    <p className="text-sm text-[#425466]">{service.bookingInfo}</p>
+                <div className="bg-card shadow-card rounded-2xl p-6 border border-border">
+                  <h3 className="text-xl font-bold text-foreground mb-4">Availability</h3>
+                  <p className="text-muted-foreground mb-4">{service.availability}</p>
+                  <div className="pt-4 border-t border-border">
+                    <p className="text-sm font-semibold text-foreground mb-2">Booking Information</p>
+                    <p className="text-sm text-muted-foreground">{service.bookingInfo}</p>
                   </div>
                 </div>
               </div>
@@ -151,7 +149,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-[#00b1c3] to-[#009bb0] text-white">
+        <section className="py-16 bg-brand-teal text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Book This Service</h2>
             <p className="text-lg mb-8">
@@ -162,13 +160,13 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-[#00b1c3] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition inline-block"
+                className="bg-white text-brand-teal hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition inline-block"
               >
                 Book Online
               </a>
               <a
                 href="tel:0861182788"
-                className="bg-[#0a2540] hover:bg-[#0a2540]/90 text-white font-semibold px-8 py-3 rounded-full transition inline-block"
+                className="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-3 rounded-full transition inline-block"
               >
                 Call (08) 6118 2788
               </a>

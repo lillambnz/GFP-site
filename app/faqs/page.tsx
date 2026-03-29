@@ -18,7 +18,7 @@ export default function FAQsPage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-[#0a2540] to-[#00b1c3] text-white py-16">
+        <section className="relative bg-slate-900 text-white py-16 pt-40">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4">Frequently Asked Questions</h1>
             <p className="text-xl">
@@ -28,7 +28,7 @@ export default function FAQsPage() {
         </section>
 
         {/* Category Tabs */}
-        <section className="py-8 bg-white/10 sticky top-[73px] z-40 backdrop-blur-sm">
+        <section className="py-8 bg-surface-sunken sticky top-[73px] z-40">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-wrap gap-3">
               {faqs.map((category) => (
@@ -40,8 +40,8 @@ export default function FAQsPage() {
                   }}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                     activeCategory === category.category
-                      ? 'bg-[#00b1c3] text-white shadow-lg'
-                      : 'bg-white/20 backdrop-blur-md text-[#0a2540] hover:bg-white/30'
+                      ? 'bg-brand-teal text-white shadow-lg'
+                      : 'bg-card shadow-card text-foreground hover:bg-card'
                   }`}
                 >
                   {category.category}
@@ -58,17 +58,17 @@ export default function FAQsPage() {
               {currentCategoryData?.questions.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-white/20 backdrop-blur-md rounded-2xl overflow-hidden border border-[#00b1c3]/10 hover:border-[#00b1c3]/30 transition-all duration-300"
+                  className="bg-card shadow-card rounded-2xl overflow-hidden border border-border hover:border-border transition-all duration-300"
                 >
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/10 transition-all duration-200"
+                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-surface-sunken transition-all duration-200"
                   >
-                    <h3 className="text-lg font-semibold text-[#0a2540] pr-4">
+                    <h3 className="text-lg font-semibold text-foreground pr-4">
                       {faq.question}
                     </h3>
                     <ChevronDown
-                      className={`w-6 h-6 text-[#00b1c3] flex-shrink-0 transition-transform duration-300 ${
+                      className={`w-6 h-6 text-brand-teal flex-shrink-0 transition-transform duration-300 ${
                         openIndex === index ? 'rotate-180' : ''
                       }`}
                     />
@@ -79,7 +79,7 @@ export default function FAQsPage() {
                     }`}
                   >
                     <div className="px-6 pb-5 pt-2">
-                      <p className="text-[#425466] leading-relaxed">{faq.answer}</p>
+                      <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export default function FAQsPage() {
         </section>
 
         {/* Still Have Questions */}
-        <section className="py-16 bg-gradient-to-r from-[#00b1c3] to-[#009bb0] text-white">
+        <section className="py-16 bg-brand-teal text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Still Have Questions?</h2>
             <p className="text-lg mb-8">
@@ -98,7 +98,7 @@ export default function FAQsPage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <a
                 href="tel:0861182788"
-                className="bg-white text-[#00b1c3] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition inline-block"
+                className="bg-white text-brand-teal hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition inline-block"
               >
                 Call (08) 6118 2788
               </a>
@@ -106,7 +106,7 @@ export default function FAQsPage() {
                 href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#0a2540] hover:bg-[#0a2540]/90 text-white font-semibold px-8 py-3 rounded-full transition inline-block"
+                className="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-3 rounded-full transition inline-block"
               >
                 Book Appointment
               </a>

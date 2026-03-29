@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ChevronLeft, ChevronRight, Star, Calendar, Phone } from 'lucide-react'
 import { googleBusinessInfo } from '@/lib/data/google-reviews'
+import { Button } from '@/components/ui/button'
 
 function GoogleIcon({ className }: { className?: string }) {
   return (
@@ -39,11 +41,9 @@ export function HeroGallery({
 
   useEffect(() => {
     if (!isAutoPlaying || photos.length <= 1) return
-
     const interval = setInterval(() => {
       setCurrentIndex((current) => (current + 1) % photos.length)
     }, autoPlayInterval)
-
     return () => clearInterval(interval)
   }, [isAutoPlaying, photos.length, autoPlayInterval])
 
@@ -63,79 +63,125 @@ export function HeroGallery({
   }
 
   return (
-    <div className={`relative w-full ${height} overflow-hidden rounded-3xl group`}>
-      {/* Images */}
-      {photos.map((photo, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentIndex ? 'opacity-100' : 'opacity-0'
-          }`}
+    <div className={`relative w-full ${height} overflow-hidden rounded-2xl group`}>
+      {/* Background Images */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="absolute inset-0"
         >
           <Image
-            src={photo.src}
-            alt={photo.alt}
+            src={photos[currentIndex].src}
+            alt={photos[currentIndex].alt}
             fill
             sizes="100vw"
             className="object-cover"
-            priority={index === 0}
+            priority={currentIndex === 0}
           />
+        </motion.div>
+      </AnimatePresence>
 
-          {/* Gradient Overlay - only for slides with text */}
-          {(photo.title || photo.description) && (
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
-          )}
+      {/* Dark overlay - only show on slides with text content */}
+      {photos[currentIndex].title && (
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
+      )}
 
-          {/* Text Content */}
-          {(photo.title || photo.description) && (
-            <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-24 max-w-4xl">
-              {photo.title && (
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 animate-fade-in">
-                  {photo.title}
-                </h2>
-              )}
-              {photo.description && (
-                <p className="text-lg md:text-xl text-white/90 animate-fade-in animation-delay-200">
-                  {photo.description}
-                </p>
-              )}
-            </div>
-          )}
+      {/* Content Overlay - only show on slides that have a title */}
+      {photos[currentIndex].title && (
+        <div className="absolute inset-0 flex items-center">
+          <div className="px-8 md:px-16 lg:px-24 max-w-2xl">
+            <motion.p
+              key={`eyebrow-${currentIndex}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="eyebrow !text-brand-teal-light mb-4"
+            >
+              Gosnells Family Practice
+            </motion.p>
+            <motion.h1
+              key={`title-${currentIndex}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-display text-white mb-4"
+            >
+              {photos[currentIndex].title}
+            </motion.h1>
+            {photos[currentIndex].description && (
+              <motion.p
+                key={`desc-${currentIndex}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-lg text-white/80 mb-8 leading-relaxed"
+              >
+                {photos[currentIndex].description}
+              </motion.p>
+            )}
+            <motion.div
+              key={`cta-${currentIndex}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-3"
+            >
+              <Button
+                className="rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white px-8 py-6 text-base shadow-elevated transition-all"
+                asChild
+              >
+                <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
+                  <Calendar className="w-4 h-4 mr-2" /> Book Appointment
+                </a>
+              </Button>
+              <Button
+                className="rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 px-8 py-6 text-base transition-all"
+                asChild
+              >
+                <a href="tel:0861182788">
+                  <Phone className="w-4 h-4 mr-2" /> Call (08) 6118 2788
+                </a>
+              </Button>
+            </motion.div>
+          </div>
         </div>
-      ))}
+      )}
 
       {/* Navigation Arrows */}
       {photos.length > 1 && (
         <>
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
             aria-label="Previous photo"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5" />
           </button>
-
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
             aria-label="Next photo"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5" />
           </button>
         </>
       )}
 
       {/* Dots Navigation */}
       {photos.length > 1 && (
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-8 left-8 md:left-16 lg:left-24 flex gap-2">
           {photos.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
+              className={`h-1.5 rounded-full transition-all duration-300 ${
                 index === currentIndex
                   ? 'bg-white w-8'
-                  : 'bg-white/50 hover:bg-white/75'
+                  : 'bg-white/40 hover:bg-white/60 w-4'
               }`}
               aria-label={`Go to photo ${index + 1}`}
             />
@@ -148,17 +194,17 @@ export function HeroGallery({
         href={googleBusinessInfo.profileUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center gap-3 z-10"
+        className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-card hover:shadow-card-hover transition-all hover:scale-105 flex items-center gap-3 z-10"
       >
-        <GoogleIcon className="w-7 h-7" />
+        <GoogleIcon className="w-6 h-6" />
         <div className="flex flex-col">
           <div className="flex items-center gap-1.5">
-            <span className="text-xl font-bold text-gray-900">{googleBusinessInfo.rating}</span>
+            <span className="text-lg font-bold text-foreground">{googleBusinessInfo.rating}</span>
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className={`w-4 h-4 ${
+                  className={`w-3.5 h-3.5 ${
                     i < Math.floor(googleBusinessInfo.rating)
                       ? 'fill-yellow-400 text-yellow-400'
                       : 'fill-gray-200 text-gray-200'
@@ -167,7 +213,7 @@ export function HeroGallery({
               ))}
             </div>
           </div>
-          <span className="text-xs text-gray-600">{googleBusinessInfo.totalReviews}+ Google reviews</span>
+          <span className="text-[10px] text-muted-foreground">{googleBusinessInfo.totalReviews}+ reviews</span>
         </div>
       </a>
     </div>
