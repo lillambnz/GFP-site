@@ -42,7 +42,7 @@ export default function TeamPage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-slate-900 text-white py-16 pt-40">
+        <section className="relative bg-slate-900 text-white py-16 pt-48">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-5xl font-bold mb-4">Our Medical Team</h1>
             <p className="text-xl max-w-3xl">

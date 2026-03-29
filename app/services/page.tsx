@@ -20,7 +20,7 @@ export default function ServicesPage() {
 
       <main>
         {/* Hero Section with Photo Background */}
-        <section className="relative bg-slate-900 text-white py-24 pt-40 overflow-hidden">
+        <section className="relative bg-slate-900 text-white py-24 pt-48 overflow-hidden">
           <div className="absolute inset-0 opacity-20">
             <div className="absolute inset-0 bg-[url('/images/photoshoot/treatment-room/GosnellsFamilyPractice-93.jpg')] bg-cover bg-center" />
             <div className="absolute inset-0 bg-slate-900" />

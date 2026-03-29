@@ -66,7 +66,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Gallery */}
-      <section className="relative pt-36 lg:pt-40 pb-0">
+      <section className="relative pt-40 lg:pt-44 pb-0">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <HeroGallery photos={heroPhotos} height="h-[75vh]" />
         </div>

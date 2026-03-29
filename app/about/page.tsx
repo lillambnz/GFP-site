@@ -39,7 +39,7 @@ export default function AboutPage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-slate-900 text-white py-20 pt-40">
+        <section className="relative bg-slate-900 text-white py-20 pt-48">
           <div className="max-w-7xl mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="text-5xl font-bold mb-6">About Gosnells Family Practice</h1>

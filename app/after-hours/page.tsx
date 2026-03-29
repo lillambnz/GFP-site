@@ -12,7 +12,7 @@ export default function AfterHoursPage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-slate-900 text-white py-16 pt-40">
+        <section className="relative bg-slate-900 text-white py-16 pt-48">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center gap-4 mb-4">
               <Clock className="w-12 h-12" />

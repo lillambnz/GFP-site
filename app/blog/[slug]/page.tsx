@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-slate-900 text-white py-16 pt-40">
+        <section className="relative bg-slate-900 text-white py-16 pt-48">
           <div className="max-w-4xl mx-auto px-4">
             <div className="inline-block bg-card shadow-card px-4 py-2 rounded-full text-sm font-semibold mb-4">
               {post.category}
