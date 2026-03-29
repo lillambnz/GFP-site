@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </section>
 
         {/* Post Content */}
-        <article className="py-16">
+        <article className="py-16 bg-glow-tl">
           <div className="max-w-4xl mx-auto px-4">
             <div className="bg-card shadow-card rounded-2xl p-8 md:p-12 mb-8 border border-border">
               <div className="prose prose-lg max-w-none">

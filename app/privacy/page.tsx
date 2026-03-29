@@ -1,6 +1,6 @@
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background bg-glow-tl">
       <div className="container mx-auto px-4 py-16 pt-48 max-w-4xl">
         <h1 className="text-4xl font-bold text-foreground mb-8">Privacy Policy</h1>
         <p className="text-sm text-muted-foreground mb-8">Last Updated: 24 September 2025</p>

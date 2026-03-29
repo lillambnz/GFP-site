@@ -2,7 +2,7 @@
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background bg-glow-br">
       <div className="max-w-4xl mx-auto px-4 py-16 pt-48">
         <h1 className="text-4xl font-bold mb-8">Terms and Conditions</h1>
 
