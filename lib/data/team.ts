@@ -105,6 +105,21 @@ export const doctors: Doctor[] = [
     bookingName: "Intan",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3"
   },
+  {
+    name: "Dr. Adetoyese \"Toye\" Lawal",
+    title: "General Practitioner",
+    gender: "Male",
+    qualifications: "MBBS, FRACGP",
+    languages: ["English"],
+    specialInterests: ["Chronic Illness Management", "Family Planning", "Men's Health"],
+    biography: "Dr Adetoyese Lawal attained his Bachelor of Medicine / Bachelor of Surgery (MBBS) in 2009 and became a Fellow of The Royal Australian College of General Practitioners (FRACGP) in 2020. Dr Lawal is a dedicated and compassionate General Practitioner who provides patient-centred care to individuals and families of all ages. He takes the time to thoroughly assess his patients and explain treatment options clearly, helping them make informed decisions about their health. He has special interests in chronic illness management, family planning and men's health. Dr Lawal is passionate about creating a supportive and comfortable environment where patients feel confident discussing their health concerns.",
+    availability: "Available",
+    status: "Available",
+    rating: 4.9,
+    image: "/images/team/Dr-adet.png",
+    bookingName: "Toye",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
+  },
 ]
 
 export const staff: StaffMember[] = [

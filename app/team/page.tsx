@@ -282,9 +282,9 @@ export default function TeamPage() {
               </div>
             </div>
 
-            {/* Dr. Intan (using old layout as we don't have new photos) */}
+            {/* Dr. Intan & Dr. Lawal */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {doctors.filter(d => d.name === "Dr. Intan Ramli").map((doctor, index) => (
+              {doctors.filter(d => d.name === "Dr. Intan Ramli" || d.name === 'Dr. Adetoyese "Toye" Lawal').map((doctor, index) => (
                 <div
                   key={index}
                   className="bg-card rounded-2xl shadow-card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500 border border-border"

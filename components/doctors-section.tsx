@@ -52,6 +52,15 @@ const doctors = [
     bookingName: "Intan",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3"
   },
+  {
+    name: "Dr. Adetoyese \"Toye\" Lawal",
+    title: "General Practitioner",
+    qualifications: "MBBS, FRACGP",
+    languages: ["English"],
+    image: "/images/team/Dr-adet.png",
+    bookingName: "Toye",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
+  },
 ]
 
 export default function DoctorsSection() {
