@@ -125,7 +125,7 @@ export const staff: StaffMember[] = [
     qualifications: "Master of Dietetics, APD",
     specialties: ["Weight Management", "Type 2 Diabetes", "Heart Disease", "PCOS Management"],
     biography: "Allison is an Accredited Practising Dietitian (APD) registered with Dietitians Australia (DA). She holds a Master of Dietetics from Curtin University and has experience working across a range of settings, including medical clinics, aged care facilities, and online consultations. Allison provides evidence-based, personalised nutrition advice to support long-term health and wellbeing. Her areas of interest include weight management, type 2 diabetes, high cholesterol, high blood pressure, underweight and low appetite, polycystic ovary syndrome (PCOS), iron deficiency, and diverticulosis. Services include weight management, diabetes management, heart disease and dyslipidaemia, malnutrition support, IBS and low FODMAP diet, renal nutrition, oncology nutrition, texture-modified diets, iron deficiency management, and healthy eating support for all age groups.",
-    image: "https://ui-avatars.com/api/?name=Allison+Ip&size=400&background=00b1c3&color=fff&bold=true&font-size=0.4",
+    image: "/images/team/Allison.jpg",
     availability: "By appointment - Call (08) 6118 2788"
   },
   {
