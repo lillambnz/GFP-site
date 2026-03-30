@@ -287,7 +287,7 @@ export default function TeamPage() {
               {doctors.filter(d => d.name === "Dr. Intan Ramli" || d.name === 'Dr. Adetoyese "Toye" Lawal').map((doctor, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-2xl shadow-card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500 border border-border"
+                  className="bg-card rounded-2xl shadow-card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500 border border-border flex flex-col"
                 >
                   <div className="aspect-[3/4] overflow-hidden relative">
                     <Image
@@ -298,7 +298,7 @@ export default function TeamPage() {
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <h3 className="text-2xl font-bold text-foreground">{doctor.name}</h3>
                       <div className="flex items-center gap-1 text-yellow-500">
@@ -341,7 +341,7 @@ export default function TeamPage() {
                     </div>
 
                     <Button
-                      className="w-full bg-brand-teal hover:bg-brand-teal-dark text-white"
+                      className="w-full bg-brand-teal hover:bg-brand-teal-dark text-white mt-auto"
                       asChild
                     >
                       <a href={doctor.bookingUrl} target="_blank" rel="noopener noreferrer">
