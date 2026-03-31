@@ -135,9 +135,13 @@ export default function Footer() {
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex items-center gap-4 flex-wrap justify-center">
-                <span className="bg-green-700/80 text-white px-3 py-1 rounded-full text-xs font-medium">
-                  AGPAL Accredited
-                </span>
+                <Image
+                  src="/AGPAL.fingerprinted..png"
+                  alt="AGPAL Accredited Practice"
+                  width={80}
+                  height={80}
+                  className="rounded opacity-90"
+                />
                 <Image
                   src="/images/bulk-billing/BBPIP_webtile_200x160_v1.png"
                   alt="Medicare Bulk Billing Practice"
