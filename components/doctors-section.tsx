@@ -53,6 +53,15 @@ const doctors = [
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3"
   },
   {
+    name: "Dr. Wan Maisarah",
+    title: "General Practitioner",
+    qualifications: "MBChB, DFSRH, MRCGP",
+    languages: ["English", "Malay"],
+    image: "/images/team/Dr-Wan-Maisarah.jpg",
+    bookingName: "Dr Wan",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
+  },
+  {
     name: "Dr. Adetoyese \"Toye\" Lawal",
     title: "General Practitioner",
     qualifications: "MBBS, FRACGP",

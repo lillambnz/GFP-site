@@ -106,6 +106,22 @@ export const doctors: Doctor[] = [
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3"
   },
   {
+    name: "Dr. Wan Maisarah",
+    title: "General Practitioner",
+    gender: "Female",
+    qualifications: "MBChB, DFSRH, MRCGP",
+    languages: ["English", "Malay"],
+    specialInterests: ["Women's Health", "Menopause Management", "Contraception", "Sexual & Reproductive Healthcare"],
+    biography: "With over 14 years of clinical experience in the UK, including seven years as a dedicated General Practitioner, Dr Wan Maisarah is thrilled to bring her practice to Gosnells Family Practice. A 2012 graduate of the University of Leicester, she completed her specialist GP training in North Oxfordshire in 2019 and holds a Diploma of the Faculty of Sexual and Reproductive Healthcare (DFSRH). While she enjoys the diversity of all aspects of General Practice, Dr Wan is particularly passionate about women's health, menopause management, and contraception. Her approach is rooted in evidence-based medicine, delivered through a holistic lens. She believes the best health outcomes start with a strong doctor-patient relationship built on trust and clear communication. She is able to offer consultations in both English and Malay.",
+    availability: "Available",
+    status: "Available",
+    rating: 4.9,
+    image: "/images/team/Dr-Wan-Maisarah.jpg",
+    bookingName: "Dr Wan",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
+    yearsExperience: 14
+  },
+  {
     name: "Dr. Adetoyese \"Toye\" Lawal",
     title: "General Practitioner",
     gender: "Male",
