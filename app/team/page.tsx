@@ -284,7 +284,7 @@ export default function TeamPage() {
 
             {/* Dr. Intan, Dr. Lawal & Dr. Wan */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {doctors.filter(d => d.name === "Dr. Intan Ramli" || d.name === 'Dr. Adetoyese "Toye" Lawal' || d.name === "Dr. Wan Maisarah").map((doctor, index) => (
+              {doctors.filter(d => d.name === "Dr. Intan Ramli" || d.name === 'Dr. Adetoyese "Toye" Lawal' || d.name === "Dr. Wan Maisarah" || d.name === "Dr. Siti Shuhaizam Mamat Raduan").map((doctor, index) => (
                 <div
                   key={index}
                   className="bg-card rounded-2xl shadow-card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500 border border-border flex flex-col"

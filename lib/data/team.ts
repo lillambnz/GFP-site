@@ -106,6 +106,22 @@ export const doctors: Doctor[] = [
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3"
   },
   {
+    name: "Dr. Siti Shuhaizam Mamat Raduan",
+    title: "General Practitioner",
+    gender: "Female",
+    qualifications: "MBBS (IMU), MAFP, FRACGP",
+    languages: ["English", "Malay"],
+    specialInterests: ["Sports Health", "Weight Management", "Women's Health", "Family Planning"],
+    biography: "Dr. Sue graduated from the International Medical University (IMU) in 2003 and has been working as a Family Physician since 2011, with broad experience in managing both acute and chronic conditions. She has a special interest in sports health, weight management, women's health, and family planning. Dr. Sue takes a holistic, patient-centred approach, focusing on prevention and overall wellbeing, and works closely with her patients to develop personalised and practical care plans. In addition to her clinical work, she is actively involved in medical education with the Academy of Family Physicians of Malaysia, where she serves as an examiner for the MAFP/ICFRACGP examinations. She is committed to building strong, trusting relationships by listening carefully and communicating clearly. Fluent in English and Malay.",
+    availability: "Available",
+    status: "Available",
+    rating: 4.9,
+    image: "/images/team/Dr-Siti-Mamat-Raduan.jpg",
+    bookingName: "Dr Sue",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
+    yearsExperience: 14
+  },
+  {
     name: "Dr. Wan Maisarah",
     title: "General Practitioner",
     gender: "Female",

@@ -53,6 +53,15 @@ const doctors = [
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3"
   },
   {
+    name: "Dr. Siti Shuhaizam Mamat Raduan",
+    title: "General Practitioner",
+    qualifications: "MBBS (IMU), MAFP, FRACGP",
+    languages: ["English", "Malay"],
+    image: "/images/team/Dr-Siti-Mamat-Raduan.jpg",
+    bookingName: "Dr Sue",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
+  },
+  {
     name: "Dr. Wan Maisarah",
     title: "General Practitioner",
     qualifications: "MBChB, DFSRH, MRCGP",
