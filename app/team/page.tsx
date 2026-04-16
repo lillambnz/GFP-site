@@ -1,12 +1,35 @@
 "use client"
 
+import { useState } from "react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { PhotoGallery } from "@/components/photo-gallery"
 import { doctors, staff } from "@/lib/data/team"
-import { Languages, Star } from "lucide-react"
+import { Languages, Star, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+
+function ExpandableBio({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false)
+  return (
+    <div>
+      <p className={`text-sm text-muted-foreground leading-relaxed ${expanded ? "" : "line-clamp-4"}`}>
+        {text}
+      </p>
+      <button
+        type="button"
+        onClick={() => setExpanded(v => !v)}
+        className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-brand-teal hover:text-brand-teal-dark transition-colors"
+      >
+        {expanded ? (
+          <>Show less <ChevronUp className="w-3.5 h-3.5" /></>
+        ) : (
+          <>Read more <ChevronDown className="w-3.5 h-3.5" /></>
+        )}
+      </button>
+    </div>
+  )
+}
 
 export default function TeamPage() {
   // Doctor photo galleries
@@ -335,9 +358,7 @@ export default function TeamPage() {
                     </div>
 
                     <div className="mb-4">
-                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4">
-                        {doctor.biography}
-                      </p>
+                      <ExpandableBio text={doctor.biography} />
                     </div>
 
                     <Button
@@ -401,9 +422,9 @@ export default function TeamPage() {
                       </div>
                     </div>
 
-                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4 mb-4">
-                      {member.biography}
-                    </p>
+                    <div className="mb-4">
+                      <ExpandableBio text={member.biography} />
+                    </div>
                   </div>
                 </div>
               ))}
