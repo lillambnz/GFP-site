@@ -116,7 +116,7 @@ export const doctors: Doctor[] = [
     availability: "Available",
     status: "Available",
     rating: 4.9,
-    image: "/images/team/Dr-Siti-Mamat-Raduan.jpg",
+    image: "/images/team/Dr-Siti-new.jpeg",
     bookingName: "Dr Sue",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
     yearsExperience: 14
@@ -132,7 +132,7 @@ export const doctors: Doctor[] = [
     availability: "Available",
     status: "Available",
     rating: 4.9,
-    image: "/images/team/Dr-Wan-Maisarah.jpg",
+    image: "/images/team/DrWANnew.jpeg",
     bookingName: "Dr Wan",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
     yearsExperience: 14

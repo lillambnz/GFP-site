@@ -57,7 +57,7 @@ const doctors = [
     title: "General Practitioner",
     qualifications: "MBBS (IMU), MAFP, FRACGP",
     languages: ["English", "Malay"],
-    image: "/images/team/Dr-Siti-Mamat-Raduan.jpg",
+    image: "/images/team/Dr-Siti-new.jpeg",
     bookingName: "Dr Sue",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
   },
@@ -66,7 +66,7 @@ const doctors = [
     title: "General Practitioner",
     qualifications: "MBChB, DFSRH, MRCGP",
     languages: ["English", "Malay"],
-    image: "/images/team/Dr-Wan-Maisarah.jpg",
+    image: "/images/team/DrWANnew.jpeg",
     bookingName: "Dr Wan",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
   },
