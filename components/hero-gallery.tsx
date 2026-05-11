@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Star, Calendar, Phone } from 'lucide-react'
 import { googleBusinessInfo } from '@/lib/data/google-reviews'
 import { Button } from '@/components/ui/button'
@@ -63,27 +63,33 @@ export function HeroGallery({
   }
 
   return (
-    <div className={`relative w-full ${height} overflow-hidden rounded-2xl group`}>
-      {/* Background Images */}
-      <AnimatePresence mode="wait">
+    <div className={`relative w-full ${height} overflow-hidden rounded-2xl group bg-slate-900`}>
+      {/* Background Images — all slides are always mounted so they preload and
+          cross-fade without a blank gap. Each slide fades to opacity 1 only when
+          it's the current index. */}
+      {photos.map((photo, index) => (
         <motion.div
-          key={currentIndex}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
+          key={index}
+          initial={false}
+          animate={{
+            opacity: index === currentIndex ? 1 : 0,
+            scale: index === currentIndex ? 1 : 1.05,
+          }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="absolute inset-0"
+          aria-hidden={index !== currentIndex}
         >
           <Image
-            src={photos[currentIndex].src}
-            alt={photos[currentIndex].alt}
+            src={photo.src}
+            alt={photo.alt}
             fill
             sizes="100vw"
             className="object-cover"
-            priority={currentIndex === 0}
+            priority={index === 0}
+            loading={index === 0 ? undefined : "eager"}
           />
         </motion.div>
-      </AnimatePresence>
+      ))}
 
       {/* Dark overlay - only show on slides with text content */}
       {photos[currentIndex].title && (
