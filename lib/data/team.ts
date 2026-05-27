@@ -116,7 +116,7 @@ export const doctors: Doctor[] = [
     availability: "Available",
     status: "Available",
     rating: 4.9,
-    image: "/images/team/Dr-Siti-new.jpeg",
+    image: "/images/team/Dr-Siti-white.jpg",
     bookingName: "Dr Sue",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
     yearsExperience: 14
@@ -132,7 +132,7 @@ export const doctors: Doctor[] = [
     availability: "Available",
     status: "Available",
     rating: 4.9,
-    image: "/images/team/DrWANnew.jpeg",
+    image: "/images/team/Dr-Wan-white.jpg",
     bookingName: "Dr Wan",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
     yearsExperience: 14
@@ -176,6 +176,15 @@ export const staff: StaffMember[] = [
     availability: "By appointment - Call (08) 6118 2788"
   },
   {
+    name: "Vruta Patel",
+    role: "Physiotherapist",
+    qualifications: "BPT (M.S. University, India)",
+    specialties: ["Musculoskeletal Physiotherapy", "Neurological Rehabilitation", "Women's Health Physiotherapy"],
+    biography: "Vruta is a dedicated physiotherapist with experience across clinical, community, and home-based settings. She specialises in musculoskeletal, neurological, aged care, and women's health physiotherapy, offering evidence-based, patient-centred care. Her skill set includes manual therapy, clinical Pilates, dry needling, cupping, hydrotherapy, and exercise prescription. Fluent in English, Gujarati, and Hindi, Vruta combines clinical expertise with empathy and clear communication to help patients regain strength, mobility, and confidence.",
+    image: "/images/team/physio.jpg",
+    availability: "By appointment - Call (08) 6118 2788"
+  },
+  {
     name: "Bianca MacIntyre",
     role: "Psychologist",
     qualifications: "Provisional Psychologist",
@@ -192,15 +201,6 @@ export const staff: StaffMember[] = [
     biography: "Saphia is a Provisional Psychologist employed by ORS who takes a warm, collaborative, and person-centred approach to therapy. She is passionate about walking alongside individuals as they navigate life's challenges, deepen self-understanding, and work towards meaningful and sustainable change. She aims to create a therapeutic space that feels safe, respectful, and grounded in trust, where patients feel genuinely heard and supported. She places strong value on mutual and shared decision-making and believes that therapy works best when clients are active partners in their care. Her work is informed by evidence-based approaches, drawing on modalities such as Cognitive Behaviour Therapy (CBT), Acceptance and Commitment Therapy (ACT), Metacognitive Therapy (MCT), among other therapeutic modalities. She uses an integrative approach that honours the interconnection between mind, body, and soul. Saphia tailors her approach to each individual, recognising that every person's story, strengths, and goals are unique. She has a particular interest in supporting individuals experiencing stress, emotional regulation difficulties, interpersonal challenges, behavioural concerns, and broader mental health difficulties. Saphia is committed to an inclusive, culturally responsive, and affirming practice, and welcomes individuals of all genders, cultures, and backgrounds. Gosnells Family Practice hosts WAPHA-commissioned ORS/MindSpot clinics for eligible patients. Referrals are made by GPs through approved pathways directly to MindSpot, as ORS does not accept direct referrals. Patients wishing to see Saphia may speak with their GP about a referral to MindSpot GP, a free government-funded mental health service for individuals experiencing low to moderate mental health concerns. Once a referral is received, MindSpot will contact the patient to assess suitability for in-person or telehealth services with ORS.",
     image: "https://ui-avatars.com/api/?name=Saphia+Beekawoo&size=400&background=00b1c3&color=fff&bold=true&font-size=0.4",
     availability: "By GP referral to MindSpot"
-  },
-  {
-    name: "Vruta Patel",
-    role: "Physiotherapist",
-    qualifications: "BPT (M.S. University, India)",
-    specialties: ["Musculoskeletal Physiotherapy", "Neurological Rehabilitation", "Women's Health Physiotherapy"],
-    biography: "Vruta is a dedicated physiotherapist with experience across clinical, community, and home-based settings. She specialises in musculoskeletal, neurological, aged care, and women's health physiotherapy, offering evidence-based, patient-centred care. Her skill set includes manual therapy, clinical Pilates, dry needling, cupping, hydrotherapy, and exercise prescription. Fluent in English, Gujarati, and Hindi, Vruta combines clinical expertise with empathy and clear communication to help patients regain strength, mobility, and confidence.",
-    image: "/images/team/physio.jpg",
-    availability: "By appointment - Call (08) 6118 2788"
   },
 ]
 
