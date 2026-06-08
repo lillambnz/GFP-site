@@ -8,6 +8,7 @@ import { doctors, staff } from "@/lib/data/team"
 import { Languages, Star, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 function ExpandableBio({ text }: { text: string }) {
   const [expanded, setExpanded] = useState(false)
@@ -146,9 +147,7 @@ export default function TeamPage() {
                   </div>
 
                   <Button className="bg-brand-teal hover:bg-brand-teal-dark text-white text-lg px-8 py-6" asChild>
-                    <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-ameer-khan" target="_blank" rel="noopener noreferrer">
-                      Book with Dr Khan
-                    </a>
+                    <Link href="/team/dr-ameer-khan">Book with Dr Khan</Link>
                   </Button>
                 </div>
               </div>
@@ -194,9 +193,7 @@ export default function TeamPage() {
                   </div>
 
                   <Button className="bg-brand-teal hover:bg-brand-teal-dark text-white text-lg px-8 py-6" asChild>
-                    <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-fazilah-binti-abu-bakar" target="_blank" rel="noopener noreferrer">
-                      Book with Dr Fazilah
-                    </a>
+                    <Link href="/team/dr-fazilah-abu-bakar">Book with Dr Fazilah</Link>
                   </Button>
                 </div>
                 <div className="order-1 lg:order-2">
@@ -248,9 +245,7 @@ export default function TeamPage() {
                   </div>
 
                   <Button className="bg-brand-teal hover:bg-brand-teal-dark text-white text-lg px-8 py-6" asChild>
-                    <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-choong-leat-loh" target="_blank" rel="noopener noreferrer">
-                      Book with Dr Loh
-                    </a>
+                    <Link href="/team/dr-choong-leat-loh">Book with Dr Loh</Link>
                   </Button>
                 </div>
               </div>
@@ -295,9 +290,7 @@ export default function TeamPage() {
                   </div>
 
                   <Button className="bg-brand-teal hover:bg-brand-teal-dark text-white text-lg px-8 py-6" asChild>
-                    <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-quam-gbajabiamila" target="_blank" rel="noopener noreferrer">
-                      Book with Dr Quam
-                    </a>
+                    <Link href="/team/dr-quam-gbajabiamila">Book with Dr Quam</Link>
                   </Button>
                 </div>
                 <div className="order-1 lg:order-2">
@@ -366,9 +359,9 @@ export default function TeamPage() {
                       className="w-full bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white mt-auto shadow-md shadow-brand-teal/20 hover:shadow-lg hover:shadow-brand-teal/30 hover:scale-[1.02] transition-all duration-300"
                       asChild
                     >
-                      <a href={doctor.bookingUrl} target="_blank" rel="noopener noreferrer">
+                      <Link href={`/team/${doctor.slug}`}>
                         Book with {doctor.bookingName}
-                      </a>
+                      </Link>
                     </Button>
                   </div>
                 </div>
