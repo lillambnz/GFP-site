@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import "../styles/globals.css"
 
 import MetaPixel from "@/components/MetaPixel"
@@ -169,6 +170,7 @@ export default function RootLayout({
         <BulkBillingPopup />
         <MetaPixel />
         <Analytics />
+        <GoogleAnalytics gaId="G-FJL2P4LVSY" />
       </body>
     </html>
   )
