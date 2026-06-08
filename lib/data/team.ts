@@ -13,6 +13,10 @@ export interface Doctor {
   bookingName: string
   bookingUrl: string
   yearsExperience?: number
+  slug: string
+  hotdocWidgetUrl?: string
+  galleryPhotos?: { src: string; alt: string }[]
+  acceptingNewPatients?: boolean
 }
 
 export interface StaffMember {
@@ -25,6 +29,7 @@ export interface StaffMember {
   availability: string
   bookingName?: string
   bookingUrl?: string
+  hotdocWidgetUrl?: string
 }
 
 export const doctors: Doctor[] = [
@@ -41,7 +46,15 @@ export const doctors: Doctor[] = [
     rating: 4.9,
     image: "/images/team/Dr-Ameer-Khan.webp",
     bookingName: "Ameer",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/ameer-khan"
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/ameer-khan",
+    slug: "dr-ameer-khan",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/ameer-khan?wp=w_iframe",
+    galleryPhotos: [
+      { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-35.jpg", alt: "Dr. Ameer Khan" },
+      { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-38.jpg", alt: "Dr. Ameer Khan" },
+      { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-45.jpg", alt: "Dr. Ameer Khan" },
+      { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-46.jpg", alt: "Dr. Ameer Khan" },
+    ]
   },
   {
     name: "Dr. Fazilah Binti Abu Bakar",
@@ -57,7 +70,15 @@ export const doctors: Doctor[] = [
     image: "/images/team/Dr-Fazilah-Abu-Bakar.webp",
     bookingName: "Fazilah",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/fazilah-binti-abu-bakar",
-    yearsExperience: 24
+    yearsExperience: 24,
+    slug: "dr-fazilah-abu-bakar",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/fazilah-binti-abu-bakar?wp=w_iframe",
+    galleryPhotos: [
+      { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-64.jpg", alt: "Dr. Fazilah Abu Bakar" },
+      { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-58.jpg", alt: "Dr. Fazilah Abu Bakar" },
+      { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-66.jpg", alt: "Dr. Fazilah Abu Bakar" },
+      { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-71.jpg", alt: "Dr. Fazilah Abu Bakar" },
+    ]
   },
   {
     name: "Dr. Choong Leat Loh",
@@ -73,7 +94,15 @@ export const doctors: Doctor[] = [
     image: "/images/team/Dr-Choong-Leat-Loh.webp",
     bookingName: "Choong",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/choong-leat-loh",
-    yearsExperience: 20
+    yearsExperience: 20,
+    slug: "dr-choong-leat-loh",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/choong-leat-loh?wp=w_iframe",
+    galleryPhotos: [
+      { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-2.jpg", alt: "Dr. Choong Leat Loh" },
+      { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-14.jpg", alt: "Dr. Choong Leat Loh" },
+      { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-16.jpg", alt: "Dr. Choong Leat Loh" },
+      { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-21.jpg", alt: "Dr. Choong Leat Loh" },
+    ]
   },
   {
     name: "Dr. Quam Gbajabiamila",
@@ -88,7 +117,15 @@ export const doctors: Doctor[] = [
     rating: 4.9,
     image: "/images/team/quam-bio.webp",
     bookingName: "Quam",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/quam-gbajabiamila"
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/quam-gbajabiamila",
+    slug: "dr-quam-gbajabiamila",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/quam-gbajabiamila?wp=w_iframe",
+    galleryPhotos: [
+      { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-115.jpg", alt: "Dr. Quam Gbajabiamila" },
+      { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-121.jpg", alt: "Dr. Quam Gbajabiamila" },
+      { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-123.jpg", alt: "Dr. Quam Gbajabiamila" },
+      { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-126.jpg", alt: "Dr. Quam Gbajabiamila" },
+    ]
   },
   {
     name: "Dr. Intan Ramli",
@@ -103,7 +140,9 @@ export const doctors: Doctor[] = [
     rating: 4.9,
     image: "/images/team/Dr-Intan.webp",
     bookingName: "Intan",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3"
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3",
+    slug: "dr-intan-ramli",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3?wp=w_iframe"
   },
   {
     name: "Dr. Siti Shuhaizam Mamat Raduan",
@@ -119,7 +158,8 @@ export const doctors: Doctor[] = [
     image: "/images/team/Dr-Siti-white.jpg",
     bookingName: "Dr Sue",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
-    yearsExperience: 14
+    yearsExperience: 14,
+    slug: "dr-siti-mamat-raduan"
   },
   {
     name: "Dr. Wan Maisarah",
@@ -134,8 +174,10 @@ export const doctors: Doctor[] = [
     rating: 4.9,
     image: "/images/team/Dr-Wan-white.jpg",
     bookingName: "Dr Wan",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
-    yearsExperience: 14
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-wan-maisarah",
+    yearsExperience: 14,
+    slug: "dr-wan-maisarah",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-wan-maisarah?wp=w_iframe"
   },
   {
     name: "Dr. Adetoyese \"Toye\" Lawal",
@@ -151,7 +193,10 @@ export const doctors: Doctor[] = [
     image: "/images/team/Dr-adet.png",
     bookingName: "Toye",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-adetoyese-toye-lawal",
-    yearsExperience: 17
+    yearsExperience: 17,
+    slug: "dr-toye-lawal",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-adetoyese-toye-lawal?wp=w_iframe",
+    acceptingNewPatients: true
   },
 ]
 
@@ -165,7 +210,8 @@ export const staff: StaffMember[] = [
     image: "/images/team/yenny.jpeg",
     availability: "Available in 12 days",
     bookingName: "Yenny",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/yen-nee-liew-1"
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/yen-nee-liew-1",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/yen-nee-liew-1?wp=w_iframe"
   },
   {
     name: "Allison Ip",
