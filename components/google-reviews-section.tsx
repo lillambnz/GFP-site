@@ -3,7 +3,6 @@
 import { Star, ExternalLink } from "lucide-react"
 import { googleReviews, googleBusinessInfo } from "@/lib/data/google-reviews"
 import { SectionHeading } from "./section-heading"
-import { StaggerContainer, StaggerItem } from "./reveal"
 import { useState, useEffect } from "react"
 
 function StarRating({ rating }: { rating: number }) {
@@ -118,30 +117,6 @@ export function GoogleReviewsSection() {
             <FeaturedCard review={featuredReview} />
           )}
         </div>
-
-        {/* Reviews Grid */}
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-          {googleReviews.filter((_, i) => i !== featuredIndex).slice(0, 6).map((review, index) => (
-            <StaggerItem key={index}>
-              <div className="bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-shadow h-full">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-teal to-brand-teal-dark flex items-center justify-center text-white font-semibold text-sm">
-                      {review.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground text-sm">{review.name}</p>
-                      {review.date && <p className="text-[11px] text-muted-foreground">{review.date}</p>}
-                    </div>
-                  </div>
-                  <GoogleIcon className="w-4 h-4 opacity-30" />
-                </div>
-                <StarRating rating={review.rating} />
-                <p className="mt-3 text-foreground/70 text-sm leading-relaxed">&ldquo;{review.text}&rdquo;</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
 
         {/* CTA */}
         <div className="text-center">
