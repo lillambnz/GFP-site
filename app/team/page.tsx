@@ -306,9 +306,69 @@ export default function TeamPage() {
               </div>
             </div>
 
-            {/* Dr. Intan, Dr. Lawal & Dr. Wan */}
+            {/* Dr. Adetoyese "Toye" Lawal */}
+            <div id="dr-lawal" className="mb-8 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="relative min-h-[400px] lg:min-h-[520px]">
+                  <Image
+                    src="/images/team/Dr-adet.png"
+                    alt="Dr. Adetoyese Toye Lawal"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="flex flex-col justify-center p-8">
+                  <div className="mb-4">
+                    <span className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-emerald-200">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      Now Accepting New Patients — Bulk Billing
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <h3 className="text-3xl font-bold text-foreground">Dr. Toye Lawal</h3>
+                    <div className="flex items-center gap-1 text-yellow-500">
+                      <Star className="w-5 h-5 fill-current" />
+                      <span className="text-sm font-semibold text-foreground">4.9</span>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground font-semibold mb-2">General Practitioner, Male</p>
+                  <p className="text-sm text-muted-foreground mb-6">MBBS, FRACGP · 17 years in medicine</p>
+
+                  <div className="mb-6">
+                    <p className="text-sm font-semibold text-foreground mb-2">Special Interests:</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-sm bg-brand-teal-light text-brand-teal px-3 py-1 rounded-full">Chronic Illness Management</span>
+                      <span className="text-sm bg-brand-teal-light text-brand-teal px-3 py-1 rounded-full">Family Planning</span>
+                      <span className="text-sm bg-brand-teal-light text-brand-teal px-3 py-1 rounded-full">Men&apos;s Health</span>
+                    </div>
+                  </div>
+
+                  <div className="mb-6 pb-6 border-b border-border">
+                    <div className="flex items-start gap-2">
+                      <Languages className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground">English</p>
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <p className="text-muted-foreground leading-relaxed">
+                      Dr Adetoyese &ldquo;Toye&rdquo; Lawal attained his MBBS in 2009 and became a Fellow of The Royal Australian College of General Practitioners (FRACGP) in 2020. He is now welcoming new patients and provides bulk-billed, patient-centred care to individuals and families of all ages. Dr Lawal takes the time to thoroughly assess his patients, explain treatment options clearly, and help them make informed decisions about their health. He has special interests in chronic illness management, family planning and men&apos;s health, and is passionate about creating a supportive and comfortable environment where patients feel confident discussing their health concerns.
+                    </p>
+                  </div>
+
+                  <Button className="bg-brand-teal hover:bg-brand-teal-dark text-white text-lg px-8 py-6" asChild>
+                    <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
+                      Book with Dr Lawal
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Dr. Intan, Dr. Siti & Dr. Wan */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {doctors.filter(d => d.name === "Dr. Intan Ramli" || d.name === 'Dr. Adetoyese "Toye" Lawal' || d.name === "Dr. Wan Maisarah" || d.name === "Dr. Siti Shuhaizam Mamat Raduan").map((doctor, index) => (
+              {doctors.filter(d => d.name === "Dr. Intan Ramli" || d.name === "Dr. Wan Maisarah" || d.name === "Dr. Siti Shuhaizam Mamat Raduan").map((doctor, index) => (
                 <div
                   key={index}
                   className="bg-card rounded-2xl shadow-card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500 border border-border flex flex-col"
@@ -363,7 +423,7 @@ export default function TeamPage() {
                     </div>
 
                     <Button
-                      className="w-full bg-brand-teal hover:bg-brand-teal-dark text-white mt-auto"
+                      className="w-full bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white mt-auto shadow-md shadow-brand-teal/20 hover:shadow-lg hover:shadow-brand-teal/30 hover:scale-[1.02] transition-all duration-300"
                       asChild
                     >
                       <a href={doctor.bookingUrl} target="_blank" rel="noopener noreferrer">
@@ -456,13 +516,13 @@ export default function TeamPage() {
                 href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-brand-teal hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition inline-block"
+                className="bg-white text-brand-teal hover:bg-gray-50 font-semibold px-8 py-3 rounded-full shadow-lg shadow-white/20 hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block"
               >
                 Book Online
               </a>
               <a
                 href="tel:0861182788"
-                className="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-3 rounded-full transition inline-block"
+                className="bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-white font-semibold px-8 py-3 rounded-full shadow-lg shadow-slate-900/30 hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block"
               >
                 Call (08) 6118 2788
               </a>

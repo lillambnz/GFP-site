@@ -144,13 +144,14 @@ export const doctors: Doctor[] = [
     qualifications: "MBBS, FRACGP",
     languages: ["English"],
     specialInterests: ["Chronic Illness Management", "Family Planning", "Men's Health"],
-    biography: "Dr Adetoyese Lawal attained his Bachelor of Medicine / Bachelor of Surgery (MBBS) in 2009 and became a Fellow of The Royal Australian College of General Practitioners (FRACGP) in 2020. Dr Lawal is a dedicated and compassionate General Practitioner who provides patient-centred care to individuals and families of all ages. He takes the time to thoroughly assess his patients and explain treatment options clearly, helping them make informed decisions about their health. He has special interests in chronic illness management, family planning and men's health. Dr Lawal is passionate about creating a supportive and comfortable environment where patients feel confident discussing their health concerns.",
+    biography: "Dr Adetoyese \"Toye\" Lawal attained his MBBS in 2009 and became a Fellow of The Royal Australian College of General Practitioners (FRACGP) in 2020. He is now welcoming new patients and provides bulk-billed, patient-centred care to individuals and families of all ages. Dr Lawal takes the time to thoroughly assess his patients, explain treatment options clearly, and help them make informed decisions about their health. He has special interests in chronic illness management, family planning and men's health, and is passionate about creating a supportive and comfortable environment where patients feel confident discussing their health concerns.",
     availability: "Available",
     status: "Available",
     rating: 4.9,
     image: "/images/team/Dr-adet.png",
     bookingName: "Toye",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
+    yearsExperience: 17
   },
 ]
 
