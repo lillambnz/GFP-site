@@ -4,6 +4,7 @@ import { Star, ExternalLink } from "lucide-react"
 import { googleReviews, googleBusinessInfo } from "@/lib/data/google-reviews"
 import { SectionHeading } from "./section-heading"
 import { StaggerContainer, StaggerItem } from "./reveal"
+import { useState, useEffect } from "react"
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -31,7 +32,47 @@ function GoogleIcon({ className }: { className?: string }) {
   )
 }
 
+function FeaturedCard({ review }: { review: (typeof googleReviews)[number] }) {
+  return (
+    <div className="bg-card rounded-2xl p-8 shadow-card border-l-4 border-l-brand-teal hover:shadow-card-hover transition-shadow cursor-pointer group">
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <div className="w-11 h-11 rounded-full bg-gradient-to-br from-brand-teal to-brand-teal-dark flex items-center justify-center text-white font-semibold text-lg">
+            {review.name.charAt(0)}
+          </div>
+          <div>
+            <p className="font-semibold text-foreground text-lg">{review.name}</p>
+            {review.date && <p className="text-xs text-muted-foreground">{review.date}</p>}
+          </div>
+        </div>
+        <GoogleIcon className="w-5 h-5 opacity-40" />
+      </div>
+      <StarRating rating={review.rating} />
+      <p className="mt-4 text-foreground/80 leading-relaxed">&ldquo;{review.text}&rdquo;</p>
+      {review.url && (
+        <p className="mt-3 text-xs text-brand-teal group-hover:underline">View original review on Google →</p>
+      )}
+    </div>
+  )
+}
+
 export function GoogleReviewsSection() {
+  const [featuredIndex, setFeaturedIndex] = useState(0)
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setVisible(false)
+      setTimeout(() => {
+        setFeaturedIndex(i => (i + 1) % googleReviews.length)
+        setVisible(true)
+      }, 400)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const featuredReview = googleReviews[featuredIndex]
+
   return (
     <section className="py-16 md:py-24 bg-surface-sunken bg-dot-pattern">
       <div className="container mx-auto px-4">
@@ -64,41 +105,23 @@ export function GoogleReviewsSection() {
           />
         </div>
 
-        {/* Featured Review */}
-        {googleReviews.filter(r => r.featured).map((review, index) => {
-          const content = (
-            <div
-              key={`featured-${index}`}
-              className="bg-card rounded-2xl p-8 shadow-card border-l-4 border-l-brand-teal hover:shadow-card-hover transition-shadow mb-8 max-w-3xl mx-auto group cursor-pointer"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-brand-teal to-brand-teal-dark flex items-center justify-center text-white font-semibold text-lg">
-                    {review.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground text-lg">{review.name}</p>
-                    {review.date && <p className="text-xs text-muted-foreground">{review.date}</p>}
-                  </div>
-                </div>
-                <GoogleIcon className="w-5 h-5 opacity-40" />
-              </div>
-              <StarRating rating={review.rating} />
-              <p className="mt-4 text-foreground/80 leading-relaxed">&ldquo;{review.text}&rdquo;</p>
-              {review.url && (
-                <p className="mt-3 text-xs text-brand-teal group-hover:underline">View original review on Google →</p>
-              )}
-            </div>
-          );
-
-          return review.url ? (
-            <a key={`featured-link-${index}`} href={review.url} target="_blank" rel="noopener noreferrer">{content}</a>
-          ) : content;
-        })}
+        {/* Featured Review — auto-rotates every 5s */}
+        <div
+          className="mb-8 max-w-3xl mx-auto transition-opacity duration-400"
+          style={{ opacity: visible ? 1 : 0 }}
+        >
+          {featuredReview.url ? (
+            <a href={featuredReview.url} target="_blank" rel="noopener noreferrer" className="block group">
+              <FeaturedCard review={featuredReview} />
+            </a>
+          ) : (
+            <FeaturedCard review={featuredReview} />
+          )}
+        </div>
 
         {/* Reviews Grid */}
         <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-          {googleReviews.filter(r => !r.featured).slice(0, 6).map((review, index) => (
+          {googleReviews.filter((_, i) => i !== featuredIndex).slice(0, 6).map((review, index) => (
             <StaggerItem key={index}>
               <div className="bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-shadow h-full">
                 <div className="flex items-start justify-between mb-4">
