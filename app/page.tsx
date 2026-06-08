@@ -8,8 +8,8 @@ import PatientInformationSection from "@/components/patient-information-section"
 import Footer from "@/components/footer"
 import Link from "next/link"
 import { services } from "@/lib/data/services"
-import { ArrowRight, Star } from "lucide-react"
-import { doctors } from "@/lib/data/team"
+import { ArrowRight } from "lucide-react"
+import { BulkBillingSection } from "@/components/bulk-billing-section"
 import { GoogleReviewsSection } from "@/components/google-reviews-section"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -19,7 +19,6 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/reveal"
 
 export default function Home() {
   const featuredServices = services.slice(0, 6)
-  const featuredDoctors = doctors.filter(d => ['dr-ameer-khan', 'dr-fazilah-abu-bakar', 'dr-choong-leat-loh'].includes(d.slug))
 
   const heroPhotos = [
     {
@@ -218,66 +217,8 @@ export default function Home() {
       {/* Reviews */}
       <GoogleReviewsSection />
 
-      {/* Meet Our Doctors */}
-      <section className="py-20 bg-background bg-glow-tl">
-        <div className="container mx-auto px-4 lg:px-8">
-          <SectionHeading
-            eyebrow="Our GPs"
-            title="Meet Our Doctors"
-            subtitle="Book directly online — bulk billing available for all eligible patients"
-            className="mb-14"
-          />
-
-          <StaggerContainer className="grid md:grid-cols-3 gap-6 mb-12">
-            {featuredDoctors.map((doctor) => (
-              <StaggerItem key={doctor.slug}>
-                <Link
-                  href={`/team/${doctor.slug}`}
-                  className="block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group border border-border h-full"
-                >
-                  <div className="aspect-[4/3] relative overflow-hidden bg-brand-teal-light">
-                    <Image
-                      src={doctor.image}
-                      alt={doctor.name}
-                      fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-1">
-                      <h3 className="font-semibold text-foreground group-hover:text-brand-teal transition-colors">{doctor.name}</h3>
-                      <div className="flex items-center gap-1 text-yellow-400">
-                        <Star className="w-3.5 h-3.5 fill-current" />
-                        <span className="text-xs font-semibold text-foreground">{doctor.rating}</span>
-                      </div>
-                    </div>
-                    <p className="text-xs text-muted-foreground mb-3">{doctor.qualifications}</p>
-                    {doctor.specialInterests && (
-                      <div className="flex flex-wrap gap-1.5 mb-4">
-                        {doctor.specialInterests.slice(0, 3).map((interest, i) => (
-                          <span key={i} className="text-xs bg-brand-teal-light text-brand-teal px-2 py-0.5 rounded-full">
-                            {interest}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                    <span className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-teal group-hover:gap-2.5 transition-all">
-                      Book Now <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </div>
-                </Link>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-
-          <Reveal className="text-center">
-            <Link href="/team" className="inline-flex items-center gap-2 text-brand-teal hover:text-brand-teal-dark font-medium transition-colors">
-              Meet the full team <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
+      {/* Bulk Billing */}
+      <BulkBillingSection />
 
       {/* Patient Information */}
       <PatientInformationSection />
