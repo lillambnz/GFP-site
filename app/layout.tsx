@@ -167,7 +167,6 @@ export default function RootLayout({
       </head>
       <body className={`font-sans antialiased`}>
         {children}
-        <BulkBillingPopup />
         <MetaPixel />
         <Analytics />
         <GoogleAnalytics gaId="G-FJL2P4LVSY" />
