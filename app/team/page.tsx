@@ -8,6 +8,7 @@ import { doctors, staff } from "@/lib/data/team"
 import { Languages, Star, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Script from "next/script"
 
 function ExpandableBio({ text }: { text: string }) {
   const [expanded, setExpanded] = useState(false)
@@ -357,14 +358,26 @@ export default function TeamPage() {
                     </p>
                   </div>
 
-                  <Button className="bg-brand-teal hover:bg-brand-teal-dark text-white text-lg px-8 py-6" asChild>
-                    <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
-                      Book with Dr Lawal
-                    </a>
-                  </Button>
                 </div>
               </div>
+              <div className="border-t border-border px-8 py-6">
+                <p className="text-lg font-bold text-foreground mb-4">Book an Appointment with Dr Lawal</p>
+                <iframe
+                  src="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-adetoyese-toye-lawal?wp=w_iframe"
+                  data-hotdoc-widget="iframe"
+                  width="100%"
+                  height="800"
+                  frameBorder={0}
+                  allow="payment"
+                  className="rounded-xl"
+                />
+              </div>
             </div>
+            <Script
+              src="https://cdn.hotdoc.com.au/static/assets/js/hotdoc-widgets.min.js"
+              strategy="afterInteractive"
+              charSet="utf-8"
+            />
 
             {/* Dr. Intan, Dr. Siti & Dr. Wan */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

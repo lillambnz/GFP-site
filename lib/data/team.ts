@@ -150,7 +150,7 @@ export const doctors: Doctor[] = [
     rating: 4.9,
     image: "/images/team/Dr-adet.png",
     bookingName: "Toye",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-adetoyese-toye-lawal",
     yearsExperience: 17
   },
 ]
