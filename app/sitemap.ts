@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { services } from '@/lib/data/services'
 import { blogPosts } from '@/lib/data/blog-posts'
+import { doctors } from '@/lib/data/team'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.gosnellsfamilypractice.com.au'
@@ -36,5 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'yearly' as const
   }))
 
-  return [...staticPages, ...servicePages, ...blogPages]
+  // Doctor profile pages
+  const doctorPages = doctors.map(doctor => ({
+    url: `${baseUrl}/team/${doctor.slug}`,
+    lastModified,
+    priority: 0.8,
+    changeFrequency: 'monthly' as const
+  }))
+
+  return [...staticPages, ...servicePages, ...blogPages, ...doctorPages]
 }

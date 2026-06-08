@@ -3,7 +3,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-background bg-glow-tl">
       <div className="container mx-auto px-4 py-16 pt-48 max-w-4xl">
         <h1 className="text-4xl font-bold text-foreground mb-8">Privacy Policy</h1>
-        <p className="text-sm text-muted-foreground mb-8">Last Updated: 24 September 2025</p>
+        <p className="text-sm text-muted-foreground mb-8">Last Updated: 8 June 2026</p>
 
         <div className="prose prose-lg max-w-none text-muted-foreground">
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. Introduction</h2>
@@ -39,6 +39,7 @@ export default function PrivacyPolicy() {
           <h3 className="text-xl font-semibold text-muted-foreground mt-6 mb-3">2.3 Website Information</h3>
           <ul className="list-disc pl-6 space-y-1">
             <li>Website usage data through Google Analytics and Vercel Analytics</li>
+            <li>Advertising and conversion data through Meta Pixel (Facebook Pixel)</li>
             <li>IP addresses and browser information</li>
             <li>Cookies and similar tracking technologies</li>
             <li>Contact form submissions and appointment requests</li>
@@ -133,6 +134,7 @@ export default function PrivacyPolicy() {
           <ul className="list-disc pl-6 space-y-1">
             <li><strong>Google Analytics:</strong> To understand website usage and improve user experience</li>
             <li><strong>Vercel Analytics:</strong> For website performance monitoring</li>
+            <li><strong>Meta Pixel (Facebook Pixel):</strong> To measure the effectiveness of our Facebook advertising campaigns and to enable us to show relevant ads to people who have previously visited our website. Data is processed by Meta Platforms Inc. (USA). You can opt out via your <a href="https://www.facebook.com/ads/preferences" target="_blank" rel="noopener noreferrer" className="underline">Facebook ad settings</a>.</li>
             <li><strong>Functional Cookies:</strong> To remember your preferences and improve functionality</li>
           </ul>
           <p>You can control cookie settings through your browser preferences. However, disabling cookies may affect website functionality.</p>
@@ -195,7 +197,7 @@ export default function PrivacyPolicy() {
           </div>
 
           <p className="mt-8 text-sm">
-            This Privacy Policy is effective as of 24 September 2025.
+            This Privacy Policy is effective as of 8 June 2026.
           </p>
         </div>
       </div>

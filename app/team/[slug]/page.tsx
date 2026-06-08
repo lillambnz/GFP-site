@@ -17,9 +17,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const doctor = doctors.find(d => d.slug === slug)
   if (!doctor) return {}
+  const baseUrl = 'https://www.gosnellsfamilypractice.com.au'
   return {
     title: `${doctor.name} — GP Gosnells | Gosnells Family Practice`,
     description: `Book an appointment with ${doctor.name} at Gosnells Family Practice, Gosnells WA. ${doctor.specialInterests?.join(", ")}. Bulk billing available. FRACGP qualified.`,
+    openGraph: {
+      title: `${doctor.name} — Bulk Billing GP at Gosnells Family Practice`,
+      description: `Book with ${doctor.name} at Gosnells Family Practice. Bulk billing available. Now accepting new patients in Gosnells WA.`,
+      images: [
+        {
+          url: `${baseUrl}${doctor.image}`,
+          width: 800,
+          height: 1067,
+          alt: doctor.name,
+        },
+      ],
+      type: 'profile',
+      url: `${baseUrl}/team/${doctor.slug}`,
+    },
   }
 }
 
