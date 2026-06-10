@@ -21,7 +21,7 @@ export interface Doctor {
 
 export interface StaffMember {
   name: string
-  role: 'Nurse' | 'Dietitian' | 'Psychologist' | 'Podiatrist' | 'Physiotherapist'
+  role: 'Nurse' | 'Dietitian' | 'Psychologist' | 'Podiatrist' | 'Physiotherapist' | 'Diabetes Educator'
   qualifications: string
   specialties: string[]
   biography: string
@@ -229,6 +229,15 @@ export const staff: StaffMember[] = [
     specialties: ["Musculoskeletal Physiotherapy", "Neurological Rehabilitation", "Women's Health Physiotherapy"],
     biography: "Vruta is a dedicated physiotherapist with experience across clinical, community, and home-based settings. She specialises in musculoskeletal, neurological, aged care, and women's health physiotherapy, offering evidence-based, patient-centred care. Her skill set includes manual therapy, clinical Pilates, dry needling, cupping, hydrotherapy, and exercise prescription. Fluent in English, Gujarati, and Hindi, Vruta combines clinical expertise with empathy and clear communication to help patients regain strength, mobility, and confidence.",
     image: "/images/team/physio.jpg",
+    availability: "By appointment - Call (08) 6118 2788"
+  },
+  {
+    name: "Tahnee Harvey",
+    role: "Diabetes Educator",
+    qualifications: "Credentialled Diabetes Educator (CDE)",
+    specialties: ["Type 1 & Type 2 Diabetes", "Gestational Diabetes", "Insulin Initiation & Adjustment", "Blood Glucose Monitoring", "Lifestyle Education", "Diabetes Complications Prevention"],
+    biography: "Tahnee Harvey is a Credentialled Diabetes Educator with a strong passion for empowering patients to understand and manage their diabetes with confidence and clarity. She takes a patient-centred approach, collaborating with individuals, families, and GPs to create individualised management strategies suited to real-world circumstances. Whether you're newly diagnosed or have been managing diabetes for years, Tahnee's goal is to help you feel informed, supported, and in control of your health — rather than overwhelmed by your diagnosis. Tahnee provides education and support across all aspects of diabetes care, including type 1 and type 2 diabetes management, gestational diabetes, insulin initiation and adjustment, blood glucose monitoring and interpretation, lifestyle education covering nutrition and physical activity, medication education, and prevention and management of diabetes-related complications.",
+    image: "/images/team/Tahnee-Harvey-edited-white-background-e1771127492672.jpg",
     availability: "By appointment - Call (08) 6118 2788"
   },
   {
