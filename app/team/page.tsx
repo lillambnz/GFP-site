@@ -86,8 +86,93 @@ export default function TeamPage() {
               </p>
             </div>
 
+            {/* New Doctors */}
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-foreground">
+                Newest Members of Our Team <span className="text-brand-teal">— Now Accepting Patients</span>
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+              {doctors.filter(d => d.isNew).map((doctor) => (
+                <div
+                  id={doctor.slug}
+                  key={doctor.slug}
+                  className="bg-card rounded-2xl shadow-card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500 border border-border flex flex-col scroll-mt-24"
+                >
+                  <div className="aspect-[3/4] overflow-hidden relative">
+                    <Image
+                      src={doctor.image}
+                      alt={doctor.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                    {doctor.isNew && (
+                      <span className="absolute top-4 left-4 bg-gradient-to-r from-brand-teal to-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                        ✨ New Doctor
+                      </span>
+                    )}
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 className="text-2xl font-bold text-foreground">{doctor.name}</h3>
+                      <div className="flex items-center gap-1 text-yellow-500">
+                        <Star className="w-4 h-4 fill-current" />
+                        <span className="text-sm font-semibold text-foreground">{doctor.rating}</span>
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground font-semibold mb-2">{doctor.title}, {doctor.gender}</p>
+                    <p className="text-sm text-muted-foreground mb-4">{doctor.qualifications}</p>
+
+                    {doctor.specialInterests && (
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-foreground mb-2">Special Interests:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {doctor.specialInterests.map((interest, idx) => (
+                            <span
+                              key={idx}
+                              className="text-xs bg-brand-teal-light text-brand-teal px-2 py-1 rounded-full"
+                            >
+                              {interest}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="mb-4 pb-4 border-b border-border">
+                      <div className="flex items-start gap-2">
+                        <Languages className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                        <p className="text-xs text-muted-foreground">
+                          {doctor.languages.join(", ")}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mb-4">
+                      <ExpandableBio text={doctor.biography} />
+                    </div>
+
+                    <Button
+                      className="w-full bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white mt-auto shadow-md shadow-brand-teal/20 hover:shadow-lg hover:shadow-brand-teal/30 hover:scale-[1.02] transition-all duration-300"
+                      asChild
+                    >
+                      <Link href={`/team/${doctor.slug}`}>
+                        Book with {doctor.bookingName}
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Practice Principals */}
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-foreground">Our Founding Doctors</h3>
+            </div>
+
             {/* Dr. Ameer Khan */}
-            <div id="dr-khan" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
+            <div id="dr-ameer-khan" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div>
                   <PhotoGallery photos={doctorPhotos.khan} columns={2} showLightbox={true} />
@@ -154,7 +239,7 @@ export default function TeamPage() {
             </div>
 
             {/* Dr. Fazilah Abu Bakar */}
-            <div id="dr-fazilah" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
+            <div id="dr-fazilah-abu-bakar" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div className="order-2 lg:order-1 flex flex-col justify-center">
                   <div className="flex items-center gap-2 mb-3">
@@ -165,7 +250,7 @@ export default function TeamPage() {
                     </div>
                   </div>
                   <p className="text-muted-foreground font-semibold mb-2">General Practitioner, Female</p>
-                  <p className="text-sm text-muted-foreground mb-6">MBBCh, FRACGP, BAO</p>
+                  <p className="text-sm text-muted-foreground mb-6">MBBch BAO, FRACGP</p>
 
                   <div className="mb-6">
                     <p className="text-sm font-semibold text-foreground mb-2">Special Interests:</p>
@@ -203,7 +288,7 @@ export default function TeamPage() {
             </div>
 
             {/* Dr. Choong Leat Loh */}
-            <div id="dr-loh" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
+            <div id="dr-choong-leat-loh" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div>
                   <PhotoGallery photos={doctorPhotos.loh} columns={2} showLightbox={true} />
@@ -252,7 +337,7 @@ export default function TeamPage() {
             </div>
 
             {/* Dr. Quam Gbajabiamila */}
-            <div id="dr-quam" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
+            <div id="dr-quam-gbajabiamila" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div className="order-2 lg:order-1 flex flex-col justify-center">
                   <div className="flex items-center gap-2 mb-3">
@@ -299,74 +384,6 @@ export default function TeamPage() {
               </div>
             </div>
 
-            {/* Dr. Intan, Dr. Lawal, Dr. Siti & Dr. Wan */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {doctors.filter(d => d.name === "Dr. Intan Ramli" || d.name === 'Dr. Adetoyese "Toye" Lawal' || d.name === "Dr. Wan Maisarah" || d.name === "Dr. Siti Shuhaizam Mamat Raduan").map((doctor, index) => (
-                <div
-                  key={index}
-                  className="bg-card rounded-2xl shadow-card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500 border border-border flex flex-col"
-                >
-                  <div className="aspect-[3/4] overflow-hidden relative">
-                    <Image
-                      src={doctor.image}
-                      alt={doctor.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-2xl font-bold text-foreground">{doctor.name}</h3>
-                      <div className="flex items-center gap-1 text-yellow-500">
-                        <Star className="w-4 h-4 fill-current" />
-                        <span className="text-sm font-semibold text-foreground">{doctor.rating}</span>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground font-semibold mb-2">{doctor.title}, {doctor.gender}</p>
-                    <p className="text-sm text-muted-foreground mb-4">{doctor.qualifications}</p>
-
-                    {doctor.specialInterests && (
-                      <div className="mb-4">
-                        <p className="text-xs font-semibold text-foreground mb-2">Special Interests:</p>
-                        <div className="flex flex-wrap gap-2">
-                          {doctor.specialInterests.map((interest, idx) => (
-                            <span
-                              key={idx}
-                              className="text-xs bg-brand-teal-light text-brand-teal px-2 py-1 rounded-full"
-                            >
-                              {interest}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="mb-4 pb-4 border-b border-border">
-                      <div className="flex items-start gap-2">
-                        <Languages className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                        <p className="text-xs text-muted-foreground">
-                          {doctor.languages.join(", ")}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mb-4">
-                      <ExpandableBio text={doctor.biography} />
-                    </div>
-
-                    <Button
-                      className="w-full bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white mt-auto shadow-md shadow-brand-teal/20 hover:shadow-lg hover:shadow-brand-teal/30 hover:scale-[1.02] transition-all duration-300"
-                      asChild
-                    >
-                      <Link href={`/team/${doctor.slug}`}>
-                        Book with {doctor.bookingName}
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 

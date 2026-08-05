@@ -17,6 +17,9 @@ export interface Doctor {
   hotdocWidgetUrl?: string
   galleryPhotos?: { src: string; alt: string }[]
   acceptingNewPatients?: boolean
+  isNew?: boolean
+  isDirector?: boolean
+  shortIntro?: string
 }
 
 export interface StaffMember {
@@ -34,6 +37,67 @@ export interface StaffMember {
 
 export const doctors: Doctor[] = [
   {
+    name: "Dr. Siti Shuhaizam Mamat Raduan",
+    title: "General Practitioner",
+    gender: "Female",
+    qualifications: "MBBS (IMU), MAFP, FRACGP",
+    languages: ["English", "Malay"],
+    specialInterests: ["Sports Health", "Weight Management", "Women's Health", "Family Planning"],
+    biography: "Dr. Sue graduated from the International Medical University (IMU) in 2003 and has been working as a Family Physician since 2011, with broad experience in managing both acute and chronic conditions. She has a special interest in sports health, weight management, women's health, and family planning. Dr. Sue takes a holistic, patient-centred approach, focusing on prevention and overall wellbeing, and works closely with her patients to develop personalised and practical care plans. In addition to her clinical work, she is actively involved in medical education with the Academy of Family Physicians of Malaysia, where she serves as an examiner for the MAFP/ICFRACGP examinations. She is committed to building strong, trusting relationships by listening carefully and communicating clearly. Fluent in English and Malay.",
+    shortIntro: "Dr Sue is an experienced Family Physician with a special interest in sports health, weight management, women's health and family planning. She takes a holistic, patient-centred approach and consults in English and Malay.",
+    availability: "Available",
+    status: "Available",
+    rating: 4.9,
+    image: "/images/team/Dr-Siti-white.jpg",
+    bookingName: "Dr Sue",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
+    yearsExperience: 14,
+    slug: "dr-siti-mamat-raduan",
+    acceptingNewPatients: true,
+    isNew: true
+  },
+  {
+    name: "Dr. Wan Maisarah",
+    title: "General Practitioner",
+    gender: "Female",
+    qualifications: "MBChB, DFSRH, MRCGP",
+    languages: ["English", "Malay"],
+    specialInterests: ["Menopause & Women's Health", "Contraception & Sexual Health", "Implanon Insertion & Removal (Bulk-Billed)", "Cervical Screening", "Mental Health"],
+    biography: "With over 14 years of clinical experience in the UK, including seven years as a dedicated General Practitioner, Dr Wan Maisarah is excited to bring her experience and patient-centred approach to Gosnells Family Practice. After graduating from the University of Leicester, UK in 2012, she completed her specialist GP training in North Oxfordshire in 2019 and obtained a Diploma of the Faculty of Sexual and Reproductive Healthcare (DFSRH). Dr Wan provides evidence-based, holistic care tailored to each individual's needs. She believes that listening carefully, building trust and working collaboratively with her patients are the foundations of excellent healthcare. She welcomes patients of all ages and is pleased to offer consultations in both English and Malay. Her special interests include menopause and women's health, contraception and sexual health, Implanon insertion and removal (fully bulk-billed), cervical screening, and mental health.",
+    shortIntro: "A UK-trained GP with over 14 years' clinical experience, Dr Wan has special interests in menopause, contraception and sexual health, bulk-billed Implanon, and cervical screening. She consults in English and Malay.",
+    availability: "Available",
+    status: "Available",
+    rating: 4.9,
+    image: "/images/team/drwan.jpeg",
+    bookingName: "Dr Wan",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-wan-maisarah",
+    yearsExperience: 14,
+    slug: "dr-wan-maisarah",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-wan-maisarah?wp=w_iframe",
+    acceptingNewPatients: true,
+    isNew: true
+  },
+  {
+    name: "Dr. Nilanjana Haque",
+    title: "General Practitioner",
+    gender: "Female",
+    qualifications: "UK-trained GP — 20+ years' clinical experience",
+    languages: ["English"],
+    specialInterests: ["Women's Health", "Sexual Health", "Children's Health", "Patient-Centred Care"],
+    biography: "Dr. Nilanjana Haque is an experienced General Practitioner with over 20 years of clinical experience in the UK. She has a special interest in Women's Health and Sexual Health and is committed to compassionate, patient-centred care for all ages. She enjoys caring for children and takes time to listen carefully, ensuring patients feel heard and supported.",
+    shortIntro: "An experienced GP with over 20 years of clinical experience in the UK, Dr Nilanjana has special interests in women's health and sexual health, and enjoys caring for children and families.",
+    availability: "Available",
+    status: "Available",
+    rating: 4.9,
+    image: "/images/team/dr-nil.jpeg",
+    bookingName: "Dr Nilanjana",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
+    yearsExperience: 20,
+    slug: "dr-nilanjana-haque",
+    acceptingNewPatients: true,
+    isNew: true
+  },
+  {
     name: "Dr. Ameer Khan",
     title: "General Practitioner",
     gender: "Male",
@@ -48,6 +112,7 @@ export const doctors: Doctor[] = [
     bookingName: "Ameer",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/ameer-khan",
     slug: "dr-ameer-khan",
+    isDirector: true,
     hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/ameer-khan?wp=w_iframe",
     galleryPhotos: [
       { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-35.jpg", alt: "Dr. Ameer Khan" },
@@ -60,7 +125,7 @@ export const doctors: Doctor[] = [
     name: "Dr. Fazilah Binti Abu Bakar",
     title: "General Practitioner",
     gender: "Female",
-    qualifications: "MBBCh, FRACGP, BAO",
+    qualifications: "MBBch BAO, FRACGP",
     languages: ["English", "Malay", "Arabic"],
     specialInterests: ["Women's Health Medicine", "Paediatric Health", "Adolescent Health", "Chronic Disease Management"],
     biography: "Dr. Fazilah Abu Bakar is an experienced female General Practitioner and FRACGP Fellow who graduated from Dublin, Ireland in 2000. She promotes overall well-being and disease prevention through a holistic approach that addresses both physical and emotional health. Her areas of interest include women's health medicine, paediatric and adolescent health, and chronic disease management. Fluent in English, Malay, and basic Arabic, Dr. Abu Bakar connects with patients from diverse cultural backgrounds, emphasizing effective communication and culturally sensitive care.",
@@ -72,6 +137,7 @@ export const doctors: Doctor[] = [
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/fazilah-binti-abu-bakar",
     yearsExperience: 24,
     slug: "dr-fazilah-abu-bakar",
+    isDirector: true,
     hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/fazilah-binti-abu-bakar?wp=w_iframe",
     galleryPhotos: [
       { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-64.jpg", alt: "Dr. Fazilah Abu Bakar" },
@@ -96,6 +162,7 @@ export const doctors: Doctor[] = [
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/choong-leat-loh",
     yearsExperience: 20,
     slug: "dr-choong-leat-loh",
+    isDirector: true,
     hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/choong-leat-loh?wp=w_iframe",
     galleryPhotos: [
       { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-2.jpg", alt: "Dr. Choong Leat Loh" },
@@ -119,6 +186,7 @@ export const doctors: Doctor[] = [
     bookingName: "Quam",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/quam-gbajabiamila",
     slug: "dr-quam-gbajabiamila",
+    isDirector: true,
     hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/quam-gbajabiamila?wp=w_iframe",
     galleryPhotos: [
       { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-115.jpg", alt: "Dr. Quam Gbajabiamila" },
@@ -126,77 +194,6 @@ export const doctors: Doctor[] = [
       { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-123.jpg", alt: "Dr. Quam Gbajabiamila" },
       { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-126.jpg", alt: "Dr. Quam Gbajabiamila" },
     ]
-  },
-  {
-    name: "Dr. Intan Ramli",
-    title: "General Practitioner",
-    gender: "Female",
-    qualifications: "FRACGP, MBBS (UWA)",
-    languages: ["English", "Malay"],
-    specialInterests: ["Chronic Disease", "Mental Health", "Paediatric Health", "Women's Health", "Minor Surgical Procedures"],
-    biography: "Dr Intan Ramli graduated locally from WA, completed her Bachelor of Medicine/ Bachelor of Surgery (MBBS) at the University of Western Australia in 2012. She gained her General Practitioner Fellowship in 2020. She has worked in many areas of specialty in medicine in Royal Perth Hospital, Fiona Stanley Hospital, Armadale Mental Health and Kalgoorlie Regional Hospital. She has worked across most of WA including multiple regional and rural clinics during her GP training. Dr Ramli has a particular interest in Chronic disease, Mental Health, Paediatric, Women's Health and minor surgery. She can fluently speak both Malay and English. When she is not practising medicine, Dr Ramli enjoys travelling, cooking and spending time with her children.",
-    availability: "Available in 8 days",
-    status: "Available",
-    rating: 4.9,
-    image: "/images/team/Dr-Intan.webp",
-    bookingName: "Intan",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3",
-    slug: "dr-intan-ramli",
-    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-intan-ramli-3?wp=w_iframe"
-  },
-  {
-    name: "Dr. Siti Shuhaizam Mamat Raduan",
-    title: "General Practitioner",
-    gender: "Female",
-    qualifications: "MBBS (IMU), MAFP, FRACGP",
-    languages: ["English", "Malay"],
-    specialInterests: ["Sports Health", "Weight Management", "Women's Health", "Family Planning"],
-    biography: "Dr. Sue graduated from the International Medical University (IMU) in 2003 and has been working as a Family Physician since 2011, with broad experience in managing both acute and chronic conditions. She has a special interest in sports health, weight management, women's health, and family planning. Dr. Sue takes a holistic, patient-centred approach, focusing on prevention and overall wellbeing, and works closely with her patients to develop personalised and practical care plans. In addition to her clinical work, she is actively involved in medical education with the Academy of Family Physicians of Malaysia, where she serves as an examiner for the MAFP/ICFRACGP examinations. She is committed to building strong, trusting relationships by listening carefully and communicating clearly. Fluent in English and Malay.",
-    availability: "Available",
-    status: "Available",
-    rating: 4.9,
-    image: "/images/team/Dr-Siti-white.jpg",
-    bookingName: "Dr Sue",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
-    yearsExperience: 14,
-    slug: "dr-siti-mamat-raduan"
-  },
-  {
-    name: "Dr. Wan Maisarah",
-    title: "General Practitioner",
-    gender: "Female",
-    qualifications: "MBChB, DFSRH, MRCGP",
-    languages: ["English", "Malay"],
-    specialInterests: ["Women's Health", "Menopause Management", "Contraception", "Sexual & Reproductive Healthcare"],
-    biography: "With over 14 years of clinical experience in the UK, including seven years as a dedicated General Practitioner, Dr Wan Maisarah is thrilled to bring her practice to Gosnells Family Practice. A 2012 graduate of the University of Leicester, she completed her specialist GP training in North Oxfordshire in 2019 and holds a Diploma of the Faculty of Sexual and Reproductive Healthcare (DFSRH). While she enjoys the diversity of all aspects of General Practice, Dr Wan is particularly passionate about women's health, menopause management, and contraception. Her approach is rooted in evidence-based medicine, delivered through a holistic lens. She believes the best health outcomes start with a strong doctor-patient relationship built on trust and clear communication. She is able to offer consultations in both English and Malay.",
-    availability: "Available",
-    status: "Available",
-    rating: 4.9,
-    image: "/images/team/Dr-Wan-white.jpg",
-    bookingName: "Dr Wan",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-wan-maisarah",
-    yearsExperience: 14,
-    slug: "dr-wan-maisarah",
-    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-wan-maisarah?wp=w_iframe"
-  },
-  {
-    name: "Dr. Adetoyese \"Toye\" Lawal",
-    title: "General Practitioner",
-    gender: "Male",
-    qualifications: "MBBS, FRACGP",
-    languages: ["English"],
-    specialInterests: ["Chronic Illness Management", "Family Planning", "Men's Health"],
-    biography: "Dr Adetoyese \"Toye\" Lawal attained his MBBS in 2009 and became a Fellow of The Royal Australian College of General Practitioners (FRACGP) in 2020. He is now welcoming new patients and provides bulk-billed, patient-centred care to individuals and families of all ages. Dr Lawal takes the time to thoroughly assess his patients, explain treatment options clearly, and help them make informed decisions about their health. He has special interests in chronic illness management, family planning and men's health, and is passionate about creating a supportive and comfortable environment where patients feel confident discussing their health concerns.",
-    availability: "Available",
-    status: "Available",
-    rating: 4.9,
-    image: "/images/team/Dr-adet.png",
-    bookingName: "Toye",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-adetoyese-toye-lawal",
-    yearsExperience: 17,
-    slug: "dr-toye-lawal",
-    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-adetoyese-toye-lawal?wp=w_iframe",
-    acceptingNewPatients: true
   },
 ]
 
@@ -246,7 +243,7 @@ export const staff: StaffMember[] = [
     qualifications: "Provisional Psychologist",
     specialties: ["Mental Health Disorders", "ADHD", "Sleep Difficulties", "LGBTQI+ Support"],
     biography: "Bianca MacIntyre is a Provisional Psychologist employed by ORS who takes a warm, person-centred approach to therapy, ensuring clients across the lifespan feel heard, respected, and empowered. Bianca strongly believes in individual autonomy and values collaborative decision-making in all aspects of care. She has a particular interest in working with individuals experiencing mental health disorders, ADHD, and sleep-related difficulties. She also has a strong commitment to inclusive practice and supporting LGBTQI+ individuals, as well as Aboriginal and Torres Strait Islander people. Her therapeutic approach is evidence-based and flexible, drawing on a range of modalities including Cognitive Behaviour Therapy (CBT), Mindfulness-Based CBT, Acceptance and Commitment Therapy (ACT), Dialectical Behaviour Therapy (DBT), and Narrative Therapy. Gosnells Family Practice hosts WAPHA commissioned ORS/MindSpot clinics for eligible patients. Referrals are made by GPs through approved channels direct to MindSpot.",
-    image: "https://ui-avatars.com/api/?name=Bianca+MacIntyre&size=400&background=00b1c3&color=fff&bold=true&font-size=0.4",
+    image: "/images/team/Bianca.jpeg",
     availability: "By GP referral to MindSpot"
   },
   {
@@ -269,4 +266,12 @@ export function getAllTeamMembers() {
 
 export function getDoctorByName(name: string): Doctor | undefined {
   return doctors.find(doctor => doctor.name === name)
+}
+
+export function getDoctorsOrdered(): Doctor[] {
+  return [...doctors].sort((a, b) => Number(b.isNew ?? false) - Number(a.isNew ?? false))
+}
+
+export function getNewDoctors(): Doctor[] {
+  return doctors.filter(doctor => doctor.isNew)
 }

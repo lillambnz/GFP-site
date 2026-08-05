@@ -82,7 +82,7 @@ export const services: Service[] = [
     title: "Women's Health",
     description: 'Comprehensive reproductive and wellness care for women',
     details: 'Our women\'s health services cover all aspects of female health including cervical screening, contraception counseling, pregnancy care, menstrual disorders, menopause management, and general gynecological concerns. We provide a comfortable, confidential environment with female doctors available upon request.',
-    practitioners: ['Dr. Fazilah Binti Abu Bakar', 'Dr. Intan Ramli'],
+    practitioners: ['Dr. Wan Maisarah', 'Dr. Nilanjana Haque', 'Dr. Siti Shuhaizam Mamat Raduan', 'Dr. Fazilah Binti Abu Bakar'],
     availability: 'Monday-Saturday',
     bookingInfo: 'Female doctors available - specify preference when booking',
     subServices: ['Cervical Screening', 'Contraception', 'Pregnancy Care', 'Menopause Management', 'PCOS Management'],
@@ -95,7 +95,7 @@ export const services: Service[] = [
     title: 'Antenatal & Postnatal Care',
     description: 'Comprehensive care throughout your pregnancy journey',
     details: 'We provide complete antenatal care including pregnancy confirmation, regular check-ups, antenatal screening, and health monitoring throughout your pregnancy. Our postnatal care includes newborn checks, breastfeeding support, maternal health assessment, and postpartum emotional wellbeing support.',
-    practitioners: ['Dr. Fazilah Binti Abu Bakar', 'Dr. Intan Ramli'],
+    practitioners: ['Dr. Fazilah Binti Abu Bakar', 'Dr. Wan Maisarah'],
     availability: 'Monday-Saturday',
     bookingInfo: 'Book regular antenatal appointments with your preferred doctor',
     image: '/images/services/antenatal.webp'

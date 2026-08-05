@@ -8,8 +8,10 @@ import PatientInformationSection from "@/components/patient-information-section"
 import Footer from "@/components/footer"
 import Link from "next/link"
 import { services } from "@/lib/data/services"
+import { getDoctorsOrdered } from "@/lib/data/team"
 import { ArrowRight } from "lucide-react"
 import { BulkBillingSection } from "@/components/bulk-billing-section"
+import { NewDoctorAnnouncement } from "@/components/new-doctor-announcement"
 import { GoogleReviewsSection } from "@/components/google-reviews-section"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -73,6 +75,9 @@ export default function Home() {
 
       {/* Trust Signals */}
       <StatsSection />
+
+      {/* New Doctor Announcement */}
+      <NewDoctorAnnouncement />
 
       {/* Featured Services */}
       <section className="py-20 bg-background bg-warm-glow">
@@ -156,30 +161,30 @@ export default function Home() {
           />
 
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {[
-              { name: "Dr. Ameer Khan", title: "General Practitioner", quals: "MBBS, FRACGP", image: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-35.jpg", specialties: ["Family Medicine", "Men's Health"], href: "/team#dr-khan" },
-              { name: "Dr. Fazilah Abu Bakar", title: "General Practitioner", quals: "MBBS, FRACGP", image: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-64.jpg", specialties: ["Women's Health", "Antenatal Care"], href: "/team#dr-fazilah" },
-              { name: "Dr. Choong Leat Loh", title: "General Practitioner", quals: "MBBS, FRACGP", image: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-2.jpg", specialties: ["Skin Cancer", "Minor Procedures"], href: "/team#dr-loh" },
-              { name: "Dr. Quam Gbajabiamila", title: "General Practitioner", quals: "MBBS, FRACGP", image: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-115.jpg", specialties: ["Family Medicine", "Sports Medicine"], href: "/team#dr-quam" },
-            ].map((doctor) => (
-              <StaggerItem key={doctor.name}>
-                <Link href={doctor.href} className="block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group h-full">
+            {getDoctorsOrdered().map((doctor) => (
+              <StaggerItem key={doctor.slug}>
+                <Link href={`/team#${doctor.slug}`} className="block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group h-full">
                   <div className="aspect-[3/4] overflow-hidden relative">
                     <Image
-                      src={doctor.image}
+                      src={doctor.galleryPhotos?.[0]?.src ?? doctor.image}
                       alt={doctor.name}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent" />
+                    {doctor.isNew && (
+                      <span className="absolute top-3 left-3 bg-gradient-to-r from-brand-teal to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                        ✨ New
+                      </span>
+                    )}
                   </div>
                   <div className="p-5">
                     <h3 className="font-bold text-foreground mb-1 group-hover:text-brand-teal transition-colors">{doctor.name}</h3>
                     <p className="text-brand-teal font-medium text-xs mb-1">{doctor.title}</p>
-                    <p className="text-muted-foreground text-xs mb-3">{doctor.quals}</p>
+                    <p className="text-muted-foreground text-xs mb-3">{doctor.qualifications}</p>
                     <div className="flex flex-wrap gap-1.5">
-                      {doctor.specialties.map((s) => (
+                      {doctor.specialInterests?.slice(0, 2).map((s) => (
                         <span key={s} className="text-[11px] bg-brand-teal-light text-brand-teal px-2 py-0.5 rounded-full">{s}</span>
                       ))}
                     </div>
