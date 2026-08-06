@@ -25,6 +25,7 @@ export default function Home() {
   const heroPhotos = [
     {
       src: "/images/hero/bulk-billing-banner.png",
+      mobileSrc: "/images/hero/bulk-billing-banner-mobile.png",
       alt: "Bulk Billing Now Available - Gosnells Family Practice",
     },
     {

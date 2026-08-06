@@ -20,6 +20,7 @@ function GoogleIcon({ className }: { className?: string }) {
 
 interface HeroPhoto {
   src: string
+  mobileSrc?: string
   alt: string
   title?: string
   description?: string
@@ -79,12 +80,23 @@ export function HeroGallery({
           className="absolute inset-0"
           aria-hidden={index !== currentIndex}
         >
+          {photo.mobileSrc && (
+            <Image
+              src={photo.mobileSrc}
+              alt={photo.alt}
+              fill
+              sizes="100vw"
+              className="object-cover md:hidden"
+              priority={index === 0}
+              loading={index === 0 ? undefined : "eager"}
+            />
+          )}
           <Image
             src={photo.src}
             alt={photo.alt}
             fill
             sizes="100vw"
-            className="object-cover"
+            className={photo.mobileSrc ? "object-cover hidden md:block" : "object-cover"}
             priority={index === 0}
             loading={index === 0 ? undefined : "eager"}
           />
@@ -137,7 +149,7 @@ export function HeroGallery({
               className="flex flex-col sm:flex-row gap-3"
             >
               <Button
-                className="rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white px-8 py-6 text-base shadow-elevated transition-all"
+                className="rounded-full bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white px-8 py-6 text-base shadow-lg shadow-brand-teal/25 hover:shadow-xl hover:shadow-brand-teal/30 hover:scale-105 transition-all duration-300"
                 asChild
               >
                 <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
