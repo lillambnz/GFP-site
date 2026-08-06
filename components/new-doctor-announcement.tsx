@@ -59,7 +59,7 @@ export function NewDoctorAnnouncement() {
               >
                 <div className="hidden lg:block relative w-36 h-36 rounded-full overflow-hidden border-2 border-white/40 shadow-lg shrink-0">
                   <Image
-                    src={doctor.image}
+                    src={doctor.headshot ?? doctor.image}
                     alt={doctor.name}
                     fill
                     sizes="144px"

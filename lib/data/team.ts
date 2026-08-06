@@ -20,6 +20,7 @@ export interface Doctor {
   isNew?: boolean
   isDirector?: boolean
   shortIntro?: string
+  headshot?: string
 }
 
 export interface StaffMember {
@@ -49,6 +50,7 @@ export const doctors: Doctor[] = [
     status: "Available",
     rating: 4.9,
     image: "/images/team/Dr-Siti-white.jpg",
+    headshot: "/images/team/dr-siti-headshot.jpg",
     bookingName: "Dr Sue",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
     yearsExperience: 14,
@@ -89,7 +91,8 @@ export const doctors: Doctor[] = [
     availability: "Available",
     status: "Available",
     rating: 4.9,
-    image: "/images/team/dr-nil.jpeg",
+    image: "/images/team/dr-nil-white.jpg",
+    headshot: "/images/team/dr-nil-headshot.jpg",
     bookingName: "Dr Nilanjana",
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
     yearsExperience: 20,
