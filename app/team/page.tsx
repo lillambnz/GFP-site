@@ -37,27 +37,15 @@ export default function TeamPage() {
   const doctorPhotos = {
     khan: [
       { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-35.jpg", alt: "Dr. Ameer Khan" },
-      { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-38.jpg", alt: "Dr. Ameer Khan" },
-      { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-45.jpg", alt: "Dr. Ameer Khan" },
-      { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-46.jpg", alt: "Dr. Ameer Khan" },
     ],
     fazilah: [
       { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-64.jpg", alt: "Dr. Fazilah Abu Bakar" },
-      { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-58.jpg", alt: "Dr. Fazilah Abu Bakar" },
-      { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-66.jpg", alt: "Dr. Fazilah Abu Bakar" },
-      { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-71.jpg", alt: "Dr. Fazilah Abu Bakar" },
     ],
     loh: [
       { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-2.jpg", alt: "Dr. Choong Leat Loh" },
-      { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-14.jpg", alt: "Dr. Choong Leat Loh" },
-      { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-16.jpg", alt: "Dr. Choong Leat Loh" },
-      { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-21.jpg", alt: "Dr. Choong Leat Loh" },
     ],
     quam: [
       { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-115.jpg", alt: "Dr. Quam Gbajabiamila" },
-      { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-121.jpg", alt: "Dr. Quam Gbajabiamila" },
-      { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-123.jpg", alt: "Dr. Quam Gbajabiamila" },
-      { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-126.jpg", alt: "Dr. Quam Gbajabiamila" },
     ]
   }
 
@@ -175,7 +163,7 @@ export default function TeamPage() {
             <div id="dr-ameer-khan" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div>
-                  <PhotoGallery photos={doctorPhotos.khan} columns={2} showLightbox={true} />
+                  <PhotoGallery photos={doctorPhotos.khan} columns={1} showLightbox={true} />
                 </div>
                 <div className="flex flex-col justify-center">
                   <div className="flex items-center gap-2 mb-3">
@@ -282,7 +270,7 @@ export default function TeamPage() {
                   </Button>
                 </div>
                 <div className="order-1 lg:order-2">
-                  <PhotoGallery photos={doctorPhotos.fazilah} columns={2} showLightbox={true} />
+                  <PhotoGallery photos={doctorPhotos.fazilah} columns={1} showLightbox={true} />
                 </div>
               </div>
             </div>
@@ -291,7 +279,7 @@ export default function TeamPage() {
             <div id="dr-choong-leat-loh" className="mb-16 bg-card rounded-2xl shadow-card overflow-hidden border border-border scroll-mt-24">
               <div className="grid lg:grid-cols-2 gap-8 p-8">
                 <div>
-                  <PhotoGallery photos={doctorPhotos.loh} columns={2} showLightbox={true} />
+                  <PhotoGallery photos={doctorPhotos.loh} columns={1} showLightbox={true} />
                 </div>
                 <div className="flex flex-col justify-center">
                   <div className="flex items-center gap-2 mb-3">
@@ -379,7 +367,7 @@ export default function TeamPage() {
                   </Button>
                 </div>
                 <div className="order-1 lg:order-2">
-                  <PhotoGallery photos={doctorPhotos.quam} columns={2} showLightbox={true} />
+                  <PhotoGallery photos={doctorPhotos.quam} columns={1} showLightbox={true} />
                 </div>
               </div>
             </div>
