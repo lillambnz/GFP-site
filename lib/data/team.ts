@@ -52,9 +52,10 @@ export const doctors: Doctor[] = [
     image: "/images/team/Dr-Siti-white.jpg",
     headshot: "/images/team/dr-siti-headshot.jpg",
     bookingName: "Dr Sue",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-siti-sue-shuhaizam",
     yearsExperience: 14,
     slug: "dr-siti-mamat-raduan",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-siti-sue-shuhaizam?wp=w_iframe",
     acceptingNewPatients: true,
     isNew: true
   },
@@ -94,9 +95,10 @@ export const doctors: Doctor[] = [
     image: "/images/team/dr-nil-white.jpg",
     headshot: "/images/team/dr-nil-headshot.jpg",
     bookingName: "Dr Nilanjana",
-    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors",
+    bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-nilanjana-haque",
     yearsExperience: 20,
     slug: "dr-nilanjana-haque",
+    hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/dr-nilanjana-haque?wp=w_iframe",
     acceptingNewPatients: true,
     isNew: true
   },
