@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Phone, MapPin, Clock, Mail } from "lucide-react"
-import { trackPixelEvent } from "@/lib/meta-events"
+import { trackContactFormSubmit } from "@/lib/meta-events"
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -24,7 +24,7 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    trackPixelEvent('Lead', { content_category: 'contact_form' })
+    trackContactFormSubmit()
     console.log("Form submitted:", formData)
   }
 

@@ -99,7 +99,7 @@ export function NewDoctorAnnouncement() {
                       href={doctor.bookingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => trackBookingClick(`${doctor.name} announcement`)}
+                      onClick={() => trackBookingClick(doctor.slug)}
                     >
                       Book an Appointment
                     </a>

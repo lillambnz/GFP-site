@@ -11,17 +11,18 @@ interface MobileStickyBarProps {
   bookingLabel?: string
   /** If set and the element exists on the page, Book scrolls to it instead of opening HotDoc. */
   scrollToId?: string
-  pixelContentName?: string
+  /** Doctor slug for pixel attribution; omitted = general clinic booking. */
+  doctorSlug?: string
 }
 
 export function MobileStickyBar({
   bookingUrl = CLINIC_BOOKING_URL,
   bookingLabel = 'Book Online',
   scrollToId,
-  pixelContentName,
+  doctorSlug,
 }: MobileStickyBarProps = {}) {
   const handleBook = () => {
-    trackBookingClick(pixelContentName)
+    trackBookingClick(doctorSlug)
     const target = scrollToId ? document.getElementById(scrollToId) : null
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -35,7 +36,7 @@ export function MobileStickyBar({
       <Button
         variant="outline"
         className="flex-1 border-brand-teal/30 text-brand-teal hover:bg-brand-teal-light rounded-full"
-        onClick={() => { trackCallClick(); window.location.href = 'tel:0861182788' }}
+        onClick={() => { trackCallClick(doctorSlug); window.location.href = 'tel:0861182788' }}
       >
         <Phone className="w-4 h-4 mr-2" />
         Call Now

@@ -131,7 +131,7 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
         bookingUrl={doctor.bookingUrl}
         bookingLabel={`Book ${doctor.bookingName}`}
         scrollToId={doctor.hotdocWidgetUrl ? "booking" : undefined}
-        pixelContentName={`${doctor.name} landing page`}
+        doctorSlug={doctor.slug}
       />
     </div>
   )

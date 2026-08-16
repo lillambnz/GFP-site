@@ -20,19 +20,30 @@ export function trackPixelEvent(eventName: string, params?: Record<string, unkno
   }).catch(() => {})
 }
 
-// Meta applies health-category data-sharing restrictions to this pixel, which
-// suppresses the Schedule and Contact standard events. Booking and call clicks
-// are therefore reported as Lead, distinguished by content_category.
-export function trackBookingClick(contentName?: string) {
-  trackPixelEvent('Lead', {
-    content_category: 'booking',
-    ...(contentName ? { content_name: contentName } : {}),
+// Meta applies health-category data-sharing restrictions to this pixel: the
+// conversion-style standard events (Lead, Schedule, Contact, ...) are
+// suppressed and only a short allowlist of parameters survives (content_ids,
+// content_type, value, ...). Booking and call clicks are therefore reported
+// as ViewContent, with content_type distinguishing the action and content_ids
+// carrying the doctor slug (or "clinic" for general booking links). In Ads
+// Manager, build a custom conversion on ViewContent + content_type=booking.
+export function trackBookingClick(doctorSlug?: string) {
+  trackPixelEvent('ViewContent', {
+    content_type: 'booking',
+    content_ids: [doctorSlug ?? 'clinic'],
   })
 }
 
-export function trackCallClick(contentName?: string) {
-  trackPixelEvent('Lead', {
-    content_category: 'phone_call',
-    ...(contentName ? { content_name: contentName } : {}),
+export function trackCallClick(doctorSlug?: string) {
+  trackPixelEvent('ViewContent', {
+    content_type: 'phone_call',
+    content_ids: [doctorSlug ?? 'clinic'],
+  })
+}
+
+export function trackContactFormSubmit() {
+  trackPixelEvent('ViewContent', {
+    content_type: 'contact_form',
+    content_ids: ['clinic'],
   })
 }
