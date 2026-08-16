@@ -4,6 +4,7 @@ import { doctors } from "@/lib/data/team"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { MobileStickyBar } from "@/components/mobile-sticky-bar"
 import type { Metadata } from "next"
 import Script from "next/script"
 
@@ -45,11 +46,11 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="pt-28">
+      <main className="pt-28 pb-20 md:pb-0">
         {/* Doctor intro — landing header for ads and direct links */}
         <div className="max-w-5xl mx-auto px-4 pt-8">
-          <div className="bg-card rounded-2xl shadow-card border border-border p-6 md:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-            <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-brand-teal/30 shadow-lg shrink-0">
+          <div className="bg-card rounded-2xl shadow-card border border-border p-4 md:p-8 flex flex-row items-center sm:items-start gap-4 md:gap-6">
+            <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-brand-teal/30 shadow-lg shrink-0">
               <Image
                 src={doctor.headshot ?? doctor.image}
                 alt={doctor.name}
@@ -58,17 +59,17 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
                 className="object-cover object-[center_25%]"
               />
             </div>
-            <div className="text-center sm:text-left">
+            <div className="min-w-0 flex-1">
               {doctor.isNew && (
-                <span className="inline-block bg-gradient-to-r from-brand-teal to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
-                  ✨ New to Our Team — Now Accepting Patients
+                <span className="inline-block bg-gradient-to-r from-brand-teal to-emerald-500 text-white text-[11px] md:text-xs font-bold px-2.5 md:px-3 py-1 rounded-full mb-2">
+                  ✨ New — Now Accepting Patients
                 </span>
               )}
-              <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-1">{doctor.name}</h1>
-              <p className="text-brand-teal font-semibold mb-1">{doctor.title}</p>
-              <p className="text-sm text-muted-foreground mb-3">{doctor.qualifications}</p>
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-0.5 md:mb-1 leading-tight">{doctor.name}</h1>
+              <p className="text-brand-teal font-semibold text-sm md:text-base mb-0.5 md:mb-1">{doctor.title}</p>
+              <p className="text-xs md:text-sm text-muted-foreground mb-2 md:mb-3">{doctor.qualifications}</p>
               {doctor.specialInterests && (
-                <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+                <div className="hidden sm:flex flex-wrap gap-2">
                   {doctor.specialInterests.slice(0, 5).map((interest) => (
                     <span key={interest} className="text-xs bg-brand-teal-light text-brand-teal px-2.5 py-1 rounded-full">
                       {interest}
@@ -76,13 +77,21 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
                   ))}
                 </div>
               )}
+              {doctor.hotdocWidgetUrl && (
+                <Button
+                  className="mt-3 md:mt-4 w-full sm:w-auto bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white rounded-full shadow-md shadow-brand-teal/20"
+                  asChild
+                >
+                  <a href="#booking">Book with {doctor.bookingName}</a>
+                </Button>
+              )}
             </div>
           </div>
         </div>
 
         {/* Booking widget or fallback button */}
         {doctor.hotdocWidgetUrl ? (
-          <div className="max-w-5xl mx-auto px-4 py-8">
+          <div id="booking" className="max-w-5xl mx-auto px-4 py-6 md:py-8 scroll-mt-24">
             {/* overflow-hidden clips the HotDoc header bar; negative marginTop shifts it out of view */}
             <div className="rounded-2xl overflow-hidden shadow-card border border-border" style={{ height: '1000px' }}>
               <iframe
@@ -118,6 +127,12 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
       )}
 
       <Footer />
+      <MobileStickyBar
+        bookingUrl={doctor.bookingUrl}
+        bookingLabel={`Book ${doctor.bookingName}`}
+        scrollToId={doctor.hotdocWidgetUrl ? "booking" : undefined}
+        pixelContentName={`${doctor.name} landing page`}
+      />
     </div>
   )
 }
