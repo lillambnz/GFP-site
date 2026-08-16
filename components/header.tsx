@@ -12,6 +12,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
+import { trackBookingClick, trackCallClick } from "@/lib/meta-events"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -180,15 +181,16 @@ export default function Header() {
               <a
                 href="tel:0861182788"
                 className="hidden xl:flex items-center gap-2 px-4 py-2 text-sm font-medium text-foreground/70 hover:text-brand-teal bg-white/50 hover:bg-brand-teal-light rounded-full transition-all border border-transparent hover:border-brand-teal/20"
+                onClick={() => trackCallClick()}
               >
                 <Phone className="w-4 h-4" />
                 <span className="tracking-wide">(08) 6118 2788</span>
               </a>
               <Button
-                className="rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white shadow-card hover:shadow-card-hover transition-all duration-300 px-6"
+                className="rounded-full bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white shadow-lg shadow-brand-teal/25 hover:shadow-xl hover:shadow-brand-teal/30 hover:scale-105 transition-all duration-300 px-6"
                 asChild
               >
-                <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer" onClick={() => trackBookingClick()}>
                   <Calendar className="w-4 h-4 mr-2" />
                   Book Now
                 </a>
@@ -284,11 +286,11 @@ export default function Header() {
                 </div>
 
                 <div className="pt-6 border-t border-border space-y-3">
-                  <a href="tel:0861182788" className="flex items-center justify-center gap-2 w-full py-3 rounded-full border border-brand-teal/30 text-brand-teal font-medium hover:bg-brand-teal-light transition-colors">
+                  <a href="tel:0861182788" className="flex items-center justify-center gap-2 w-full py-3 rounded-full border border-brand-teal/30 text-brand-teal font-medium hover:bg-brand-teal-light transition-colors" onClick={() => trackCallClick()}>
                     <Phone className="w-5 h-5" /> Call Reception
                   </a>
                   <Button className="w-full rounded-full py-6 text-lg bg-brand-teal hover:bg-brand-teal-dark shadow-card" asChild>
-                    <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer" onClick={() => trackBookingClick()}>
                       Book Appointment Now
                     </a>
                   </Button>

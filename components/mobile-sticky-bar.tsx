@@ -2,7 +2,7 @@
 
 import { Phone, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { trackPixelEvent } from "@/lib/meta-events"
+import { trackBookingClick, trackCallClick } from "@/lib/meta-events"
 
 const CLINIC_BOOKING_URL = 'https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors'
 
@@ -21,7 +21,7 @@ export function MobileStickyBar({
   pixelContentName,
 }: MobileStickyBarProps = {}) {
   const handleBook = () => {
-    trackPixelEvent('Schedule', pixelContentName ? { content_name: pixelContentName } : undefined)
+    trackBookingClick(pixelContentName)
     const target = scrollToId ? document.getElementById(scrollToId) : null
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -35,7 +35,7 @@ export function MobileStickyBar({
       <Button
         variant="outline"
         className="flex-1 border-brand-teal/30 text-brand-teal hover:bg-brand-teal-light rounded-full"
-        onClick={() => { trackPixelEvent('Contact'); window.location.href = 'tel:0861182788' }}
+        onClick={() => { trackCallClick(); window.location.href = 'tel:0861182788' }}
       >
         <Phone className="w-4 h-4 mr-2" />
         Call Now

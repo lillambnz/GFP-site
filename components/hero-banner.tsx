@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Phone } from "lucide-react"
+import { trackBookingClick, trackCallClick } from "@/lib/meta-events"
 
 export default function HeroBanner() {
   return (
@@ -45,20 +46,20 @@ export default function HeroBanner() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
                 size="lg" 
-                className="bg-[#00b1c3] hover:bg-[#009bb0] text-white"
+                className="bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white shadow-lg shadow-brand-teal/25 hover:shadow-xl hover:shadow-brand-teal/30 hover:scale-105 transition-all duration-300"
                 asChild
               >
-                <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer" onClick={() => trackBookingClick()}>
                   Book Appointment
                 </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-[#00b1c3] text-[#00b1c3] hover:bg-[#00b1c3]/10"
+                className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal/10 hover:scale-105 transition-all duration-300"
                 asChild
               >
-                <a href="tel:+61861182788">
+                <a href="tel:+61861182788" onClick={() => trackCallClick()}>
                   <Phone size={20} className="mr-2" />
                   Call (08) 6118 2788
                 </a>

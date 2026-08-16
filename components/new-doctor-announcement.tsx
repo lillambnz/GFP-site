@@ -7,7 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Reveal } from "./reveal"
-import { trackPixelEvent } from "@/lib/meta-events"
+import { trackBookingClick, trackCallClick } from "@/lib/meta-events"
 import { getNewDoctors } from "@/lib/data/team"
 
 const AUTO_PLAY_INTERVAL = 6000
@@ -99,7 +99,7 @@ export function NewDoctorAnnouncement() {
                       href={doctor.bookingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => trackPixelEvent('Schedule', { content_name: `${doctor.name} announcement` })}
+                      onClick={() => trackBookingClick(`${doctor.name} announcement`)}
                     >
                       Book an Appointment
                     </a>
@@ -110,7 +110,7 @@ export function NewDoctorAnnouncement() {
                     className="border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white hover:scale-105 transition-all duration-300"
                     asChild
                   >
-                    <a href="tel:+61861182788" onClick={() => trackPixelEvent('Contact')}>
+                    <a href="tel:+61861182788" onClick={() => trackCallClick()}>
                       <Phone size={18} className="mr-2" />
                       (08) 6118 2788
                     </a>
