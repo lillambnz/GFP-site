@@ -27,6 +27,35 @@ interface HeroPhoto {
   alt: string
   title?: string
   description?: string
+  /** When set, the whole slide is a clickable link (used for banner-style slides with no title overlay). */
+  href?: string
+}
+
+function SlideImages({ photo, index }: { photo: HeroPhoto; index: number }) {
+  return (
+    <>
+      {photo.mobileSrc && (
+        <Image
+          src={photo.mobileSrc}
+          alt={photo.alt}
+          fill
+          sizes="100vw"
+          className="object-cover md:hidden"
+          priority={index === 0}
+          loading={index === 0 ? undefined : "eager"}
+        />
+      )}
+      <Image
+        src={photo.src}
+        alt={photo.alt}
+        fill
+        sizes="100vw"
+        className={photo.mobileSrc ? "object-cover hidden md:block" : "object-cover"}
+        priority={index === 0}
+        loading={index === 0 ? undefined : "eager"}
+      />
+    </>
+  )
 }
 
 interface HeroGalleryProps {
@@ -80,29 +109,22 @@ export function HeroGallery({
             scale: index === currentIndex ? 1 : 1.05,
           }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute inset-0"
+          className={`absolute inset-0 ${index === currentIndex ? "pointer-events-auto" : "pointer-events-none"}`}
           aria-hidden={index !== currentIndex}
         >
-          {photo.mobileSrc && (
-            <Image
-              src={photo.mobileSrc}
-              alt={photo.alt}
-              fill
-              sizes="100vw"
-              className="object-cover md:hidden"
-              priority={index === 0}
-              loading={index === 0 ? undefined : "eager"}
-            />
+          {photo.href ? (
+            <Link
+              href={photo.href}
+              aria-label={photo.alt}
+              tabIndex={index === currentIndex ? 0 : -1}
+              onClick={() => trackBookingClick()}
+              className="absolute inset-0 block cursor-pointer"
+            >
+              <SlideImages photo={photo} index={index} />
+            </Link>
+          ) : (
+            <SlideImages photo={photo} index={index} />
           )}
-          <Image
-            src={photo.src}
-            alt={photo.alt}
-            fill
-            sizes="100vw"
-            className={photo.mobileSrc ? "object-cover hidden md:block" : "object-cover"}
-            priority={index === 0}
-            loading={index === 0 ? undefined : "eager"}
-          />
         </motion.div>
       ))}
 
@@ -177,14 +199,14 @@ export function HeroGallery({
         <>
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+            className="absolute z-10 left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
             aria-label="Previous photo"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
+            className="absolute z-10 right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all opacity-0 group-hover:opacity-100"
             aria-label="Next photo"
           >
             <ChevronRight className="w-5 h-5" />
@@ -194,7 +216,7 @@ export function HeroGallery({
 
       {/* Dots Navigation */}
       {photos.length > 1 && (
-        <div className="absolute bottom-8 left-8 md:left-16 lg:left-24 flex gap-2">
+        <div className="absolute z-10 bottom-8 left-8 md:left-16 lg:left-24 flex gap-2">
           {photos.map((_, index) => (
             <button
               key={index}

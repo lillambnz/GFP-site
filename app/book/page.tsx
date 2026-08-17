@@ -30,7 +30,7 @@ export default function BookPage() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="pt-28 md:pt-36 pb-16">
+      <main className="pt-40 md:pt-44 pb-16">
         <section className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-8 md:mb-12">
             <p className="text-xs font-semibold tracking-widest uppercase text-brand-teal mb-2">Book Online</p>

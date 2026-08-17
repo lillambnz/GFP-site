@@ -26,6 +26,12 @@ export default function Home() {
 
   const heroPhotos = [
     {
+      src: "/images/hero/new-doctors-banner.jpg",
+      mobileSrc: "/images/hero/new-doctors-banner-mobile.jpg",
+      alt: "Meet our new doctors — Dr Sue, Dr Wan Maisarah and Dr Nilanjana Haque — now accepting new patients. Book online.",
+      href: BOOK_PATH,
+    },
+    {
       src: "/images/hero/bulk-billing-banner.png",
       mobileSrc: "/images/hero/bulk-billing-banner-mobile.png",
       alt: "Bulk Billing Now Available - Gosnells Family Practice",
@@ -35,12 +41,6 @@ export default function Home() {
       alt: "Modern Medical Reception Area",
       title: "Welcome to Gosnells Family Practice",
       description: "Your trusted healthcare partner, providing comprehensive medical care for the whole family"
-    },
-    {
-      src: "/images/hero/doctorsitting.png",
-      alt: "Professional Medical Care",
-      title: "Expert Medical Team",
-      description: "All doctors hold FRACGP qualifications and speak multiple languages"
     },
     {
       src: "/images/hero/mixfacility.png",
