@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, type ReactNode } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Star, Calendar, Phone } from 'lucide-react'
@@ -29,9 +29,12 @@ interface HeroPhoto {
   description?: string
   /** When set, the whole slide is a clickable link (used for banner-style slides with no title overlay). */
   href?: string
+  /** Custom responsive slide content rendered instead of the image(s). */
+  content?: ReactNode
 }
 
 function SlideImages({ photo, index }: { photo: HeroPhoto; index: number }) {
+  if (photo.content) return <>{photo.content}</>
   return (
     <>
       {photo.mobileSrc && (

@@ -13,6 +13,7 @@ import { trackBookingClick } from "@/lib/meta-events"
 import { ArrowRight } from "lucide-react"
 import { BulkBillingSection } from "@/components/bulk-billing-section"
 import { NewDoctorAnnouncement } from "@/components/new-doctor-announcement"
+import { NewDoctorsHeroSlide } from "@/components/new-doctors-hero-slide"
 import { GoogleReviewsSection } from "@/components/google-reviews-section"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -27,9 +28,9 @@ export default function Home() {
   const heroPhotos = [
     {
       src: "/images/hero/new-doctors-banner.jpg",
-      mobileSrc: "/images/hero/new-doctors-banner-mobile.jpg",
       alt: "Meet our new doctors — Dr Sue, Dr Wan Maisarah and Dr Nilanjana Haque — now accepting new patients. Book online.",
       href: BOOK_PATH,
+      content: <NewDoctorsHeroSlide />,
     },
     {
       src: "/images/hero/bulk-billing-banner.png",
