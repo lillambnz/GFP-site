@@ -96,7 +96,7 @@ export const faqs: FAQCategory[] = [
     questions: [
       {
         question: 'Do you offer women\'s health services?',
-        answer: 'Yes, we provide comprehensive women\'s health services including cervical screening, contraception advice, pregnancy care, menopause management, and general gynecological concerns. Female doctors are available upon request.'
+        answer: 'Yes, we provide comprehensive women\'s health services including cervical screening, contraception advice, pregnancy care, menopause management, and general gynecological concerns. Our female GPs — Dr Sue (Siti Mamat Raduan), Dr Wan Maisarah and Dr Nilanjana Haque — are now accepting new patients, and you can request a female doctor when booking.'
       },
       {
         question: 'Can I get vaccinations here?',

@@ -95,7 +95,7 @@ export const services: Service[] = [
     title: 'Antenatal & Postnatal Care',
     description: 'Comprehensive care throughout your pregnancy journey',
     details: 'We provide complete antenatal care including pregnancy confirmation, regular check-ups, antenatal screening, and health monitoring throughout your pregnancy. Our postnatal care includes newborn checks, breastfeeding support, maternal health assessment, and postpartum emotional wellbeing support.',
-    practitioners: ['Dr. Fazilah Binti Abu Bakar', 'Dr. Wan Maisarah'],
+    practitioners: ['Dr. Wan Maisarah', 'Dr. Fazilah Binti Abu Bakar'],
     availability: 'Monday-Saturday',
     bookingInfo: 'Book regular antenatal appointments with your preferred doctor',
     image: '/images/services/antenatal.webp'
@@ -226,10 +226,10 @@ export const services: Service[] = [
     title: 'Minor Procedures',
     description: 'In-office minor surgical procedures',
     details: 'We perform a range of minor procedures including skin lesion removal, cyst excision, wound care and suturing, ingrown toenail treatment, and minor surgical interventions. All procedures are performed in our well-equipped procedure room with appropriate anesthesia and follow-up care.',
-    practitioners: ['Dr. Choong Leat Loh', 'Dr. Ameer Khan'],
+    practitioners: ['Dr. Wan Maisarah (Implanon insertion & removal)', 'Dr. Choong Leat Loh', 'Dr. Ameer Khan'],
     availability: 'By appointment',
     bookingInfo: 'Discuss with your doctor if a procedure is needed',
-    subServices: ['Skin Lesion Removal', 'Wound Care & Suturing', 'Cyst Excision', 'Ingrown Toenail Treatment'],
+    subServices: ['Implanon Insertion & Removal', 'Skin Lesion Removal', 'Wound Care & Suturing', 'Cyst Excision', 'Ingrown Toenail Treatment'],
     image: '/images/services/MinorProcedures.jpg'
   },
 

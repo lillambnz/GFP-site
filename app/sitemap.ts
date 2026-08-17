@@ -41,9 +41,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const doctorPages = doctors.map(doctor => ({
     url: `${baseUrl}/team/${doctor.slug}`,
     lastModified,
-    priority: 0.8,
+    priority: doctor.isNew ? 0.9 : 0.6,
     changeFrequency: 'monthly' as const
   }))
 
-  return [...staticPages, ...servicePages, ...blogPages, ...doctorPages]
+  const bookPage = {
+    url: `${baseUrl}/book`,
+    lastModified,
+    priority: 0.9,
+    changeFrequency: 'weekly' as const
+  }
+
+  return [...staticPages, bookPage, ...servicePages, ...blogPages, ...doctorPages]
 }
