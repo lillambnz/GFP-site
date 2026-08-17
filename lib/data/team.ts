@@ -277,10 +277,6 @@ export function getDoctorByName(name: string): Doctor | undefined {
   return doctors.find(doctor => doctor.name === name)
 }
 
-export function getDoctorsOrdered(): Doctor[] {
-  return [...doctors].sort((a, b) => Number(b.isNew ?? false) - Number(a.isNew ?? false))
-}
-
 export function getNewDoctors(): Doctor[] {
   return doctors.filter(doctor => doctor.isNew)
 }

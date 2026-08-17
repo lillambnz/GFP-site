@@ -8,7 +8,8 @@ import PatientInformationSection from "@/components/patient-information-section"
 import Footer from "@/components/footer"
 import Link from "next/link"
 import { services } from "@/lib/data/services"
-import { getDoctorsOrdered } from "@/lib/data/team"
+import { getNewDoctors } from "@/lib/data/team"
+import { trackBookingClick } from "@/lib/meta-events"
 import { ArrowRight } from "lucide-react"
 import { BulkBillingSection } from "@/components/bulk-billing-section"
 import { NewDoctorAnnouncement } from "@/components/new-doctor-announcement"
@@ -152,44 +153,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Doctors Section */}
+      {/* Doctors Section — new doctors accepting patients */}
       <section className="py-20 bg-secondary/50 bg-dot-pattern">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionHeading
             eyebrow="Our Doctors"
-            title="Meet Our Expert Medical Team"
-            subtitle="Experienced healthcare professionals dedicated to your wellbeing"
+            title="Now Accepting New Patients"
+            subtitle="Three experienced GPs have joined Gosnells Family Practice — book online in minutes"
             className="mb-14"
           />
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {getDoctorsOrdered().map((doctor) => (
+          <StaggerContainer className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+            {getNewDoctors().map((doctor) => (
               <StaggerItem key={doctor.slug}>
-                <Link href={`/team#${doctor.slug}`} className="block bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group h-full">
+                <Link
+                  href={`/team/${doctor.slug}`}
+                  onClick={() => trackBookingClick(doctor.slug)}
+                  className="flex flex-col bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group h-full border border-border"
+                >
                   <div className="aspect-[3/4] overflow-hidden relative">
                     <Image
-                      src={doctor.galleryPhotos?.[0]?.src ?? doctor.image}
+                      src={doctor.image}
                       alt={doctor.name}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent" />
-                    {doctor.isNew && (
-                      <span className="absolute top-3 left-3 bg-gradient-to-r from-brand-teal to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                        ✨ New
-                      </span>
-                    )}
+                    <span className="absolute top-3 left-3 bg-gradient-to-r from-brand-teal to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                      ✨ New Doctor
+                    </span>
                   </div>
-                  <div className="p-5">
-                    <h3 className="font-bold text-foreground mb-1 group-hover:text-brand-teal transition-colors">{doctor.name}</h3>
-                    <p className="text-brand-teal font-medium text-xs mb-1">{doctor.title}</p>
+                  <div className="p-5 flex flex-col flex-1">
+                    <span className="self-start text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full mb-2">
+                      Accepting new patients
+                    </span>
+                    <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-brand-teal transition-colors">{doctor.name}</h3>
                     <p className="text-muted-foreground text-xs mb-3">{doctor.qualifications}</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {doctor.specialInterests?.slice(0, 2).map((s) => (
+                    <div className="flex flex-wrap gap-1.5 mb-3">
+                      {doctor.specialInterests?.slice(0, 3).map((s) => (
                         <span key={s} className="text-[11px] bg-brand-teal-light text-brand-teal px-2 py-0.5 rounded-full">{s}</span>
                       ))}
                     </div>
+                    {doctor.shortIntro && (
+                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-4">{doctor.shortIntro}</p>
+                    )}
+                    <span className="mt-auto inline-flex items-center gap-1 text-brand-teal font-semibold text-sm group-hover:gap-2 transition-all">
+                      Book with {doctor.bookingName} <ArrowRight className="w-4 h-4" />
+                    </span>
                   </div>
                 </Link>
               </StaggerItem>
@@ -197,9 +207,13 @@ export default function Home() {
           </StaggerContainer>
 
           <Reveal className="text-center">
-            <Link href="/team">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto mb-8">
+              Our founding doctors — Dr Ameer Khan, Dr Fazilah Abu Bakar, Dr Choong Leat Loh and Dr Quam Gbajabiamila — continue to care for their existing patients.{" "}
+              <Link href="/team" className="text-brand-teal font-medium hover:underline">Meet the full team →</Link>
+            </p>
+            <Link href={BOOK_PATH} onClick={() => trackBookingClick()}>
               <Button className="bg-brand-teal hover:bg-brand-teal-dark text-white px-8 py-6 rounded-full shadow-card hover:shadow-card-hover transition-all text-base">
-                Meet Our Full Team <ArrowRight className="ml-2 w-4 h-4" />
+                Book an Appointment <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
           </Reveal>
