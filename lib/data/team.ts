@@ -118,6 +118,7 @@ export const doctors: Doctor[] = [
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/ameer-khan",
     slug: "dr-ameer-khan",
     isDirector: true,
+    acceptingNewPatients: false,
     hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/ameer-khan?wp=w_iframe",
     galleryPhotos: [
       { src: "/images/photoshoot/doctors/dr-khan/GosnellsFamilyPractice-35.jpg", alt: "Dr. Ameer Khan" },
@@ -143,6 +144,7 @@ export const doctors: Doctor[] = [
     yearsExperience: 24,
     slug: "dr-fazilah-abu-bakar",
     isDirector: true,
+    acceptingNewPatients: false,
     hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/fazilah-binti-abu-bakar?wp=w_iframe",
     galleryPhotos: [
       { src: "/images/photoshoot/doctors/dr-fazilah/GosnellsFamilyPractice-64.jpg", alt: "Dr. Fazilah Abu Bakar" },
@@ -168,6 +170,7 @@ export const doctors: Doctor[] = [
     yearsExperience: 20,
     slug: "dr-choong-leat-loh",
     isDirector: true,
+    acceptingNewPatients: false,
     hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/choong-leat-loh?wp=w_iframe",
     galleryPhotos: [
       { src: "/images/photoshoot/doctors/dr-loh/GosnellsFamilyPractice-2.jpg", alt: "Dr. Choong Leat Loh" },
@@ -192,6 +195,7 @@ export const doctors: Doctor[] = [
     bookingUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/quam-gbajabiamila",
     slug: "dr-quam-gbajabiamila",
     isDirector: true,
+    acceptingNewPatients: false,
     hotdocWidgetUrl: "https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors/quam-gbajabiamila?wp=w_iframe",
     galleryPhotos: [
       { src: "/images/photoshoot/doctors/dr-quam/GosnellsFamilyPractice-115.jpg", alt: "Dr. Quam Gbajabiamila" },
@@ -279,4 +283,8 @@ export function getDoctorsOrdered(): Doctor[] {
 
 export function getNewDoctors(): Doctor[] {
   return doctors.filter(doctor => doctor.isNew)
+}
+
+export function getFoundingDoctors(): Doctor[] {
+  return doctors.filter(doctor => doctor.isDirector)
 }
