@@ -95,14 +95,12 @@ export function NewDoctorAnnouncement() {
                     className="bg-white text-brand-teal hover:bg-gray-50 font-semibold shadow-lg hover:scale-105 transition-all duration-300"
                     asChild
                   >
-                    <a
-                      href={doctor.bookingUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href={`/team/${doctor.slug}`}
                       onClick={() => trackBookingClick(doctor.slug)}
                     >
                       Book an Appointment
-                    </a>
+                    </Link>
                   </Button>
                   <Button
                     size="lg"

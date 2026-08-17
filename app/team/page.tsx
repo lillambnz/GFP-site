@@ -9,6 +9,7 @@ import { Languages, Star, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import { BOOK_PATH } from "@/lib/booking"
 
 function ExpandableBio({ text }: { text: string }) {
   const [expanded, setExpanded] = useState(false)
@@ -451,9 +452,7 @@ export default function TeamPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
-                href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={BOOK_PATH}
                 className="bg-white text-brand-teal hover:bg-gray-50 font-semibold px-8 py-3 rounded-full shadow-lg shadow-white/20 hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block"
               >
                 Book Online

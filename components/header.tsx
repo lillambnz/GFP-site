@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { trackBookingClick, trackCallClick } from "@/lib/meta-events"
+import { BOOK_PATH } from "@/lib/booking"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -190,10 +191,10 @@ export default function Header() {
                 className="rounded-full bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white shadow-lg shadow-brand-teal/25 hover:shadow-xl hover:shadow-brand-teal/30 hover:scale-105 transition-all duration-300 px-6"
                 asChild
               >
-                <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer" onClick={() => trackBookingClick()}>
+                <Link href={BOOK_PATH} onClick={() => trackBookingClick()}>
                   <Calendar className="w-4 h-4 mr-2" />
                   Book Now
-                </a>
+                </Link>
               </Button>
             </div>
 
@@ -290,9 +291,9 @@ export default function Header() {
                     <Phone className="w-5 h-5" /> Call Reception
                   </a>
                   <Button className="w-full rounded-full py-6 text-lg bg-brand-teal hover:bg-brand-teal-dark shadow-card" asChild>
-                    <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer" onClick={() => trackBookingClick()}>
+                    <Link href={BOOK_PATH} onClick={() => { trackBookingClick(); setIsOpen(false) }}>
                       Book Appointment Now
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>

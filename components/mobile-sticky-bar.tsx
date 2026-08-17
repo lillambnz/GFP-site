@@ -3,8 +3,9 @@
 import { Phone, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { trackBookingClick, trackCallClick } from "@/lib/meta-events"
+import { useRouter } from "next/navigation"
+import { BOOK_PATH } from "@/lib/booking"
 
-const CLINIC_BOOKING_URL = 'https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors'
 
 interface MobileStickyBarProps {
   bookingUrl?: string
@@ -16,16 +17,19 @@ interface MobileStickyBarProps {
 }
 
 export function MobileStickyBar({
-  bookingUrl = CLINIC_BOOKING_URL,
+  bookingUrl = BOOK_PATH,
   bookingLabel = 'Book Online',
   scrollToId,
   doctorSlug,
 }: MobileStickyBarProps = {}) {
+  const router = useRouter()
   const handleBook = () => {
     trackBookingClick(doctorSlug)
     const target = scrollToId ? document.getElementById(scrollToId) : null
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else if (bookingUrl.startsWith('/')) {
+      router.push(bookingUrl)
     } else {
       window.open(bookingUrl, '_blank')
     }

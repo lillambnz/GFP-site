@@ -18,6 +18,7 @@ import Image from "next/image"
 import { MobileStickyBar } from "@/components/mobile-sticky-bar"
 import { SectionHeading } from "@/components/section-heading"
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/reveal"
+import { BOOK_PATH } from "@/lib/booking"
 
 export default function Home() {
   const featuredServices = services.slice(0, 6)
@@ -249,13 +250,13 @@ export default function Home() {
               </span>
             </Link>
 
-            <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer" className="px-8 py-12 hover:bg-white/5 transition-colors group text-center">
+            <Link href={BOOK_PATH} className="px-8 py-12 hover:bg-white/5 transition-colors group text-center">
               <h3 className="text-xl font-bold mb-2 group-hover:text-brand-teal transition-colors">Book Now</h3>
               <p className="text-white/50 text-sm mb-4">Schedule your appointment online</p>
               <span className="text-sm font-medium text-brand-teal inline-flex items-center gap-1.5">
                 Book Online <ArrowRight className="w-3.5 h-3.5" />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

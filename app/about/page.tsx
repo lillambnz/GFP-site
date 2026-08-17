@@ -3,6 +3,7 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Award, Heart, Users, Target, Shield, Star } from "lucide-react"
+import { BOOK_PATH } from "@/lib/booking"
 
 export default function AboutPage() {
   const values = [
@@ -191,16 +192,14 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
-                href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-brand-teal hover:bg-gray-100 font-semibold px-8 py-4 rounded-full transition inline-block text-lg"
+                href={BOOK_PATH}
+                className="bg-white text-brand-teal hover:bg-gray-50 font-semibold px-8 py-4 rounded-full shadow-lg shadow-white/20 hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block text-lg"
               >
                 Book Appointment
               </a>
               <a
                 href="/team"
-                className="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-full transition inline-block text-lg"
+                className="bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-white font-semibold px-8 py-4 rounded-full shadow-lg shadow-slate-900/30 hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block text-lg"
               >
                 Meet Our Team
               </a>

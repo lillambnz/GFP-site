@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { CheckCircle2, ArrowRight } from "lucide-react"
 import { Reveal, StaggerContainer, StaggerItem } from "./reveal"
+import { BOOK_PATH } from "@/lib/booking"
 
 const benefits = [
   {
@@ -65,9 +66,7 @@ export function BulkBillingSection() {
                 That&apos;s why we bulk bill <strong className="text-white">all eligible Medicare patients</strong> — every appointment, every day.
               </p>
               <Link
-                href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={BOOK_PATH}
                 className="inline-flex items-center gap-2 bg-brand-teal hover:bg-brand-teal-dark text-white font-semibold px-7 py-3.5 rounded-full transition-colors shadow-lg text-sm"
               >
                 Book a Bulk Billed Appointment

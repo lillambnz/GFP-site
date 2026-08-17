@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { X, Phone, Calendar, CheckCircle } from 'lucide-react'
 import Image from 'next/image'
+import { BOOK_PATH } from "@/lib/booking"
 
 export default function BulkBillingPopup() {
   const [isVisible, setIsVisible] = useState(false)
@@ -150,9 +151,8 @@ export default function BulkBillingPopup() {
 
                 {/* Online Booking */}
                 <a
-                  href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={BOOK_PATH}
+                  onClick={handleClose}
                   className="group flex items-center gap-3 p-3 bg-gradient-to-r from-amber-50 to-yellow-50 hover:from-amber-100 hover:to-yellow-100 rounded-xl transition-all duration-300 border-2 border-amber-100 hover:border-amber-300 hover:shadow-lg"
                 >
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-[#F2A900] to-[#D4940A] rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">

@@ -4,6 +4,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { afterHoursServices, nearestHospitals, emergencyContacts, whenToSeekEmergencyCare, regularHours } from "@/lib/data/after-hours"
 import { Phone, Clock, MapPin, AlertTriangle, PhoneCall, Building2 } from "lucide-react"
+import { BOOK_PATH } from "@/lib/booking"
 
 export default function AfterHoursPage() {
   return (
@@ -183,10 +184,8 @@ export default function AfterHoursPage() {
               Book an appointment with Gosnells Family Practice for non-urgent medical care
             </p>
             <a
-              href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-brand-teal hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition inline-block"
+              href={BOOK_PATH}
+              className="bg-white text-brand-teal hover:bg-gray-50 font-semibold px-8 py-3 rounded-full shadow-lg shadow-white/20 hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block"
             >
               Book Appointment
             </a>

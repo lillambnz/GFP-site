@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, Clock, Lightbulb, Facebook, Instagram, Twitter, Ar
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { BOOK_PATH } from "@/lib/booking"
 
 export default function Footer() {
   return (
@@ -15,10 +16,10 @@ export default function Footer() {
             Our friendly reception team is here to help you find the right doctor and time that works for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button className="rounded-full bg-brand-teal hover:bg-brand-teal-dark text-white px-8 py-6 text-base shadow-card hover:shadow-card-hover transition-all" asChild>
-              <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
+            <Button className="rounded-full bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white px-8 py-6 text-base shadow-lg shadow-brand-teal/25 hover:shadow-xl hover:shadow-brand-teal/30 hover:scale-105 transition-all duration-300" asChild>
+              <Link href={BOOK_PATH}>
                 Book Online <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" className="rounded-full border-brand-teal/30 text-brand-teal hover:bg-brand-teal-light px-8 py-6 text-base" asChild>
               <a href="tel:0861182788">
@@ -104,7 +105,7 @@ export default function Footer() {
             <div>
               <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Access</h4>
               <ul className="space-y-2.5 text-sm">
-                <li><a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-brand-teal transition-colors">Book Appointment</a></li>
+                <li><Link href={BOOK_PATH} className="text-white/50 hover:text-brand-teal transition-colors">Book Appointment</Link></li>
                 <li><Link href="/about" className="text-white/50 hover:text-brand-teal transition-colors">About Us</Link></li>
                 <li><Link href="/team" className="text-white/50 hover:text-brand-teal transition-colors">Our Team</Link></li>
                 <li><Link href="/services" className="text-white/50 hover:text-brand-teal transition-colors">All Services</Link></li>
@@ -138,8 +139,8 @@ export default function Footer() {
                 <Image
                   src="/AGPAL.fingerprinted..png"
                   alt="AGPAL Accredited Practice"
-                  width={80}
-                  height={80}
+                  width={120}
+                  height={120}
                   className="rounded opacity-90"
                 />
                 <Image

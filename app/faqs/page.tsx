@@ -5,6 +5,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { faqs } from "@/lib/data/faqs"
 import { ChevronDown } from "lucide-react"
+import { BOOK_PATH } from "@/lib/booking"
 
 export default function FAQsPage() {
   const [activeCategory, setActiveCategory] = useState('General')
@@ -103,10 +104,8 @@ export default function FAQsPage() {
                 Call (08) 6118 2788
               </a>
               <a
-                href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-3 rounded-full transition inline-block"
+                href={BOOK_PATH}
+                className="bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-700 hover:to-slate-800 text-white font-semibold px-8 py-3 rounded-full shadow-lg shadow-slate-900/30 hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block"
               >
                 Book Appointment
               </a>

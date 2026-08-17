@@ -6,6 +6,9 @@ import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Star, Calendar, Phone } from 'lucide-react'
 import { googleBusinessInfo } from '@/lib/data/google-reviews'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { BOOK_PATH } from '@/lib/booking'
+import { trackBookingClick } from '@/lib/meta-events'
 
 function GoogleIcon({ className }: { className?: string }) {
   return (
@@ -152,9 +155,9 @@ export function HeroGallery({
                 className="rounded-full bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-brand-teal-dark hover:to-emerald-600 text-white px-8 py-6 text-base shadow-lg shadow-brand-teal/25 hover:shadow-xl hover:shadow-brand-teal/30 hover:scale-105 transition-all duration-300"
                 asChild
               >
-                <a href="https://www.hotdoc.com.au/medical-centres/gosnells-WA-6110/gosnells-family-practice/doctors" target="_blank" rel="noopener noreferrer">
+                <Link href={BOOK_PATH} onClick={() => trackBookingClick()}>
                   <Calendar className="w-4 h-4 mr-2" /> Book Appointment
-                </a>
+                </Link>
               </Button>
               <Button
                 className="rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white hover:bg-white/30 px-8 py-6 text-base transition-all"
