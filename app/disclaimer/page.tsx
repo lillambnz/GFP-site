@@ -161,6 +161,7 @@ export default function DisclaimerPage() {
               23C, 2158 Albany Highway<br />
               Gosnells, WA 6110<br />
               Phone: (08) 6118 2788<br />
+              Fax: (08) 9368 5679<br />
               Email: info@gosnellsfamilypractice.com.au
             </p>
             <p className="mt-6 text-sm text-muted-foreground">

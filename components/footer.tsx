@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Lightbulb, Facebook, Instagram, Twitter, ArrowRight } from "lucide-react"
+import { Phone, Printer, Mail, MapPin, Clock, Lightbulb, Facebook, Instagram, Twitter, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -58,6 +58,13 @@ export default function Footer() {
                   <Phone className="w-4 h-4 text-brand-teal/60" />
                   <div>
                     <a href="tel:0861182788" className="text-white font-medium hover:text-brand-teal transition-colors">(08) 6118 2788</a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Printer className="w-4 h-4 text-brand-teal/60" />
+                  <div>
+                    <p className="text-white/80 text-sm">Fax: (08) 9368 5679</p>
                   </div>
                 </div>
 

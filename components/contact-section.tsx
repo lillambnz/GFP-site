@@ -52,6 +52,7 @@ export default function ContactSection() {
                 <div>
                   <p className="font-semibold text-foreground">Phone</p>
                   <p className="text-muted-foreground">(08) 6118 2788</p>
+                  <p className="text-muted-foreground text-sm">Fax: (08) 9368 5679</p>
                 </div>
               </div>
 

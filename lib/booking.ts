@@ -10,3 +10,4 @@ export const CLINIC_HOTDOC_URL =
 
 export const CLINIC_TEL = 'tel:0861182788'
 export const CLINIC_PHONE_DISPLAY = '(08) 6118 2788'
+export const CLINIC_FAX_DISPLAY = '(08) 9368 5679'

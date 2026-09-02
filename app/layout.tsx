@@ -90,6 +90,7 @@ export default function RootLayout({
     "logo": "https://gosnellsfamilypractice.com.au/icon.svg",
     "description": "AGPAL Accredited family medical practice providing comprehensive healthcare services in Gosnells, Perth, Western Australia.",
     "telephone": "+61861182788",
+    "faxNumber": "+61893685679",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2237 Albany Highway",

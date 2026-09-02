@@ -184,6 +184,7 @@ export default function PrivacyPolicy() {
             <p>Privacy Officer</p>
             <p>Address: 23C, 2158 Albany Highway, Gosnells WA 6110</p>
             <p>Phone: (08) 6118 2788</p>
+            <p>Fax: (08) 9368 5679</p>
             <p>Email: info@gosnellsfamilypractice.com.au</p>
           </div>
 
